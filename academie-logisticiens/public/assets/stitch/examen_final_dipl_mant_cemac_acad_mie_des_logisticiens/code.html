@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#44474d","inverse-primary":"#b6c7e7","tertiary-fixed-dim":"#6bd8cb","on-error-container":"#93000a","error-container":"#ffdad6","outline-variant":"#c4c6ce","outline":"#74777e","background":"#f9f9ff","inverse-surface":"#263143","on-primary-fixed-variant":"#364762","surface-container-highest":"#d8e3fb","on-primary":"#ffffff","inverse-on-surface":"#ecf1ff","primary":"#00040e","surface-container-lowest":"#ffffff","on-primary-fixed":"#091c34","secondary-fixed-dim":"#eac249","on-secondary-container":"#735a00","surface-dim":"#cfdaf2","surface-container-low":"#f0f3ff","on-tertiary-fixed-variant":"#005049","on-primary-container":"#7586a3","surface-tint":"#4e5f7a","surface-container":"#e7eeff","on-error":"#ffffff","primary-fixed-dim":"#b6c7e7","on-tertiary-container":"#119589","surface-container-high":"#dee8ff","tertiary-fixed":"#89f5e7","tertiary-container":"#00221e","on-surface":"#111c2d","surface":"#f9f9ff","tertiary":"#000403","surface-bright":"#f9f9ff","on-secondary-fixed-variant":"#584400","on-tertiary":"#ffffff","on-tertiary-fixed":"#00201d","on-secondary":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#745b00","secondary-container":"#fcd358","on-secondary-fixed":"#241a00","secondary-fixed":"#ffe08b","primary-container":"#0b1e36","error":"#ba1a1a","on-background":"#111c2d","surface-variant":"#d8e3fb"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-lg":"1.5rem"},"fontFamily":{"metric-stat":["Outfit"],"label-md":["Plus Jakarta Sans"],"display-lg":["Outfit"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Outfit"],"label-sm":["Plus Jakarta Sans"],"headline-md":["Outfit"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Outfit"],"headline-xl-mobile":["Outfit"],"headline-xl":["Outfit"],"body-sm":["Plus Jakarta Sans"]},"fontSize":{"metric-stat":["1.75rem",{"lineHeight":"1.1","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["1.125rem",{"lineHeight":"1.45","fontWeight":"600"}],"display-lg-mobile":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.04em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"1.35","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.55","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.4","fontWeight":"600"}],"headline-xl-mobile":["1.625rem",{"lineHeight":"1.3","fontWeight":"600"}],"headline-xl":["2.25rem",{"lineHeight":"1.25","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.5","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary z-50 flex flex-col justify-between shadow-[0_4px_24px_rgba(11,30,54,0.18)]"><div class="flex flex-col"><div class="h-20 px-6 flex items-center gap-3 bg-primary/40"><div class="w-10 h-10 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed">anchor</span></div><div><span class="block font-headline-sm text-headline-sm text-surface-container-lowest leading-none tracking-tight">ALB</span><span class="block font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider mt-0.5">Brazzaville Executive</span></div></div><div class="px-6 py-4"><div class="bg-surface-container-lowest/5 rounded-xl p-3 flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-lg">military_tech</span><span class="font-label-sm text-label-sm text-surface-container-lowest">Cadre Portuaire</span></div><span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-tertiary-container/80 px-2 py-0.5 rounded-full">Niv. III</span></div></div><nav class="px-4 space-y-1.5 mt-2" data-active-classes="bg-secondary text-on-secondary font-bold rounded-xl shadow-[0_4px_16px_rgba(11,30,54,0.12)]"><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span>Tableau de bord</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="mes-formations" href="#"><span class="material-symbols-outlined text-xl">school</span><span>Mes Formations</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="salle-de-cours" href="#"><span class="material-symbols-outlined text-xl">play_lesson</span><span>Salle de Cours</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="arene-challenges" href="#"><span class="material-symbols-outlined text-xl">flag</span><span>Arène Challenges</span><span class="ml-auto bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded">CTF</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="certifications-et-titres" href="#"><span class="material-symbols-outlined text-xl">verified</span><span>Certifications &amp; Titres</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="solde-et-jetons-fcfa" href="#"><span class="material-symbols-outlined text-xl">account_balance_wallet</span><span>Solde &amp; Jetons FCFA</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="support-et-mentorat" href="#"><span class="material-symbols-outlined text-xl">contact_support</span><span>Support &amp; Mentorat</span></a></nav></div><div class="p-4 mx-4 mb-6 rounded-xl bg-surface-container-lowest/5 backdrop-blur-sm"><div class="flex items-center gap-2 mb-2"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">O2Switch Cloud</span></div><p class="font-body-sm text-body-sm text-surface-container-high/80 leading-snug">Brazzaville, Rép. du Congo<br/><span class="text-secondary-fixed-dim font-label-sm text-label-sm font-semibold">Accrédité CEMAC</span></p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,30,54,0.06)] z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-6"><div class="flex flex-col"><h1 class="font-title-md text-title-md text-primary font-bold">Académie des Logisticiens</h1><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Campus Numérique Exécutif</span></div><div class="relative ml-4 w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Rechercher module, unité, document..." type="text"/></div></div><div class="flex items-center gap-5"><div class="flex items-center gap-3 bg-surface-container-low px-4 py-2 rounded-xl"><div class="flex items-center gap-1.5 text-secondary"><span class="material-symbols-outlined text-lg">workspace_premium</span><span class="font-label-md text-label-md font-bold">280 Pts</span></div><span class="text-outline-variant font-label-sm text-label-sm">•</span><div class="flex items-center gap-1.5 text-primary"><span class="material-symbols-outlined text-lg">payments</span><span class="font-label-md text-label-md font-bold">10 000 FCFA</span></div></div><div class="relative flex items-center"><button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-xl">notifications</span></button><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span></div><div class="flex items-center gap-1 bg-surface-container-low px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-base">language</span><span class="font-label-sm text-label-sm font-semibold uppercase">FR</span></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex items-center gap-3"><div class="text-right"><span class="block font-label-md text-label-md text-on-surface leading-tight font-bold">Arsène Makosso</span><span class="block font-label-sm text-label-sm text-on-surface-variant">N° ALB-2024-89</span></div><img alt="Profile" class="w-10 h-10 rounded-full object-cover shadow-[0_2px_8px_rgba(11,30,54,0.12)] ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1XxqjwAYVjvs_zP9bRX1N6xBl6P6OWn35DSbiLXFFktaTA6KXGBs5vi2SNvGbDdT26jnTHmVDyAUL7clABIPU5j7fRZl1Q9iMDqgceEBDTvKE1k1TgdETtc-7b2MMWTTb7wOHV6WYtXUusMwaCIKNufpQvvmAlxDLs5-JL4qYDq9vf-0K3qU4fRmXH3S533i7gRWcJ9fkrouCOeaJ86KNp8rWUUahEpHoaZ4DxGYFrcu8s6AOml3-2hF6sNW3ATM1jOGtNmnLGfPw"/></div></div></header><main class="relative pt-20 w-full min-h-[calc(100vh-3.5rem)] px-8 py-6 bg-surface"><div class="flex flex-col w-full">
+<!-- Security Notice & Official Protocol Banner -->
+<div class="w-full bg-primary-container text-on-primary rounded-xl px-6 py-4 shadow-xl mb-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Session Officielle CEMAC N° SEC-8891-BZV</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-surface-container-highest">Surveillance Proctored Active</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-surface-container-lowest leading-tight">Grand Examen Diplômant : Cadre Déclarant en Douane &amp; Transit SYDONIA World</h2>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest/5 px-4 py-2.5 rounded-xl">
+<div class="text-right">
+<span class="block font-label-sm text-label-sm text-secondary-fixed uppercase">Auditeur Enregistré</span>
+<span class="block font-label-md text-label-md text-surface-container-lowest font-bold">Arsène Makosso • ALB-2024-89</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
+        AM
+      </div>
+</div>
+</div>
+<!-- Real-time Exam HUD: Progress, Timer, Live Metrics -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+<!-- Question Progress Bar Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">assignment_turned_in</span>
+<span class="font-title-md text-title-md font-bold text-primary">Progression Globale : Question 42 sur 100</span>
+</div>
+<span class="font-metric-stat text-metric-stat text-primary">42<span class="text-label-md text-on-surface-variant font-normal"> / 100</span></span>
+</div>
+<!-- Dual Color Track Progress -->
+<div class="w-full bg-surface-container-low h-3 rounded-full overflow-hidden flex">
+<div class="bg-on-tertiary-container h-full transition-all duration-300" style="width: 38%;"></div>
+<div class="bg-secondary h-full transition-all duration-300" style="width: 4%;"></div>
+</div>
+<div class="flex items-center justify-between mt-3 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span> 38 Répondues</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> 4 Pour relecture</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></span> 58 Restantes</span>
+</div>
+<span class="font-semibold text-secondary">Seuil requis : 70% (70 bonnes réponses)</span>
+</div>
+</div>
+<!-- Chronometer Countdown Card -->
+<div class="lg:col-span-4 bg-primary text-on-primary rounded-xl p-5 shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-1 text-secondary-fixed">
+<span class="material-symbols-outlined text-lg">timer</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Temps Restant Strict</span>
+</div>
+<div class="font-metric-stat text-metric-stat font-bold text-surface-container-lowest tracking-tight" id="exam-timer">
+          01:14:32
+        </div>
+<p class="font-label-sm text-label-sm text-surface-container-highest/80 mt-1">Clôture automatique à 00:00:00</p>
+</div>
+<!-- Circular SVG gauge -->
+<div class="relative w-20 h-20 flex items-center justify-center">
+<svg class="w-20 h-20 transform -rotate-90" viewbox="0 0 72 72">
+<circle cx="36" cy="36" fill="transparent" r="30" stroke="#364762" stroke-width="6"></circle>
+<circle cx="36" cy="36" fill="transparent" r="30" stroke="#fcd358" stroke-dasharray="188.4" stroke-dashoffset="26.3" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<span class="absolute material-symbols-outlined text-secondary-fixed text-xl">hourglass_bottom</span>
+</div>
+</div>
+</div>
+<!-- Main Body Grid: Question Scenario + Side Exam Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Active Question Center Stage -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Case Study Context Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Module Ribbon / Tag -->
+<div class="bg-surface-container-low px-6 py-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-primary-container text-surface-container-lowest font-label-sm text-label-sm font-semibold">UNITÉ CAVD-402</span>
+<span class="font-label-md text-label-md text-primary font-bold">Module 4 : Traitement des contestations de valeur en douane</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/30 px-2.5 py-1 rounded-full font-bold">Valeur : 1.0 Pt</span>
+</div>
+<div class="p-6 md:p-8">
+<!-- Vignette Narrative -->
+<div class="flex items-start gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl shrink-0 mt-0.5">help_center</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold block mb-1">Mise en situation professionnelle • Terminal Conteneurs Congo Terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+                Un navire porte-conteneurs accoste au Port Autonome de Pointe-Noire avec 4 EVP de pièces détachées déclarées sous le régime D24. L’inspecteur douanier conteste la valeur CIF déclarée de 18% par rapport au cours mercuriale CEMAC. Selon l’Article 24 du Code des Douanes CEMAC, quel est le recours conservatoire prioritaire du déclarant pour obtenir la mainlevée provisoire sans immobiliser la marchandise sur quai ?
+              </h3>
+</div>
+</div>
+<!-- Technical Context Reference Box -->
+<div class="bg-surface-container-low rounded-xl p-4 mb-8 flex items-center gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container text-2xl">policy</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Base légale applicable :</strong> Règlements CEMAC N° 5/01-UEAC-049-CM-06 portant révision du Code des Douanes. Procédure dématérialisée SYDONIA World République du Congo.
+            </div>
+</div>
+<!-- Radio Answer Choices -->
+<div aria-label="Options de réponse" class="space-y-3" role="radiogroup">
+<!-- Option A -->
+<label class="group flex items-start gap-4 p-4 rounded-xl cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest group-hover:bg-primary-fixed mt-0.5 shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">A</span>
+</div>
+<div class="flex-1">
+<span class="font-body-md text-body-md text-on-surface">Déposer une plainte au Tribunal de Grande Instance de Pointe-Noire avec effet suspensif immédiat sur le titre d’enlèvement.</span>
+</div>
+</label>
+<!-- Option B (Selected/Active State) -->
+<label class="group flex items-start gap-4 p-4 rounded-xl cursor-pointer bg-surface-container-low shadow-sm transition-all">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-primary-container text-surface-container-lowest mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div class="flex-1">
+<span class="font-body-md text-body-md text-primary font-bold">Constituer une consignation bancaire ou caution financière auprès du Trésor Public couvrant le différentiel de droits contestés (Option sélectionnée).</span>
+<p class="font-label-sm text-label-sm text-on-tertiary-container mt-1 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+                  Réponse temporairement verrouillée dans votre feuille d'examen
+                </p>
+</div>
+</label>
+<!-- Option C -->
+<label class="group flex items-start gap-4 p-4 rounded-xl cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest group-hover:bg-primary-fixed mt-0.5 shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">C</span>
+</div>
+<div class="flex-1">
+<span class="font-body-md text-body-md text-on-surface">Demander le refoulement immédiat de la cargaison maritime vers le port de transbordement de Luanda sans enregistrement D6.</span>
+</div>
+</label>
+<!-- Option D -->
+<label class="group flex items-start gap-4 p-4 rounded-xl cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest group-hover:bg-primary-fixed mt-0.5 shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">D</span>
+</div>
+<div class="flex-1">
+<span class="font-body-md text-body-md text-on-surface">Abandonner la marchandise au profit de l’administration des douanes pour annuler d’office la créance fiscale.</span>
+</div>
+</label>
+</div>
+<!-- Bottom Action Buttons: Previous, Bookmark, Next -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 bg-surface-container-low/30 rounded-xl px-4 py-3">
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-surface-container-highest hover:bg-primary-fixed text-primary font-label-md text-label-md font-bold flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+              Question Précédente
+            </button>
+<button class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-secondary-fixed/50 hover:bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+              Marquer pour relecture
+            </button>
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-2 shadow-sm transition-all">
+              Question Suivante (43/100)
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Case Practical Support Document (Image & Schema) -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-center">
+<img class="w-full md:w-48 h-32 rounded-xl object-cover shadow-sm shrink-0" data-alt="High quality aerial photograph of the modern shipping container terminal at Autonomous Port of Pointe-Noire Congo with blue sea, giant gantry cranes, stacks of freight containers and logistics inspectors reviewing shipping manifests under direct sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJcKmQMOJ3DQiyF1jq8YOmTluM-2c9qqyLMUjj6ZpHPLyfj0K_fcLA5tg1XALUdN_ZuqKb_cQW-34OFWbYb4oAX8vnPY8qpMLevK894GEsGuRMyPhfd1bXu8bjPt1otbi_tVxvekqcHCjOB1PLpCbr9xD5SfTp6e45r9uZuNyada8PMEOD6a2cO2g94_QrJYahs9PkRDVz-bhuUAOEekwWMy6BT_5p6cgNhCjfjKTJRCy3O10nUXVtgA"/>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-base">attach_file</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Pièce jointe au cas #42</span>
+</div>
+<h4 class="font-title-md text-title-md font-bold text-primary mb-1">Bordereau de Transit SYDONIA &amp; Déclaration D24</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Manifeste fret maritime MSC Corcovado, connaissement Bill of Lading BL-BZV-2024-0988. Valeur déclarée : 34 500 000 FCFA.</p>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container font-label-sm text-label-sm font-bold flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-base">zoom_in</span>
+            Agrandir la liasse documentaire
+          </button>
+</div>
+</div>
+</div>
+<!-- Exam Sidebar: Rules, Question Selector Grid & Final Submission -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Integrity & Regulatory Rules Card -->
+<div class="bg-primary-container text-on-primary rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-surface-container-lowest">Règles &amp; Éligibilité</h3>
+</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-surface-container-high/90">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-base shrink-0 mt-0.5">check_circle</span>
+<span><strong>Seuil éliminatoire :</strong> 70% de réussite exigé par le jury académique ALB.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-base shrink-0 mt-0.5">lock_clock</span>
+<span><strong>Tentative unique :</strong> Tout abandon ou rafraîchissement invalide la feuille d'examen.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-base shrink-0 mt-0.5">fingerprint</span>
+<span><strong>Chiffrement O2Switch :</strong> Horodatage cryptographique SHA-256 certifié CEMAC.</span>
+</li>
+</ul>
+<div class="mt-5 pt-4 bg-surface-container-lowest/5 rounded-lg p-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-xl">shield</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-semibold">Session verrouillée sans possibilité d'assistance externe.</span>
+</div>
+</div>
+<!-- Quick Question Selector 100 Matrix -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">grid_view</span>
+<h4 class="font-title-md text-title-md font-bold text-primary">Grille des 100 Questions</h4>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Lot 1 à 100</span>
+</div>
+<!-- Legend -->
+<div class="flex items-center justify-between gap-2 mb-4 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-on-tertiary-container"></span> Validée</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-secondary"></span> Relecture</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-primary-container text-white text-center leading-3 text-[9px] font-bold">42</span> Active</span>
+<span class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-surface-container"></span> Non vue</span>
+</div>
+<!-- Interactive 100 Question Grid (Bento mini cell layout) -->
+<div class="grid grid-cols-10 gap-1.5 max-h-64 overflow-y-auto pr-1">
+<!-- Render 1 to 41 (Simulated answered & flagged) -->
+<!-- 1-10 -->
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">1</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">2</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">3</button>
+<button class="h-7 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">4</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">5</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">6</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">7</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">8</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">9</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">10</button>
+<!-- 11-20 -->
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">11</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">12</button>
+<button class="h-7 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">13</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">14</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">15</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">16</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">17</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">18</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">19</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">20</button>
+<!-- 21-30 -->
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">21</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">22</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">23</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">24</button>
+<button class="h-7 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">25</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">26</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">27</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">28</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">29</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">30</button>
+<!-- 31-40 -->
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">31</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">32</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">33</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">34</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">35</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">36</button>
+<button class="h-7 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">37</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">38</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">39</button>
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">40</button>
+<!-- 41 - 50 (42 Active) -->
+<button class="h-7 rounded bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">41</button>
+<button class="h-7 rounded bg-primary-container text-secondary-fixed font-label-sm text-label-sm font-extrabold shadow">42</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">43</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">44</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">45</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">46</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">47</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">48</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">49</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">50</button>
+<!-- 51 - 60 (Upcoming Unseen) -->
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">51</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">52</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">53</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">54</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">55</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">56</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">57</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">58</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">59</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">60</button>
+<!-- 61 - 70 -->
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">61</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">62</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">63</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">64</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">65</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">66</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">67</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">68</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">69</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">70</button>
+<!-- 71 - 80 -->
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">71</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">72</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">73</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">74</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">75</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">76</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">77</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">78</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">79</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">80</button>
+<!-- 81 - 90 -->
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">81</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">82</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">83</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">84</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">85</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">86</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">87</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">88</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">89</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">90</button>
+<!-- 91 - 100 -->
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">91</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">92</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">93</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">94</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">95</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">96</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">97</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">98</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">99</button>
+<button class="h-7 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">100</button>
+</div>
+</div>
+<!-- Official CEMAC Parchment Preview & Final Submission Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-md flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md font-bold text-primary">Titre Officiel Délivré</h4>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Parchemin CEMAC Certifié</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          La validation de cet examen délivre instantanément le titre d'aptitude professionnelle avec sceau d'État et vérificateur QR Code décentralisé.
+        </p>
+<!-- Final Confirmation Button -->
+<button class="w-full py-4 px-6 rounded-xl bg-secondary hover:bg-on-secondary-container text-on-secondary font-headline-sm text-headline-sm font-bold shadow-lg transition-all flex items-center justify-center gap-3 mt-2" id="submit-exam-btn">
+<span class="material-symbols-outlined text-2xl">send_and_archive</span>
+          Soumettre définitivement
+        </button>
+<span class="text-center font-label-sm text-label-sm text-on-surface-variant">Action irréversible • Clôture définitive du cycle ALB</span>
+</div>
+</div>
+</div>
+<!-- Interactive Submission Confirm Modal (Toggled by JS) -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="submit-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-8 shadow-2xl relative">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed/40 text-secondary mx-auto flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary text-center font-bold mb-2">
+        Confirmer la remise officielle ?
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-center mb-6 leading-normal">
+        Vous avez répondu à <strong class="text-on-surface">42 questions sur 100</strong>. Les questions non répondues seront comptabilisées à zéro point. Êtes-vous certain de vouloir soumettre votre copie au jury académique ?
+      </p>
+<div class="bg-surface-container-low rounded-xl p-4 mb-6 space-y-2 font-label-md text-label-md">
+<div class="flex justify-between text-on-surface">
+<span>Auditeur :</span>
+<span class="font-bold">Arsène Makosso</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>Horodatage O2Switch :</span>
+<span class="font-bold">2024-11-23 15:45:28 UTC</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>Statut protocole :</span>
+<span class="text-on-tertiary-container font-bold">Conforme CEMAC</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-1/2 py-3 rounded-xl bg-surface-container-highest hover:bg-surface-container text-primary font-label-md text-label-md font-bold transition-all" id="cancel-modal-btn">
+          Poursuivre l'examen
+        </button>
+<button class="w-1/2 py-3 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-bold shadow-md transition-all" onclick="alert('Feuille d\'examen transmise avec succès au jury de l\'Académie des Logisticiens de Brazzaville. Calcul du score officiel en cours...'); window.location.reload();">
+          Confirmer l'envoi
+        </button>
+</div>
+</div>
+</div>
+<!-- Inline Script for Countdown & Modal Interactions -->
+<script>
+    (function initExamEngine() {
+      // Countdown Timer Logic
+      var totalSeconds = 74 * 60 + 32; // 01:14:32 remaining
+      var timerElement = document.getElementById('exam-timer');
+
+      var countdownInterval = setInterval(function() {
+        if (totalSeconds <= 0) {
+          clearInterval(countdownInterval);
+          if (timerElement) timerElement.innerText = "00:00:00";
+          alert("Temps imparti écoulé ! Vos réponses sont transmises automatiquement au jury.");
+          return;
+        }
+        totalSeconds--;
+        var hours = Math.floor(totalSeconds / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = totalSeconds % 60;
+
+        var hStr = hours < 10 ? "0" + hours : hours;
+        var mStr = minutes < 10 ? "0" + minutes : minutes;
+        var sStr = seconds < 10 ? "0" + seconds : seconds;
+
+        if (timerElement) {
+          timerElement.innerText = hStr + ":" + mStr + ":" + sStr;
+        }
+      }, 1000);
+
+      // Submission Modal Handler
+      var submitBtn = document.getElementById('submit-exam-btn');
+      var modal = document.getElementById('submit-modal');
+      var cancelBtn = document.getElementById('cancel-modal-btn');
+
+      if (submitBtn && modal && cancelBtn) {
+        submitBtn.addEventListener('click', function() {
+          modal.classList.remove('hidden');
+        });
+        cancelBtn.addEventListener('click', function() {
+          modal.classList.add('hidden');
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full h-14 bg-surface-container-lowest shadow-[0_-1px_6px_rgba(11,30,54,0.03)] px-8 flex items-center justify-between"><div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span><span>Infrastructure O2Switch Cloud Datacenter Sécurisé SSL/TLS 256-bit</span></div><div class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Académie des Logisticiens de Brazzaville • Enregistrement CEMAC N° RCG-BZV-0492</div></footer></div></body></html>

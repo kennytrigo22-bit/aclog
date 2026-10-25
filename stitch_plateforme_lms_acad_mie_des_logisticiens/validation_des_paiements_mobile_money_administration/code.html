@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-bright":"#f9f9ff","surface-dim":"#cfdaf2","secondary-container":"#fcd358","tertiary-fixed-dim":"#6bd8cb","tertiary-fixed":"#89f5e7","inverse-surface":"#263143","on-error-container":"#93000a","error-container":"#ffdad6","tertiary":"#000403","primary-container":"#0b1e36","secondary-fixed-dim":"#eac249","surface-variant":"#d8e3fb","on-surface":"#111c2d","on-tertiary-fixed":"#00201d","surface-container-high":"#dee8ff","tertiary-container":"#00221e","inverse-primary":"#b6c7e7","outline-variant":"#c4c6ce","on-tertiary-fixed-variant":"#005049","on-background":"#111c2d","surface-container-lowest":"#ffffff","surface-container":"#e7eeff","on-primary-fixed":"#091c34","on-secondary-fixed-variant":"#584400","surface":"#f9f9ff","background":"#f9f9ff","on-secondary-fixed":"#241a00","surface-container-low":"#f0f3ff","on-secondary":"#ffffff","outline":"#74777e","on-primary":"#ffffff","error":"#ba1a1a","secondary-fixed":"#ffe08b","primary":"#00040e","surface-container-highest":"#d8e3fb","on-secondary-container":"#735a00","on-tertiary":"#ffffff","on-primary-container":"#7586a3","on-primary-fixed-variant":"#364762","surface-tint":"#4e5f7a","primary-fixed-dim":"#b6c7e7","inverse-on-surface":"#ecf1ff","primary-fixed":"#d5e3ff","secondary":"#745b00","on-error":"#ffffff","on-tertiary-container":"#119589","on-surface-variant":"#44474d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","margin-mobile":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","gutter-mobile":"1rem"},"fontFamily":{"headline-md":["Outfit"],"label-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Outfit"],"display-lg":["Outfit"],"headline-sm":["Outfit"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"metric-stat":["Outfit"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Outfit"],"display-lg-mobile":["Outfit"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["1.5rem",{"lineHeight":"1.35","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl-mobile":["1.625rem",{"lineHeight":"1.3","fontWeight":"600"}],"display-lg":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["1.25rem",{"lineHeight":"1.4","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.5","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.55","fontWeight":"400"}],"title-md":["1.125rem",{"lineHeight":"1.45","fontWeight":"600"}],"metric-stat":["1.75rem",{"lineHeight":"1.1","fontWeight":"700"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"headline-xl":["2.25rem",{"lineHeight":"1.25","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg-mobile":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25","letterSpacing":"0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary-container z-50 flex flex-col justify-between shadow-[0_4px_20px_rgba(11,30,54,0.15)]"><div class="flex flex-col"><div class="p-space-lg bg-primary"><div class="flex items-center gap-space-sm"><img alt="Logo Académie des Logisticiens" class="w-10 h-10 rounded-lg object-cover ring-2 ring-secondary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1XxqjwAYVjvs_zP9bRX1N6xBl6P6OWn35DSbiLXFFktaTA6KXGBs5vi2SNvGbDdT26jnTHmVDyAUL7clABIPU5j7fRZl1Q9iMDqgceEBDTvKE1k1TgdETtc-7b2MMWTTb7wOHV6WYtXUusMwaCIKNufpQvvmAlxDLs5-JL4qYDq9vf-0K3qU4fRmXH3S533i7gRWcJ9fkrouCOeaJ86KNp8rWUUahEpHoaZ4DxGYFrcu8s6AOml3-2hF6sNW3ATM1jOGtNmnLGfPw"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary-fixed tracking-wider uppercase">Académie des Logisticiens</span><span class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">ADMINISTRATION</span><span class="font-label-sm text-label-sm text-on-primary-container opacity-80 text-[10px]">Brazzaville • Rép. du Congo</span></div></div><div class="mt-space-sm flex items-center justify-between pt-space-xs"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>SUPER ADMIN</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-[12px]">cloud_done</span>O2Switch OK</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container opacity-70 px-space-sm">Navigation Centrale</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-lowest text-primary font-bold shadow-[0_2px_8px_rgba(0,0,0,0.08)]"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="tableau-de-bord" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de Bord / KPI</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 rounded-lg transition-colors bg-surface-container-lowest text-primary font-bold shadow-[0_2px_8px_rgba(0,0,0,0.08)]" data-path="validation-des-paiements" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">payments</span><span>Validation Paiements</span></div><span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm">MTN/Airtel 12</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-utilisateurs" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">group</span><span>Utilisateurs &amp; Apprenants</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-formations" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">school</span><span>Formations &amp; Examens (70%)</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-challenges-ctf" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">military_tech</span><span>Challenges CTF Logistique</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-promotions-jetons" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">monetization_on</span><span>Promotions &amp; Jetons FCFA</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="support-tickets" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Support &amp; Réclamations</span></div><span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">3</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="parametres-systeme" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres Système</span></div></a></nav></div><div class="p-space-md m-space-sm bg-primary rounded-xl"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-primary">Bénéficiaire Mobile Money</span><span class="font-body-sm text-body-sm text-secondary-fixed font-semibold">Didi Chance AMBIA (+242)</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(11,30,54,0.06)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md w-96"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Rechercher apprenant, transaction +242, diplôme..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-[18px] text-secondary">shield_person</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline-variant leading-none text-[10px]">Rôle Actif</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Super Administrateur</option><option>Gestionnaire Académique</option></select></div></div><div class="h-6 w-px bg-surface-variant"></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Commandes &amp; Alertes en attente" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Statut Serveur O2Switch" type="button"><span class="material-symbols-outlined text-[22px] text-tertiary-fixed-dim">dns</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Didi Chance AMBIA</span><span class="font-label-sm text-label-sm text-secondary leading-none">Super Admin • Brazzaville</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1XxqjwAYVjvs_zP9bRX1N6xBl6P6OWn35DSbiLXFFktaTA6KXGBs5vi2SNvGbDdT26jnTHmVDyAUL7clABIPU5j7fRZl1Q9iMDqgceEBDTvKE1k1TgdETtc-7b2MMWTTb7wOHV6WYtXUusMwaCIKNufpQvvmAlxDLs5-JL4qYDq9vf-0K3qU4fRmXH3S533i7gRWcJ9fkrouCOeaJ86KNp8rWUUahEpHoaZ4DxGYFrcu8s6AOml3-2hF6sNW3ATM1jOGtNmnLGfPw"/></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Operational Notice Banner / SLA Tracker -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary via-primary-container to-primary text-on-primary p-space-lg mb-space-lg shadow-xl">
+<div class="absolute -right-10 -bottom-10 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-secondary-fixed/20 flex items-center justify-center text-secondary-fixed shadow-inner shrink-0">
+<span class="material-symbols-outlined text-[32px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Protocole Manuel Phase 1 • Section 7 Cahier des Charges</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest animate-ping"></span>
+              SLA : ≤ 30 min garanti
+            </span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-surface-container-lowest mt-0.5">
+            Validation des Commandes &amp; Dépôts Mobile Money (+242)
+          </span>
+<p class="font-body-sm text-body-sm text-on-primary-container max-w-3xl mt-1">
+            Compte d’encaissement centralisé : <strong class="text-secondary-fixed font-bold">+242 068 287 915</strong> (Bénéficiaire certifié : <strong class="text-surface-container-lowest">Didi Chance AMBIA</strong>). Canaux autorisés : MTN Mobile Money Congo &amp; Airtel Money RCG.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md w-full lg:w-auto justify-end">
+<div class="bg-surface-container-lowest/10 backdrop-blur-md px-4 py-2.5 rounded-xl flex items-center gap-3">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline-variant text-[11px] uppercase">Solde Traité Aujourd'hui</span>
+<span class="font-metric-stat text-metric-stat text-secondary-fixed">845 000 <span class="font-label-sm text-label-sm font-normal">FCFA</span></span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed text-[26px]">account_balance_wallet</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Badges & Filters Row -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Tabs Filter -->
+<div class="flex items-center gap-1 p-1 bg-surface-container-low rounded-xl shadow-sm">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all" type="button">
+<span>Toutes les commandes</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">142</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-transparent text-error hover:bg-error-container/30 font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span>En Attente de Validation</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold">4</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-transparent text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-all" type="button">
+<span>Validées</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface font-label-sm text-label-sm">128</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-transparent text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-all" type="button">
+<span>Rejetées</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface font-label-sm text-label-sm">10</span>
+</button>
+</div>
+<!-- Quick Search & Accounting Export -->
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<div class="relative flex-1 md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">person_search</span>
+<input class="w-full bg-surface-container-lowest pl-9 pr-4 py-2 rounded-xl text-body-sm font-body-sm text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:bg-surface-container-lowest" placeholder="Arsène MAKOSSO, ALB-2024, TxId..." type="text"/>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Comptable</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+<div class="hidden group-hover:flex flex-col absolute right-0 top-full mt-1 w-52 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-2">
+<a class="flex items-center gap-2 px-4 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container" href="#">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">table_view</span>
+<span>Grand Livre (CSV Excel)</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container" href="#">
+<span class="material-symbols-outlined text-[18px] text-error">picture_as_pdf</span>
+<span>Bordereau Fiscal (PDF)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Split Screen Arbitrage Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl items-start">
+<!-- LEFT PANEL: Active Transaction Under Inspection (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md relative overflow-hidden">
+<!-- Top status indicator strip -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-container font-bold text-label-sm font-label-sm">01</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Dossier en Arbitrage Direct</span>
+<span class="font-title-md text-title-md font-bold text-primary">COMMANDE #CMD-2026-0924-884</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-error-container/60 px-3 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-error-container font-bold">Reçu il y a 8 min (Urgence SLA)</span>
+</div>
+</div>
+<!-- Student & Course Details Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md bg-surface-container-low p-space-md rounded-xl mb-space-md">
+<!-- Student profile block -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline text-[11px]">Apprenant Destinataire</span>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center font-headline-sm font-bold text-headline-sm">
+                AM
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-primary truncate">Arsène MAKOSSO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Matricule : <strong class="text-primary font-bold">ALB-2024-89</strong></span>
+</div>
+</div>
+<div class="mt-1 flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">phone_in_talk</span>
+<span class="font-semibold">+242 06 912 34 56</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm">MTN Congo</span>
+</div>
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+<span class="truncate">arsene.makosso@port-pointe-noire.cg</span>
+</div>
+</div>
+<!-- Course enrollment target -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold text-[11px]">Module Commandé</span>
+<span class="font-label-md text-label-md font-bold text-primary leading-snug">
+              Maîtrise Opérationnelle du Dédouanement et Transit (SYDONIA WORLD)
+            </span>
+<div class="mt-auto pt-2 flex items-center justify-between text-body-sm font-body-sm">
+<span class="inline-flex items-center gap-1 text-on-surface-variant text-[12px]">
+<span class="material-symbols-outlined text-[15px] text-secondary">token</span>
+                Accès Immédiat
+              </span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Examen 70% Requis</span>
+</div>
+</div>
+</div>
+<!-- Financial Breakdown Ledger -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-space-xs block">Décompte Financier Officiel</span>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Prix Catalogue de la Formation :</span>
+<span class="font-semibold text-on-surface">75 000 FCFA</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+                Réduction Jetons Apprenant (200 Jetons FCFA) :
+              </span>
+<span class="font-bold text-error">- 10 000 FCFA</span>
+</div>
+<div class="h-px bg-surface-variant my-1"></div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Montant Net Réclamé &amp; Attendu</span>
+<span class="font-label-sm text-label-sm text-outline">Dépôt exact attendu sur compte +242 068 287 915</span>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-primary text-secondary">65 000 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick 1-Click Action Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch gap-space-md pt-space-xs">
+<!-- Approval Action -->
+<button class="flex-1 flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-tertiary-container hover:bg-primary-container text-tertiary-fixed font-bold font-label-md text-label-md shadow-lg hover:shadow-xl transition-all group" id="btn-validate" onclick="triggerValidationSuccess()" type="button">
+<span class="material-symbols-outlined text-[24px] text-tertiary-fixed group-hover:scale-110 transition-transform">check_circle</span>
+<div class="flex flex-col text-left">
+<span class="leading-tight text-white font-headline-sm">Valider &amp; Débloquer l'Accès</span>
+<span class="text-[11px] text-tertiary-fixed font-normal">Push notification + Email instantanés</span>
+</div>
+</button>
+<!-- Rejection Action with Dropdown -->
+<div class="relative sm:w-60">
+<button class="w-full h-full min-h-[58px] flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-bold font-label-md text-label-md transition-all" onclick="document.getElementById('reject-dropdown').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+<span>Rejeter la Commande</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<!-- Rejection Reason Modal/Dropdown -->
+<div class="hidden absolute left-0 sm:right-0 sm:left-auto top-full mt-2 w-72 bg-surface-container-lowest rounded-xl shadow-2xl p-space-md z-30 flex flex-col gap-2" id="reject-dropdown">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Sélectionner Motif du Rejet</span>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-error-container/30 text-body-sm font-body-sm text-on-surface" onclick="confirmRejection('Montant Mobile Money non reçu')" type="button">
+                1. Montant non reçu sur +242 068 287 915
+              </button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-error-container/30 text-body-sm font-body-sm text-on-surface" onclick="confirmRejection('Capture de reçu illisible ou falsifiée')" type="button">
+                2. Capture d'écran illisible / altérée
+              </button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-error-container/30 text-body-sm font-body-sm text-on-surface" onclick="confirmRejection('Nom de bénéficiaire erroné')" type="button">
+                3. Erreur Bénéficiaire (Non-Didi Chance AMBIA)
+              </button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-error-container/30 text-body-sm font-body-sm text-on-surface" onclick="confirmRejection('Trop-perçu / Remboursement engagé')" type="button">
+                4. Erreur montant : Remboursement sous 5 min engagé
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: High-Fidelity Proof Inspection / Mobile Money SMS Preview (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">receipt_long</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Preuve de Dépôt Fournie</span>
+</div>
+<button class="flex items-center gap-1 px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-variant font-label-sm text-label-sm text-primary transition-colors" onclick="toggleZoomModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+<span>Agrandir</span>
+</button>
+</div>
+<!-- Simulated Mobile Phone / Receipt View -->
+<div class="relative bg-primary-container text-on-primary-container rounded-2xl p-space-md shadow-inner overflow-hidden">
+<div class="flex items-center justify-between mb-3 pb-2 bg-surface-container-lowest/5 px-2 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-wider">SMS Réseau MTN Mobile Money Congo</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">14:22 GMT+1</span>
+</div>
+<!-- Exact SMS Text Simulation -->
+<div class="bg-surface-container-lowest text-on-surface p-space-md rounded-xl shadow-lg relative mb-space-md">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">sms</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-bold">Expéditeur : MTNMobileMoney</span>
+<p class="font-body-sm text-body-sm font-medium text-on-surface mt-1 leading-relaxed">
+                  « Vous avez envoyé <strong class="text-primary font-bold bg-secondary-fixed/30 px-1 rounded">65000 FCFA</strong> avec succès à <strong class="text-primary font-bold">DIDI CHANCE AMBIA</strong> (+242068287915) le 24/09/2026 à 14:22:18. Réf: <span class="font-mono font-bold text-primary">TxId-99281923</span>. Nouveau solde: 14 250 FCFA. Frais: 650 FCFA. »
+                </p>
+</div>
+</div>
+</div>
+<!-- Inspection Checklist -->
+<div class="space-y-2 text-body-sm font-body-sm bg-surface-container-lowest/5 p-space-sm rounded-xl">
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-surface-dim">Identifiant Transaction (Réf) :</span>
+<span class="font-mono font-bold text-secondary-fixed">TxId-99281923</span>
+</div>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-surface-dim">Destinataire Vérifié :</span>
+<span class="font-semibold text-tertiary-fixed">Didi Chance AMBIA (Conforme)</span>
+</div>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-surface-dim">Montant Net Validé :</span>
+<span class="font-bold text-surface-container-lowest">65 000 FCFA (Exact)</span>
+</div>
+</div>
+<!-- Thumbnail of uploaded screenshot with photo alt -->
+<div class="mt-space-md relative rounded-xl overflow-hidden shadow-md cursor-pointer group" onclick="toggleZoomModal()">
+<img class="w-full h-40 object-cover object-top group-hover:scale-105 transition-transform duration-300" data-alt="High-resolution smartphone screen capture showing a successful MTN Mobile Money transaction receipt in Brazzaville Congo. The screen shows golden yellow and navy blue branding, a confirmation checkmark, 65000 FCFA sent to Didi Chance AMBIA, and a sharp timestamp in bright studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5e4M0bGvMMqQO7CsfOAuF-SO5aFiGOUOYFdjtZH0jjCGQb5HwgdM6bjSUPhyhyLlIIpnwN-MxY_Tgn2bMThbNmQlUdrvAXuinQyuDPu9pu8qwX0mLtPJK7iuLLFHuGaAow9sTZG1X_M07XbqcOdQTiYxSj1hTouh_skJlag5Eis9szY96iS5ySVEx0HVd6goP-N4ywG_EpfaaT1v1RoE4qMr5W9KRrzAo8CBgQNV5WkT_kYLeSicwhg"/>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-lg">Cliquer pour agrandir le reçu original</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">info</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Audit automatique : Aucun doublon de référence détecté sur les 30 derniers jours.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Orders Table Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Journal des Transactions Récentes</span>
+<p class="font-body-sm text-body-sm text-outline">Toutes les soumissions de paiement effectuées par les apprenants congolais et sous-régionaux.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">Affichage : 5 sur 142 dossiers</span>
+</div>
+</div>
+<!-- Table Responsive Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">ID &amp; Horodatage</th>
+<th class="py-3 px-4">Apprenant &amp; Contact</th>
+<th class="py-3 px-4">Formation Inscrite</th>
+<th class="py-3 px-4">Opérateur / Réf</th>
+<th class="py-3 px-4 text-right">Montant</th>
+<th class="py-3 px-4 text-center">Statut</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-2 text-body-sm font-body-sm">
+<!-- Row 1: Selected / Pending (Arsène MAKOSSO) -->
+<tr class="bg-secondary-fixed/10 hover:bg-secondary-fixed/20 transition-colors">
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-primary">#CMD-0924-884</span>
+<span class="text-outline text-[12px]">Aujourd'hui, 14:22</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Arsène MAKOSSO</span>
+<span class="text-[12px] text-outline-variant">+242 06 912 34 56 (ALB-2024-89)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-medium text-primary line-clamp-1">Transit &amp; Dédouanement SYDONIA WORLD</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-bold text-on-surface">MTN Money</span>
+<span class="font-mono text-[11px] text-outline">TxId-99281923</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex flex-col items-end">
+<span class="font-bold text-primary font-headline-sm">65 000 FCFA</span>
+<span class="text-[10px] text-tertiary-container font-semibold">-200 Jetons appliqués</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                En Examen
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" type="button">
+                Arbitrer
+              </button>
+</td>
+</tr>
+<!-- Row 2: Pending (Airtel Money) -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-primary">#CMD-0924-883</span>
+<span class="text-outline text-[12px]">Aujourd'hui, 13:45</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Grace MBOUNGOU</span>
+<span class="text-[12px] text-outline-variant">+242 05 540 11 22 (ALB-2024-94)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-medium text-primary line-clamp-1">Gestion des Stocks &amp; Entreposage Portuaire</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-bold text-on-surface">Airtel Money</span>
+<span class="font-mono text-[11px] text-outline">AIR-892182</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="font-bold text-primary font-headline-sm">45 000 FCFA</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Urgent (22m)
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md transition-colors" type="button">
+                Examiner
+              </button>
+</td>
+</tr>
+<!-- Row 3: Validated -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-primary">#CMD-0924-882</span>
+<span class="text-outline text-[12px]">Aujourd'hui, 11:10</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Christian BAZOLO</span>
+<span class="text-[12px] text-outline-variant">+242 06 678 90 12 (ALB-2024-12)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-medium text-primary line-clamp-1">Fret Aérien IATA &amp; Manutention Aéroportuaire</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-bold text-on-surface">MTN Money</span>
+<span class="font-mono text-[11px] text-outline">TxId-99172635</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="font-bold text-primary font-headline-sm">90 000 FCFA</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Validé &amp; Actif
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Validated -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-primary">#CMD-0924-881</span>
+<span class="text-outline text-[12px]">Hier, 17:50</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Yolande NGOUABI</span>
+<span class="text-[12px] text-outline-variant">+242 05 601 23 45 (ALB-2024-51)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-medium text-primary line-clamp-1">Incoterms 2020 &amp; Chaîne Multimodale</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-bold text-on-surface">Airtel Money</span>
+<span class="font-mono text-[11px] text-outline">AIR-782910</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="font-bold text-primary font-headline-sm">50 000 FCFA</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                Validé &amp; Actif
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Rejected -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-mono font-bold text-primary">#CMD-0924-880</span>
+<span class="text-outline text-[12px]">Hier, 15:14</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-bold text-primary">Michel ILOKI</span>
+<span class="text-[12px] text-outline-variant">+242 06 432 10 98 (ALB-2024-102)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-medium text-primary line-clamp-1">Transport Maritime &amp; Logistique des Conteneurs</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-bold text-on-surface">MTN Money</span>
+<span class="font-mono text-[11px] text-error">TX-INVALIDE</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="font-bold text-outline font-headline-sm line-through">75 000 FCFA</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">close</span>
+                Rejeté (Faux Reçu)
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Zoom & Image Inspection Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-primary/80 backdrop-blur-md hidden items-center justify-center p-space-md" id="zoom-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-2xl w-full p-space-md shadow-2xl relative flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Inspection Agrandie • Reçu Mobile Money MTN</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-variant flex items-center justify-center text-primary" onclick="toggleZoomModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="relative rounded-xl overflow-hidden bg-black max-h-[716px] flex items-center justify-center">
+<img class="w-full h-auto object-contain max-h-[665px]" data-alt="Ultra sharp macro inspection photo of a smartphone display showing an official MTN Congo mobile money confirmation text with reference TxId-99281923 and recipient Didi Chance AMBIA on September 24 2026." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7F47W6Tg2x0_eEjGxxc-luBz4RHC21djD467puyuEFM-2CiIWz-xKNyfbLVK77YgtgSGvD5nkVxgS314S98AFwk9j6xiCpd3Ot62AKtF5CND4sOcohijkZMrJfteZQxgG2AxAK3X_uP-x_CouxVppA0WoMFZruEHUxfOEHfR5rFDNRjwkFDSHLsGyugBu_iIOULAPAPrtcZ3jcwh-UrOHHkSrMmkR9bqMAe0_hsQ5bHmKUOLc4_fKQ"/>
+</div>
+<div class="mt-space-md flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Preuve liée à la commande #CMD-0924-884 (Arsène MAKOSSO)</span>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md" onclick="toggleZoomModal()" type="button">Fermer l'Aperçu</button>
+</div>
+</div>
+</div>
+<!-- Action Toast Feedback Overlay -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 transition-transform duration-300 hidden" id="validation-toast">
+<div class="bg-tertiary-container text-tertiary-fixed px-6 py-4 rounded-xl shadow-2xl flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-white">Commande Validée avec Succès !</span>
+<span class="font-body-sm text-body-sm text-tertiary-fixed-dim">Accès cours débloqué • Notification transmise à Arsène MAKOSSO</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleZoomModal() {
+    const modal = document.getElementById('zoom-modal');
+    modal.classList.toggle('hidden');
+    modal.classList.toggle('flex');
+  }
+
+  function triggerValidationSuccess() {
+    const btn = document.getElementById('btn-validate');
+    const toast = document.getElementById('validation-toast');
+    
+    // Feedback visual change
+    btn.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin">refresh</span><span>Déblocage en cours...</span>';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.className = "flex-1 flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-surface-container-high text-outline font-bold font-label-md text-label-md cursor-not-allowed";
+      btn.innerHTML = '<span class="material-symbols-outlined text-[24px]">task_alt</span><span>Formation Débloquée avec Succès</span>';
+      
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-32');
+      }, 50);
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-32');
+        setTimeout(() => toast.classList.add('hidden'), 300);
+      }, 5000);
+    }, 800);
+  }
+
+  function confirmRejection(reason) {
+    document.getElementById('reject-dropdown').classList.add('hidden');
+    if (confirm("Confirmer le rejet de cette commande pour le motif suivant :\n\n" + reason)) {
+      alert("La commande a été marquée comme REJETÉE.\nMotif : " + reason + "\nUn SMS d'alerte et un email ont été adressés à l'apprenant.");
+    }
+  }
+</script></main></div></body></html>

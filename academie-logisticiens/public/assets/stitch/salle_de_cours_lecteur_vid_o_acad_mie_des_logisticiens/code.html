@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#44474d","inverse-primary":"#b6c7e7","tertiary-fixed-dim":"#6bd8cb","on-error-container":"#93000a","error-container":"#ffdad6","outline-variant":"#c4c6ce","outline":"#74777e","background":"#f9f9ff","inverse-surface":"#263143","on-primary-fixed-variant":"#364762","surface-container-highest":"#d8e3fb","on-primary":"#ffffff","inverse-on-surface":"#ecf1ff","primary":"#00040e","surface-container-lowest":"#ffffff","on-primary-fixed":"#091c34","secondary-fixed-dim":"#eac249","on-secondary-container":"#735a00","surface-dim":"#cfdaf2","surface-container-low":"#f0f3ff","on-tertiary-fixed-variant":"#005049","on-primary-container":"#7586a3","surface-tint":"#4e5f7a","surface-container":"#e7eeff","on-error":"#ffffff","primary-fixed-dim":"#b6c7e7","on-tertiary-container":"#119589","surface-container-high":"#dee8ff","tertiary-fixed":"#89f5e7","tertiary-container":"#00221e","on-surface":"#111c2d","surface":"#f9f9ff","tertiary":"#000403","surface-bright":"#f9f9ff","on-secondary-fixed-variant":"#584400","on-tertiary":"#ffffff","on-tertiary-fixed":"#00201d","on-secondary":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#745b00","secondary-container":"#fcd358","on-secondary-fixed":"#241a00","secondary-fixed":"#ffe08b","primary-container":"#0b1e36","error":"#ba1a1a","on-background":"#111c2d","surface-variant":"#d8e3fb"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-lg":"1.5rem"},"fontFamily":{"metric-stat":["Outfit"],"label-md":["Plus Jakarta Sans"],"display-lg":["Outfit"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Outfit"],"label-sm":["Plus Jakarta Sans"],"headline-md":["Outfit"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Outfit"],"headline-xl-mobile":["Outfit"],"headline-xl":["Outfit"],"body-sm":["Plus Jakarta Sans"]},"fontSize":{"metric-stat":["1.75rem",{"lineHeight":"1.1","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["1.125rem",{"lineHeight":"1.45","fontWeight":"600"}],"display-lg-mobile":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.04em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"1.35","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.55","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.4","fontWeight":"600"}],"headline-xl-mobile":["1.625rem",{"lineHeight":"1.3","fontWeight":"600"}],"headline-xl":["2.25rem",{"lineHeight":"1.25","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.5","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary z-50 flex flex-col justify-between shadow-[0_4px_24px_rgba(11,30,54,0.18)]"><div class="flex flex-col"><div class="h-20 px-6 flex items-center gap-3 bg-primary/40"><div class="w-10 h-10 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed">anchor</span></div><div><span class="block font-headline-sm text-headline-sm text-surface-container-lowest leading-none tracking-tight">ALB</span><span class="block font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider mt-0.5">Brazzaville Executive</span></div></div><div class="px-6 py-4"><div class="bg-surface-container-lowest/5 rounded-xl p-3 flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-lg">military_tech</span><span class="font-label-sm text-label-sm text-surface-container-lowest">Cadre Portuaire</span></div><span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-tertiary-container/80 px-2 py-0.5 rounded-full">Niv. III</span></div></div><nav class="px-4 space-y-1.5 mt-2" data-active-classes="bg-secondary text-on-secondary font-bold rounded-xl shadow-[0_4px_16px_rgba(11,30,54,0.12)]"><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span>Tableau de bord</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="mes-formations" href="#"><span class="material-symbols-outlined text-xl">school</span><span>Mes Formations</span></a><a aria-current="page" class="flex items-center gap-3 px-4 py-3 transition-all bg-secondary text-on-secondary font-bold rounded-xl shadow-[0_4px_16px_rgba(11,30,54,0.12)]" data-path="salle-de-cours" href="#"><span class="material-symbols-outlined text-xl">play_lesson</span><span>Salle de Cours</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="arene-challenges" href="#"><span class="material-symbols-outlined text-xl">flag</span><span>Arène Challenges</span><span class="ml-auto bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded">CTF</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="certifications-et-titres" href="#"><span class="material-symbols-outlined text-xl">verified</span><span>Certifications &amp; Titres</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="solde-et-jetons-fcfa" href="#"><span class="material-symbols-outlined text-xl">account_balance_wallet</span><span>Solde &amp; Jetons FCFA</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="support-et-mentorat" href="#"><span class="material-symbols-outlined text-xl">contact_support</span><span>Support &amp; Mentorat</span></a></nav></div><div class="p-4 mx-4 mb-6 rounded-xl bg-surface-container-lowest/5 backdrop-blur-sm"><div class="flex items-center gap-2 mb-2"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">O2Switch Cloud</span></div><p class="font-body-sm text-body-sm text-surface-container-high/80 leading-snug">Brazzaville, Rép. du Congo<br/><span class="text-secondary-fixed-dim font-label-sm text-label-sm font-semibold">Accrédité CEMAC</span></p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,30,54,0.06)] z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-6"><div class="flex flex-col"><h1 class="font-title-md text-title-md text-primary font-bold">Académie des Logisticiens</h1><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Campus Numérique Exécutif</span></div><div class="relative ml-4 w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Rechercher module, unité, document..." type="text"/></div></div><div class="flex items-center gap-5"><div class="flex items-center gap-3 bg-surface-container-low px-4 py-2 rounded-xl"><div class="flex items-center gap-1.5 text-secondary"><span class="material-symbols-outlined text-lg">workspace_premium</span><span class="font-label-md text-label-md font-bold">280 Pts</span></div><span class="text-outline-variant font-label-sm text-label-sm">•</span><div class="flex items-center gap-1.5 text-primary"><span class="material-symbols-outlined text-lg">payments</span><span class="font-label-md text-label-md font-bold">10 000 FCFA</span></div></div><div class="relative flex items-center"><button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-xl">notifications</span></button><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span></div><div class="flex items-center gap-1 bg-surface-container-low px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-base">language</span><span class="font-label-sm text-label-sm font-semibold uppercase">FR</span></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex items-center gap-3"><div class="text-right"><span class="block font-label-md text-label-md text-on-surface leading-tight font-bold">Arsène Makosso</span><span class="block font-label-sm text-label-sm text-on-surface-variant">N° ALB-2024-89</span></div><img alt="Profile" class="w-10 h-10 rounded-full object-cover shadow-[0_2px_8px_rgba(11,30,54,0.12)] ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1XxqjwAYVjvs_zP9bRX1N6xBl6P6OWn35DSbiLXFFktaTA6KXGBs5vi2SNvGbDdT26jnTHmVDyAUL7clABIPU5j7fRZl1Q9iMDqgceEBDTvKE1k1TgdETtc-7b2MMWTTb7wOHV6WYtXUusMwaCIKNufpQvvmAlxDLs5-JL4qYDq9vf-0K3qU4fRmXH3S533i7gRWcJ9fkrouCOeaJ86KNp8rWUUahEpHoaZ4DxGYFrcu8s6AOml3-2hF6sNW3ATM1jOGtNmnLGfPw"/></div></div></header><main class="relative pt-20 w-full min-h-[calc(100vh-3.5rem)] px-8 py-6 bg-surface"><div class="flex flex-col w-full">
+<!-- Fil d'Ariane & Actions Métier Haut de Page -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-4 mb-6">
+<div class="space-y-1.5 min-w-0">
+<nav class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant flex-wrap">
+<span class="hover:text-primary transition-colors cursor-pointer">Mes Formations</span>
+<span class="material-symbols-outlined text-xs text-outline-variant">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Procédures Douanières CEMAC &amp; Sydonia World</span>
+<span class="material-symbols-outlined text-xs text-outline-variant">chevron_right</span>
+<span class="text-secondary font-bold">Module 4 : Le Circuit de Visite Douanier</span>
+</nav>
+<div class="flex items-center gap-3 flex-wrap">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Unité DOU-402</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Leçon 4.2 : Traitement d'un DAU avec contestation de valeur en douane (Brazzaville / Pointe-Noire)</h2>
+</div>
+</div>
+<!-- Actions Rapides Session & Gamification -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="flex items-center gap-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md px-4 py-2.5 rounded-xl shadow-sm transition-all" id="toggleCinemaBtn">
+<span class="material-symbols-outlined text-lg">aspect_ratio</span>
+<span class="hidden sm:inline">Mode Focus Studio</span>
+</button>
+<button class="flex items-center gap-2 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-xl shadow-md transition-all" id="markCompletedBtn">
+<span class="material-symbols-outlined text-lg text-secondary-fixed">verified</span>
+<span>Marquer terminé</span>
+<span class="bg-surface-container-lowest/15 text-secondary-fixed text-xs px-2 py-0.5 rounded font-bold ml-1">+45 Pts</span>
+</button>
+</div>
+</div>
+<!-- Grille Principale LMS (Lecteur & Contenu vs Plan de Cours) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- Colonne Gauche : Lecteur & Matériel Pédagogique (8 cols) -->
+<div class="xl:col-span-8 flex flex-col space-y-6 transition-all duration-300" id="videoMainCol">
+<!-- Video Player Deck (Dark Executive Cinema UI) -->
+<div class="relative w-full rounded-2xl overflow-hidden bg-primary shadow-xl">
+<!-- Live Cloud Sync Indicator Tag -->
+<div class="absolute top-4 left-4 z-20 flex items-center gap-2 bg-primary/80 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-sm text-on-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span>Reprise synchronisée Cloud O2Switch • 1080p 60fps</span>
+</div>
+<div class="absolute top-4 right-4 z-20 flex items-center gap-2">
+<span class="bg-primary/80 backdrop-blur-md text-secondary-fixed font-label-sm text-label-sm px-3 py-1 rounded-lg font-bold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-sm">gavel</span> CEMAC Acte N° 2/98
+          </span>
+</div>
+<!-- Video Canvas & Poster Container -->
+<div class="relative aspect-video w-full flex items-center justify-center bg-primary overflow-hidden group">
+<img class="w-full h-full object-cover opacity-85 group-hover:scale-102 transition-transform duration-700" data-alt="A modern African logistics control center at Port of Pointe-Noire with large dual-screen customs software terminal Sydonia World, displaying cargo freight tariffs and maritime bills of lading in high definition cinematic lighting deep navy and gold reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2UWhITQ4y-uUieEu7lsaX26cEaz6jO0uH82-D-8twvZQzM6S4dXJV2KaDaVBxtLbCJQrt-gxdYITb2It-tZO5jGLlMVoXJt_DMdhhD6dA9GCnsAsZPSTt8CMNTrYvktvLe_Pd90GILg0QIqc1d_0KcjwIJ88bZNcFIaR4cyFNkgeg_wjM0vYkgx7hHCjzavHKThUbJGmr9wwUnR9gJifiUmXoNeU6cPHIapnmvEpisRpbk3xVl-_V6A"/>
+<!-- Subtle Dark Cinema Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent"></div>
+<!-- Central Play Trigger Overlay -->
+<button class="absolute w-20 h-20 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-xl hover:scale-110 hover:bg-secondary-fixed transition-all z-10" id="mainPlayBtn">
+<span class="material-symbols-outlined text-4xl ml-1 text-on-primary">play_arrow</span>
+</button>
+<!-- Watermark Discret Cadre Auditeur -->
+<div class="absolute bottom-20 right-6 text-on-primary/30 font-label-sm text-label-sm pointer-events-none select-none tracking-widest font-mono">
+            AUDITEUR : ARSENE MAKOSSO • ALB-2024-89
+          </div>
+<!-- Bottom Custom Control Bar -->
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary via-primary/95 to-transparent px-6 pt-8 pb-4 z-20 flex flex-col gap-2">
+<!-- Timeline & Chapter Track -->
+<div class="relative w-full group/timeline cursor-pointer py-1">
+<!-- Background Bar Track -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest/30 relative overflow-hidden">
+<!-- Current Progress (50.6% -> 24:18/48:00) -->
+<div class="h-full bg-secondary-fixed-dim rounded-full" style="width: 50.6%;"></div>
+</div>
+<!-- Interactive Chapter Markers -->
+<div class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none px-1">
+<span class="w-1.5 h-3 rounded-sm bg-on-primary shadow-sm" title="00:00 - Introduction"></span>
+<span class="w-1.5 h-3 rounded-sm bg-on-primary shadow-sm" style="margin-left: 20%;" title="10:15 - Cas pratique Sydonia++"></span>
+<span class="w-1.5 h-3 rounded-sm bg-secondary-container shadow-sm" style="margin-left: 50%;" title="24:18 - Procédure d'apurement (Position actuelle)"></span>
+<span class="w-1.5 h-3 rounded-sm bg-on-primary/60 shadow-sm" style="margin-left: 78%;" title="38:40 - Résumé &amp; Check-list"></span>
+</div>
+</div>
+<!-- Controls Row -->
+<div class="flex items-center justify-between text-on-primary pt-1">
+<div class="flex items-center gap-4">
+<button class="hover:text-secondary-fixed transition-colors flex items-center">
+<span class="material-symbols-outlined text-2xl">play_circle</span>
+</button>
+<button class="hover:text-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-xl">replay_10</span>
+</button>
+<button class="hover:text-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-xl">forward_10</span>
+</button>
+<div class="flex items-center gap-2 ml-2">
+<span class="material-symbols-outlined text-xl">volume_up</span>
+<div class="w-16 h-1.5 bg-surface-container-highest/40 rounded-full overflow-hidden hidden sm:block">
+<div class="w-4/5 h-full bg-on-primary"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-surface-container-highest font-mono ml-2">
+                  24:18 <span class="text-on-surface-variant font-normal">/ 48:00</span>
+</span>
+<span class="hidden md:inline text-xs bg-surface-container-lowest/10 text-secondary-fixed px-2 py-0.5 rounded font-semibold">
+                  Ch. 3 : Procédure d'apurement
+                </span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 text-xs bg-surface-container-lowest/15 px-2.5 py-1 rounded font-bold hover:bg-surface-container-lowest/25 cursor-pointer transition-all">
+<span>1.0x</span>
+</div>
+<button class="hover:text-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-xl">closed_caption</span>
+</button>
+<button class="hover:text-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+<button class="hover:text-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-xl">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Onglets d'Étude & Espace Pédagogique -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6">
+<!-- Navigation Onglets -->
+<div class="flex items-center gap-2 border-b-0 pb-4 overflow-x-auto">
+<button class="tab-btn flex items-center gap-2 px-5 py-2.5 rounded-xl font-label-md text-label-md font-bold transition-all bg-primary text-on-primary" data-tab="support">
+<span class="material-symbols-outlined text-lg">menu_book</span>
+<span>Support &amp; Transcription</span>
+</button>
+<button class="tab-btn flex items-center gap-2 px-5 py-2.5 rounded-xl font-label-md text-label-md font-bold transition-all bg-surface-container-low text-on-surface hover:bg-surface-container" data-tab="ressources">
+<span class="material-symbols-outlined text-lg">folder_zip</span>
+<span>Ressources téléchargeables (3)</span>
+</button>
+<button class="tab-btn flex items-center gap-2 px-5 py-2.5 rounded-xl font-label-md text-label-md font-bold transition-all bg-surface-container-low text-on-surface hover:bg-surface-container" data-tab="mentor">
+<span class="material-symbols-outlined text-lg">question_answer</span>
+<span>Poser une question au Mentor</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</button>
+</div>
+<!-- Contenu Onglet 1 : Support & Transcription Réglementaire -->
+<div class="tab-pane flex flex-col space-y-6 pt-4" id="tab-support-content">
+<div class="bg-surface-container-low p-4 rounded-xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Objectif opérationnel immédiat</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+                À l'issue de cette leçon, l'auditeur est capable de formuler une requête en commission d'arbitrage de valeur en douane (CAVD) conformément à l'article 24 du Code des Douanes CEMAC, en évitant l'immobilisation des conteneurs au Terminal de Pointe-Noire (Congo Terminal).
+              </p>
+</div>
+</div>
+<div class="space-y-4 text-on-surface">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">1. Contexte du Litige de Valeur Transactionnelle</h3>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+              Lors de la liquidation dans le module de dédouanement automatisé <strong>Sydonia World</strong>, le déclarant mandaté transmet le DAU (Document Administratif Unique) appuyé des factures pro-forma, fret B/L maritime et attestations d'assurance. Lorsque la valeur déclarée CAF s'écarte des cours mercuriaux ou de la valeur de transaction de référence établie par la Direction Générale des Douanes et Droits Indirects (DGDDI), le statut passe automatiquement en <em>Circuit Rouge (Visite physique + Contrôle documentaire approfondi)</em>.
+            </p>
+<!-- Schéma de Transit Interactif SVG Inline -->
+<div class="bg-surface p-5 rounded-xl space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Workflow Décisionnel CEMAC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Réf. Norme OMC Art. VII</span>
+</div>
+<div class="w-full overflow-x-auto py-2">
+<svg class="w-full min-w-[640px] h-32" fill="none" viewbox="0 0 760 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Step 1 -->
+<rect class="fill-surface-container" height="90" rx="10" width="160" x="10" y="25"></rect>
+<text class="fill-on-surface font-title-md text-xs font-bold" text-anchor="middle" x="90" y="55">1. Dépôt Sydonia</text>
+<text class="fill-on-surface-variant text-[11px]" text-anchor="middle" x="90" y="75">Enregistrement DAU</text>
+<text class="fill-secondary text-[10px] font-bold" text-anchor="middle" x="90" y="92">Code Circuit Visite</text>
+<!-- Arrow 1-2 -->
+<path class="text-outline-variant" d="M175 70 H 205" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2"></path>
+<polygon class="fill-outline-variant" points="205,66 215,70 205,74"></polygon>
+<!-- Step 2 -->
+<rect class="fill-surface-container" height="90" rx="10" width="160" x="220" y="25"></rect>
+<text class="fill-on-surface font-title-md text-xs font-bold" text-anchor="middle" x="300" y="55">2. Alerte Mercuriale</text>
+<text class="fill-on-surface-variant text-[11px]" text-anchor="middle" x="300" y="75">Écart &gt; 18% Base CAF</text>
+<text class="fill-error text-[10px] font-bold" text-anchor="middle" x="300" y="92">Suspension BAE</text>
+<!-- Arrow 2-3 -->
+<path class="text-outline-variant" d="M385 70 H 415" stroke="currentColor" stroke-width="2"></path>
+<polygon class="fill-outline-variant" points="415,66 425,70 415,74"></polygon>
+<!-- Step 3 (Active highlighted) -->
+<rect class="fill-primary-container" height="100" rx="12" width="170" x="430" y="20"></rect>
+<text class="fill-on-primary font-title-md text-xs font-bold" text-anchor="middle" x="515" y="52">3. Consignation FCFA</text>
+<text class="fill-surface-container-high text-[11px]" text-anchor="middle" x="515" y="72">Caution bancaire certifiée</text>
+<text class="fill-secondary-fixed text-[10px] font-bold" text-anchor="middle" x="515" y="92">Mainlevée Provisoire</text>
+<!-- Arrow 3-4 -->
+<path class="text-outline-variant" d="M605 70 H 635" stroke="currentColor" stroke-width="2"></path>
+<polygon class="fill-outline-variant" points="635,66 645,70 635,74"></polygon>
+<!-- Step 4 -->
+<rect class="fill-surface-container" height="90" rx="10" width="100" x="650" y="25"></rect>
+<text class="fill-on-surface font-title-md text-xs font-bold" text-anchor="middle" x="700" y="58">4. CAVD</text>
+<text class="fill-tertiary-container text-[11px] font-bold" text-anchor="middle" x="700" y="78">Arbitrage</text>
+<text class="fill-on-surface-variant text-[10px]" text-anchor="middle" x="700" y="94">Arrêté final</text>
+</svg>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary pt-2">2. Méthode d'instruction du Recours à l'Inspection Principale</h4>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+              Pour éviter les surestaries colossales facturées par les armateurs au môle de Pointe-Noire (pouvant atteindre 65 000 FCFA par conteneur/jour après franchise), la manœuvre recommandée par le corps professoral de l'Académie consiste à solliciter la mainlevée sous caution (Article 112 du Code des Douanes). Le dossier doit comporter obligatoirement la déclaration en douane d'exportation visée du pays d'origine (Chine, UE, Turquie).
+            </p>
+</div>
+</div>
+<!-- Contenu Onglet 2 : Ressources à Télécharger -->
+<div class="tab-pane hidden flex-col space-y-4 pt-4" id="tab-ressources-content">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Resource Card 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-9 h-9 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">1.8 MB</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary line-clamp-1">Spécimen DAU Vierge 2026.pdf</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Formulaire officiel à 8 feuillets pour déclaration en douane CEMAC.</p>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary font-label-sm text-label-sm py-2 px-3 rounded-lg shadow-sm transition-all font-bold">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Télécharger</span>
+</button>
+</div>
+<!-- Resource Card 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-9 h-9 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">menu_book</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">4.2 MB</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary line-clamp-1">Guide Guichet Unique GUOT 2026.pdf</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Procédures dématérialisées de pré-dédouanement au Congo.</p>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary font-label-sm text-label-sm py-2 px-3 rounded-lg shadow-sm transition-all font-bold">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Télécharger</span>
+</button>
+</div>
+<!-- Resource Card 3 -->
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">table_chart</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-mono">11.4 MB</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary line-clamp-1">Nomenclature SH 2022 Tarif CEMAC.xlsx</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tableau complet des droits de douane, TVA et centimes additionnels.</p>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 bg-secondary text-on-secondary hover:bg-secondary-fixed text-primary font-label-sm text-label-sm py-2 px-3 rounded-lg shadow-sm transition-all font-bold">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span>Télécharger tableur</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Contenu Onglet 3 : Poser une question au Mentor (Système Asynchrone) -->
+<div class="tab-pane hidden flex-col space-y-4 pt-4" id="tab-mentor-content">
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Senior African customs administrator and logistics professor smiling in formal suit in modern Brazzaville office portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4MuyxmRocxjGZeG__LkNTRX7z6XcptTZ9OplYcZ1FjRWVF2Zt6_tJDhG8C5dUS6Gd01xwi3DgUzUCPmlMyJFZIi9aCJsXnREho-XAkSkpO4Q6g7HnhOiJv6QGr6G-xZ2XWjOWtEmyrrkWYPdfcqN8_HoeR8bWebKV1K1DfeN7VKJAdKVQEpADWpKnmBBRAHPZ-LoWd1uZ133VagLwXAbPEB4OWBicZR-845fxu3zG4cDUDBUGrAmFvw"/>
+<div>
+<div class="flex items-center gap-2">
+<h5 class="font-label-md text-label-md font-bold text-primary">Colonel Honoré Mouanda</h5>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.2 rounded font-bold">Enseignant Référent</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Expert formateur Sydonia World &amp; Ancien Inspecteur Principal des Douanes du Port Autonome.</p>
+</div>
+</div>
+<form class="space-y-4" id="mentorQuestionForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm font-bold text-on-surface mb-1">Horodatage de référence dans la vidéo</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface font-mono font-label-md text-label-md px-3.5 py-2.5 rounded-lg" readonly="" type="text" value="24:18"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-secondary text-lg">timer</span>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-bold text-on-surface mb-1">Type d'interrogation</label>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-3.5 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option>Cas de jurisprudence / Écart de valeur</option>
+<option>Bug technique saisie Sydonia World</option>
+<option>Calcul des droits d'accises</option>
+<option>Préparation Examen de Titre</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-bold text-on-surface mb-1">Votre question technique détaillée</label>
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container resize-none" placeholder="Décrivez précisément votre doute opérationnel ou fournissez le contexte d'un dossier import/export..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Réponse garantie sous 4h ouvrées (Lun-Sam)</span>
+<button class="bg-primary text-on-primary hover:bg-primary-container px-6 py-2.5 rounded-xl font-label-md text-label-md font-bold shadow-md transition-all flex items-center gap-2" id="submitTicketBtn" type="button">
+<span class="material-symbols-outlined text-lg">send</span>
+<span>Transmettre au bureau des formateurs</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Colonne Droite : Plan de Cours & Progression Modulaire (4 cols) -->
+<div class="xl:col-span-4 flex flex-col space-y-6" id="courseOutlineCol">
+<!-- Carte Récapitulative Avancement Module -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col space-y-4">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Statut Général du Module</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Progression Modulaire</h3>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary font-metric-stat text-metric-stat">
+            65<span class="text-xs -mt-2">%</span>
+</div>
+</div>
+<!-- Jauge Graphique Stylisée -->
+<div class="space-y-2">
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-tertiary-fixed-dim rounded-full transition-all duration-500" style="width: 65%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>3 leçons sur 6 validées</span>
+<span>Reste env. 1h 40min</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2 text-on-surface">
+<div class="flex-1 bg-surface-container-low p-2.5 rounded-xl text-center">
+<span class="block font-metric-stat text-headline-sm font-bold text-primary">280</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Points acquis</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-2.5 rounded-xl text-center">
+<span class="block font-metric-stat text-headline-sm font-bold text-secondary">Niv. III</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rang Cadre</span>
+</div>
+</div>
+</div>
+<!-- Syllabus / Liste Interactive des Leçons -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-5 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary">format_list_bulleted</span>
+<h4 class="font-title-md text-title-md font-bold text-primary">Contenu du Module 4</h4>
+</div>
+<span class="bg-surface-container-highest text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold">6 Unités</span>
+</div>
+<div class="divide-y divide-surface-container-low max-h-[580px] overflow-y-auto">
+<!-- Leçon 4.1 (Validée) -->
+<div class="p-4 hover:bg-surface transition-colors flex items-start gap-3.5 cursor-pointer group">
+<div class="mt-0.5 w-6 h-6 rounded-full bg-on-tertiary-container/15 text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold uppercase tracking-wider">Terminé • 100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">35:10</span>
+</div>
+<h5 class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary truncate mt-0.5">Leçon 4.1 : Typologie des circuits Sydonia (Vert, Bleu, Jaune, Rouge)</h5>
+</div>
+</div>
+<!-- Leçon 4.2 (EN COURS / ACTIVE) -->
+<div class="p-4 bg-primary-container text-on-primary flex items-start gap-3.5 shadow-inner">
+<div class="mt-0.5 w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">play_arrow</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase tracking-wider">Leçon Active • 50%</span>
+<span class="font-label-sm text-label-sm text-surface-container-highest font-mono">48:00</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-on-primary truncate mt-0.5">Leçon 4.2 : Traitement d'un DAU avec contestation de valeur en douane</h5>
+<div class="w-full bg-surface-container-lowest/20 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full w-[50.6%]"></div>
+</div>
+</div>
+</div>
+<!-- Leçon 4.3 (Validée) -->
+<div class="p-4 hover:bg-surface transition-colors flex items-start gap-3.5 cursor-pointer group">
+<div class="mt-0.5 w-6 h-6 rounded-full bg-on-tertiary-container/15 text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold uppercase tracking-wider">Terminé • 100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">22:45</span>
+</div>
+<h5 class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary truncate mt-0.5">Leçon 4.3 : Procédure de visite à quai et prélèvements d'échantillons</h5>
+</div>
+</div>
+<!-- Leçon 4.4 (À Suivre) -->
+<div class="p-4 hover:bg-surface transition-colors flex items-start gap-3.5 cursor-pointer group">
+<div class="mt-0.5 w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">À venir</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">40:15</span>
+</div>
+<h5 class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary truncate mt-0.5">Leçon 4.4 : Mainlevée provisoire &amp; actes de soumission cautionnée</h5>
+</div>
+</div>
+<!-- Étape Quiz Modulaire Requis -->
+<div class="p-4 bg-secondary-container/15 hover:bg-secondary-container/25 transition-colors flex items-start gap-3.5 cursor-pointer border-l-0">
+<div class="mt-0.5 w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">quiz</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Quiz de Validation (70% requis)</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">15 QCM</span>
+</div>
+<h5 class="font-label-md text-label-md text-primary font-bold truncate mt-0.5">Test d'Évaluation Pratique M4 : Procédures Portuaires</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Débloque l'attestation de réussite du bloc technique.</p>
+</div>
+</div>
+<!-- Examen Final Verrouillé -->
+<div class="p-4 bg-surface-container-low/50 opacity-80 flex items-start gap-3.5 cursor-not-allowed">
+<div class="mt-0.5 w-6 h-6 rounded-full bg-surface-container-highest text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">lock</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-bold uppercase tracking-wider">Examen Certifiant Verrouillé</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">1h 20m</span>
+</div>
+<h5 class="font-label-md text-label-md text-on-surface font-bold truncate mt-0.5">Grand Examen de Titre : Déclarant en Douane CEMAC</h5>
+<div class="flex items-center gap-1.5 mt-1 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-xs text-secondary">lock_clock</span>
+<span>Accessible après 100% des modules (Actuellement 65%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pied du Sommaire avec Aide Directe -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Session synchronisée</span>
+</div>
+<button class="text-primary hover:text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span>Télécharger le Syllabus</span>
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Dynamique Micro-interaction -->
+<div class="fixed bottom-6 right-8 bg-primary text-on-primary px-5 py-3 rounded-xl shadow-xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 z-50 pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-secondary-fixed">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Progression enregistrée sur le Cloud ALB.</span>
+</div>
+</div>
+<script>
+  // Interaction Gestion des Onglets de Cours
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.getAttribute('data-tab');
+
+      // Réinitialiser les boutons
+      tabBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+
+      // Activer le bouton cliqué
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+      btn.classList.add('bg-primary', 'text-on-primary');
+
+      // Afficher le volet approprié
+      tabPanes.forEach(pane => {
+        pane.classList.add('hidden');
+      });
+      const activePane = document.getElementById(`tab-${targetTab}-content`);
+      if (activePane) {
+        activePane.classList.remove('hidden');
+      }
+    });
+  });
+
+  // Mode Focus Cinéma
+  const cinemaBtn = document.getElementById('toggleCinemaBtn');
+  const mainCol = document.getElementById('videoMainCol');
+  const outlineCol = document.getElementById('courseOutlineCol');
+  let isCinema = false;
+
+  cinemaBtn.addEventListener('click', () => {
+    isCinema = !isCinema;
+    if (isCinema) {
+      mainCol.classList.remove('xl:col-span-8');
+      mainCol.classList.add('xl:col-span-12');
+      outlineCol.classList.add('hidden');
+      cinemaBtn.querySelector('span:nth-child(2)').textContent = "Quitter Mode Focus";
+      cinemaBtn.classList.add('bg-secondary', 'text-on-secondary');
+    } else {
+      mainCol.classList.add('xl:col-span-8');
+      mainCol.classList.remove('xl:col-span-12');
+      outlineCol.classList.remove('hidden');
+      cinemaBtn.querySelector('span:nth-child(2)').textContent = "Mode Focus Studio";
+      cinemaBtn.classList.remove('bg-secondary', 'text-on-secondary');
+    }
+  });
+
+  // Toast Notifier Helper
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    toastMsg.textContent = message;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3500);
+  }
+
+  // Marquer comme terminé
+  const markCompletedBtn = document.getElementById('markCompletedBtn');
+  markCompletedBtn.addEventListener('click', () => {
+    markCompletedBtn.classList.add('bg-on-tertiary-container', 'text-on-primary');
+    markCompletedBtn.innerHTML = `
+      <span class="material-symbols-outlined text-lg">check_circle</span>
+      <span>Leçon Validée !</span>
+      <span class="bg-surface-container-lowest/20 text-on-primary text-xs px-2 py-0.5 rounded font-bold ml-1">+45 Pts</span>
+    `;
+    showToast("Leçon 4.2 enregistrée • 45 Points Executive crédités à votre solde.");
+  });
+
+  // Soumission Ticket Mentor
+  const submitTicketBtn = document.getElementById('submitTicketBtn');
+  if (submitTicketBtn) {
+    submitTicketBtn.addEventListener('click', () => {
+      showToast("Question transmise au Colonel Mouanda. Ticket #CEMAC-781 ouvert.");
+    });
+  }
+
+  // Play button micro-interaction
+  const mainPlayBtn = document.getElementById('mainPlayBtn');
+  if (mainPlayBtn) {
+    mainPlayBtn.addEventListener('click', () => {
+      mainPlayBtn.classList.toggle('scale-95');
+      showToast("Lecture de la session académique en cours...");
+    });
+  }
+</script></main><footer class="w-full h-14 bg-surface-container-lowest shadow-[0_-1px_6px_rgba(11,30,54,0.03)] px-8 flex items-center justify-between"><div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span><span>Infrastructure O2Switch Cloud Datacenter Sécurisé SSL/TLS 256-bit</span></div><div class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Académie des Logisticiens de Brazzaville • Enregistrement CEMAC N° RCG-BZV-0492</div></footer></div></body></html>

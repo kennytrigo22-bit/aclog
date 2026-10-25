@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-bright":"#f9f9ff","surface-dim":"#cfdaf2","secondary-container":"#fcd358","tertiary-fixed-dim":"#6bd8cb","tertiary-fixed":"#89f5e7","inverse-surface":"#263143","on-error-container":"#93000a","error-container":"#ffdad6","tertiary":"#000403","primary-container":"#0b1e36","secondary-fixed-dim":"#eac249","surface-variant":"#d8e3fb","on-surface":"#111c2d","on-tertiary-fixed":"#00201d","surface-container-high":"#dee8ff","tertiary-container":"#00221e","inverse-primary":"#b6c7e7","outline-variant":"#c4c6ce","on-tertiary-fixed-variant":"#005049","on-background":"#111c2d","surface-container-lowest":"#ffffff","surface-container":"#e7eeff","on-primary-fixed":"#091c34","on-secondary-fixed-variant":"#584400","surface":"#f9f9ff","background":"#f9f9ff","on-secondary-fixed":"#241a00","surface-container-low":"#f0f3ff","on-secondary":"#ffffff","outline":"#74777e","on-primary":"#ffffff","error":"#ba1a1a","secondary-fixed":"#ffe08b","primary":"#00040e","surface-container-highest":"#d8e3fb","on-secondary-container":"#735a00","on-tertiary":"#ffffff","on-primary-container":"#7586a3","on-primary-fixed-variant":"#364762","surface-tint":"#4e5f7a","primary-fixed-dim":"#b6c7e7","inverse-on-surface":"#ecf1ff","primary-fixed":"#d5e3ff","secondary":"#745b00","on-error":"#ffffff","on-tertiary-container":"#119589","on-surface-variant":"#44474d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-sm":"0.5rem","margin":"2rem","margin-mobile":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","gutter-mobile":"1rem"},"fontFamily":{"headline-md":["Outfit"],"label-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Outfit"],"display-lg":["Outfit"],"headline-sm":["Outfit"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"metric-stat":["Outfit"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Outfit"],"display-lg-mobile":["Outfit"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["1.5rem",{"lineHeight":"1.35","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl-mobile":["1.625rem",{"lineHeight":"1.3","fontWeight":"600"}],"display-lg":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["1.25rem",{"lineHeight":"1.4","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.5","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.55","fontWeight":"400"}],"title-md":["1.125rem",{"lineHeight":"1.45","fontWeight":"600"}],"metric-stat":["1.75rem",{"lineHeight":"1.1","fontWeight":"700"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"headline-xl":["2.25rem",{"lineHeight":"1.25","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg-mobile":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25","letterSpacing":"0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary-container z-50 flex flex-col justify-between shadow-[0_4px_20px_rgba(11,30,54,0.15)]"><div class="flex flex-col"><div class="p-space-lg bg-primary"><div class="flex items-center gap-space-sm"><img alt="Logo Académie des Logisticiens" class="w-10 h-10 rounded-lg object-cover ring-2 ring-secondary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1XxqjwAYVjvs_zP9bRX1N6xBl6P6OWn35DSbiLXFFktaTA6KXGBs5vi2SNvGbDdT26jnTHmVDyAUL7clABIPU5j7fRZl1Q9iMDqgceEBDTvKE1k1TgdETtc-7b2MMWTTb7wOHV6WYtXUusMwaCIKNufpQvvmAlxDLs5-JL4qYDq9vf-0K3qU4fRmXH3S533i7gRWcJ9fkrouCOeaJ86KNp8rWUUahEpHoaZ4DxGYFrcu8s6AOml3-2hF6sNW3ATM1jOGtNmnLGfPw"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary-fixed tracking-wider uppercase">Académie des Logisticiens</span><span class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">ADMINISTRATION</span><span class="font-label-sm text-label-sm text-on-primary-container opacity-80 text-[10px]">Brazzaville • Rép. du Congo</span></div></div><div class="mt-space-sm flex items-center justify-between pt-space-xs"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>SUPER ADMIN</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-[12px]">cloud_done</span>O2Switch OK</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container opacity-70 px-space-sm">Navigation Centrale</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-lowest text-primary font-bold shadow-[0_2px_8px_rgba(0,0,0,0.08)]"><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="tableau-de-bord" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de Bord / KPI</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="validation-des-paiements" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">payments</span><span>Validation Paiements</span></div><span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm">MTN/Airtel 12</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-utilisateurs" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">group</span><span>Utilisateurs &amp; Apprenants</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-formations" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">school</span><span>Formations &amp; Examens (70%)</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-challenges-ctf" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">military_tech</span><span>Challenges CTF Logistique</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="gestion-des-promotions-jetons" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">monetization_on</span><span>Promotions &amp; Jetons FCFA</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="support-tickets" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Support &amp; Réclamations</span></div><span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">3</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-lg text-on-primary-container hover:bg-surface-variant/20 hover:text-on-primary transition-colors font-label-md text-label-md" data-path="parametres-systeme" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres Système</span></div></a></nav></div><div class="p-space-md m-space-sm bg-primary rounded-xl"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-primary">Bénéficiaire Mobile Money</span><span class="font-body-sm text-body-sm text-secondary-fixed font-semibold">Didi Chance AMBIA (+242)</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(11,30,54,0.06)] flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md w-96"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Rechercher apprenant, transaction +242, diplôme..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-[18px] text-secondary">shield_person</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline-variant leading-none text-[10px]">Rôle Actif</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Super Administrateur</option><option>Gestionnaire Académique</option></select></div></div><div class="h-6 w-px bg-surface-variant"></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Commandes &amp; Alertes en attente" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Statut Serveur O2Switch" type="button"><span class="material-symbols-outlined text-[22px] text-tertiary-fixed-dim">dns</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Didi Chance AMBIA</span><span class="font-label-sm text-label-sm text-secondary leading-none">Super Admin • Brazzaville</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1XxqjwAYVjvs_zP9bRX1N6xBl6P6OWn35DSbiLXFFktaTA6KXGBs5vi2SNvGbDdT26jnTHmVDyAUL7clABIPU5j7fRZl1Q9iMDqgceEBDTvKE1k1TgdETtc-7b2MMWTTb7wOHV6WYtXUusMwaCIKNufpQvvmAlxDLs5-JL4qYDq9vf-0K3qU4fRmXH3S533i7gRWcJ9fkrouCOeaJ86KNp8rWUUahEpHoaZ4DxGYFrcu8s6AOml3-2hF6sNW3ATM1jOGtNmnLGfPw"/></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Notification Banner / Micro Status Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Paramètres Système &amp; Configuration Métier</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">SUPER ADMIN</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+          Mode Production Actif • Serveur O2Switch Cloud mutualisé • PHP 8.2 &amp; MySQL synchronisés
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-sm" id="backupBtn" onclick="runBackup()">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim" id="backupIcon">database</span>
+<span id="backupText">Sauvegarde BDD Manuelle</span>
+</button>
+<button class="flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all shadow-md" onclick="saveAllSettings()">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">save</span>
+<span>Enregistrer les modifications</span>
+</button>
+</div>
+</div>
+<!-- Interactive Navigation Tabs -->
+<div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-surface-container-low">
+<button class="tab-button flex items-center gap-2 px-space-md py-2.5 rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary font-bold shadow-sm" id="tab-finance" onclick="switchTab('finance')">
+<span class="material-symbols-outlined text-[20px] text-secondary">payments</span>
+<span>Paramètres Financiers &amp; Mobile Money</span>
+</button>
+<button class="tab-button flex items-center gap-2 px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-academic" onclick="switchTab('academic')">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+<span>Barèmes Académiques &amp; Examens</span>
+</button>
+<button class="tab-button flex items-center gap-2 px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-tokens" onclick="switchTab('tokens')">
+<span class="material-symbols-outlined text-[20px]">toll</span>
+<span>Gamification &amp; Jetons FCFA</span>
+</button>
+<button class="tab-button flex items-center gap-2 px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-smtp" onclick="switchTab('smtp')">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+<span>Passerelle SMTP &amp; SMS O2Switch</span>
+</button>
+<button class="tab-button flex items-center gap-2 px-space-md py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-ai" onclick="switchTab('ai')">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+<span>IA &amp; Chatbot Logistique</span>
+</button>
+</div>
+<!-- Main Multi-Panel Content Container -->
+<div class="relative w-full">
+<!-- PANNEAU 1: Mobile Money & Finance (+242) -->
+<div class="tab-panel flex flex-col gap-space-lg" id="panel-finance">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Beneficiary & Mobile Money Configuration (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary">account_balance_wallet</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Compte Collecteur Officiel République du Congo (+242)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Section 7.1 • Canaux de règlement synchronisés MTN MoMo &amp; Airtel Money</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> RECONCILIATION LIVE
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-2">
+<!-- Field: Receiver Phone -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Numéro Récepteur Officiel (+242)</span>
+<span class="text-secondary font-mono text-[11px]">MTN CONGO / AIRTEL</span>
+</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">phone_iphone</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" type="text" value="+242 068 287 915"/>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Affiché aux apprenants sur l'invitation de transfert manuel.</span>
+</div>
+<!-- Field: Certified Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Nom Certifié du Bénéficiaire Mobile Money</span>
+<span class="text-tertiary-fixed-variant font-mono text-[11px]">IDENTITÉ STRICTE</span>
+</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">badge</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" type="text" value="Didi Chance AMBIA"/>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px]">KYC OK</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Nom apparaissant sur le terminal de validation MTN/Airtel.</span>
+</div>
+</div>
+<!-- Operator Switches Grid -->
+<div class="mt-space-sm flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Canaux et Passerelles Actives à Brazzaville &amp; Pointe-Noire</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<!-- MTN Mobile Money Switch -->
+<div class="p- space-md p-3 rounded-lg bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold">MTN MoMo</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>*105# Manuel &amp; Push</span>
+<span class="text-secondary font-bold">ACTIF</span>
+</div>
+</div>
+<!-- Airtel Money Switch -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Airtel Money</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-error"></div>
+</label>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>*128# Congo</span>
+<span class="text-error font-bold">ACTIF</span>
+</div>
+</div>
+<!-- Bank Wire Switch -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Virement CEMAC</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>BGFI / LCB Bank</span>
+<span class="text-on-surface font-bold">ACTIF</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Strict SLA Delays Configuration -->
+<div class="mt-space-sm pt-space-md bg-surface-container-low/50 rounded-xl p-space-md">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">timer</span>
+              Engagements SLA Administrateur &amp; Règlements Rapides
+            </span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Délai d'arbitrage garanti (SLA Validation Reçu)</span>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">30 minutes</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[11px]">Strict</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Temps max pour Didi Chance AMBIA pour valider la preuve SMS.</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Délai de remboursement en cas d'erreur de versement</span>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">5 minutes</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">Automatique</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Procédure d'annulation sécurisée en cas de double transaction.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Real-time Telemetry & Security Digest (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-primary-container text-on-primary-container shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Surveillance Passerelle</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim">wifi_tethering</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg text-[2.5rem] leading-none text-on-primary font-bold">99.88%</span>
+<span class="font-label-sm text-label-sm text-on-primary-container mt-1">Disponibilité passerelles +242 (30 derniers jours)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-primary/60 flex flex-col gap-2">
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-primary">Transactions Reçues Ce Mois :</span>
+<span class="font-bold text-secondary-fixed">4 850 000 FCFA</span>
+</div>
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-primary">Taux de résolution SLA &lt; 30 min :</span>
+<span class="font-bold text-tertiary-fixed-dim">98.4%</span>
+</div>
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-primary">Dossiers litigieux ouverts :</span>
+<span class="font-bold text-on-primary">0 dossier</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-highest/10 text-on-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">shield</span>
+<span class="font-label-sm text-[11px]">Audit trimestriel O2Switch conforme RGPD &amp; Directives CEMAC / BEAC.</span>
+</div>
+</div>
+<!-- Quick Actions Tile -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Opérations d'Urgence Trésorerie</span>
+<button class="w-full text-left p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container font-label-sm text-label-sm text-on-surface flex items-center justify-between transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">refresh</span>
+                Forcer la synchro des statuts MTN MoMo
+              </span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<button class="w-full text-left p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container font-label-sm text-label-sm text-on-surface flex items-center justify-between transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">download</span>
+                Exporter le grand livre financier (Excel)
+              </span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- PANNEAU 2: Barèmes Académiques & Examens (Section 5.4 & 10.10) -->
+<div class="tab-panel hidden flex flex-col gap-space-lg" id="panel-academic">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-8 flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary">school</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Barèmes de Diplomation &amp; Conditions d'Examen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Section 5.4 &amp; 10.10 • Seuil d'admissibilité au diplôme professionnel certifié</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+              NORME ACADÉMIQUE 70%
+            </span>
+</div>
+<!-- Passing Score Slider Component -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<label class="font-label-md text-label-md text-on-surface font-bold">Score de Passage Officiel par Défaut (Admissibilité)</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Indice minimal exigé pour l'obtention du diplôme et du certificat de compétences.</p>
+</div>
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-metric-stat text-metric-stat text-on-surface font-bold" id="scoreDisplay">70</span>
+<span class="font-metric-stat text-metric-stat text-secondary font-bold">%</span>
+</div>
+</div>
+<!-- Custom Slider Control -->
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant">50%</span>
+<input class="w-full h-2 bg-surface-dim rounded-lg appearance-none cursor-pointer accent-secondary" id="scoreSlider" max="95" min="50" oninput="updateScore(this.value)" step="1" type="range" value="70"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">95%</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Seuil de complaisance (Rejeté)</span>
+<span class="text-secondary font-bold">Standard Académie des Logisticiens (70%)</span>
+<span>Mention Très Honorable (&gt; 85%)</span>
+</div>
+</div>
+<!-- Academic Exam Parameters Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-2">
+<!-- Number of questions -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">quiz</span>
+<span class="font-label-sm text-label-sm font-semibold">Tirage Examen Final</span>
+</div>
+<div class="flex items-baseline gap-1">
+<input class="w-20 font-metric-stat text-metric-stat text-on-surface font-bold bg-transparent focus:outline-none" type="number" value="100"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">questions</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Générées aléatoirement depuis la banque QCM de l'unité.</span>
+</div>
+<!-- Exam Duration -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span class="font-label-sm text-label-sm font-semibold">Durée Chronométrée</span>
+</div>
+<div class="flex items-baseline gap-1">
+<input class="w-16 font-metric-stat text-metric-stat text-on-surface font-bold bg-transparent focus:outline-none" type="number" value="80"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">min (1h20)</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Compte à rebours strict avec soumission automatique.</span>
+</div>
+<!-- Number of attempts -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">lock_reset</span>
+<span class="font-label-sm text-label-sm font-semibold">Tentatives Autorisées</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-stat text-metric-stat text-on-surface font-bold">1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tentative</span>
+</div>
+<span class="font-label-sm text-[11px] text-secondary font-bold">Réactivation manuelle requise</span>
+</div>
+</div>
+<!-- Note on Retake & Manual Activation Policy -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Règle de Rattrapage &amp; Seconde Chance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Tout échec inférieur à 70% bloque automatiquement l'évaluation. Le Super Administrateur peut réactiver une 2nde tentative directement depuis la fiche de l'apprenant dans l'onglet <strong>Utilisateurs &amp; Apprenants</strong> après étude du dossier.
+              </p>
+</div>
+</div>
+</div>
+<!-- Academic Accreditation Card -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<span class="font-label-md text-label-md text-on-surface font-bold">Certificat Numérique &amp; Signature</span>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-primary-container flex items-center justify-center text-center p-space-md">
+<div class="flex flex-col items-center gap-2 z-10">
+<span class="material-symbols-outlined text-[36px] text-secondary-fixed">workspace_premium</span>
+<span class="font-headline-sm text-headline-sm text-on-primary">DIPLÔME OFFICIEL</span>
+<span class="font-label-sm text-[10px] text-on-primary-container tracking-widest uppercase">Signature Électronique Didi Chance AMBIA</span>
+</div>
+<div class="absolute inset-0 opacity-10 bg-radial-gradient"></div>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Modèle de diplôme :</span>
+<span class="font-bold text-on-surface">Trilingue FR/EN (A4)</span>
+</div>
+<div class="flex justify-between">
+<span>Contrôle QR-Code :</span>
+<span class="font-bold text-tertiary-fixed-dim">Actif (aclog.com/verify)</span>
+</div>
+<div class="flex justify-between">
+<span>Horodatage SHA-256 :</span>
+<span class="font-bold text-on-surface">Synchro O2Switch OK</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">preview</span>
+<span>Prévisualiser le Gabarit Diplôme</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- PANNEAU 3: Gamification & Jetons FCFA (Section 11) -->
+<div class="tab-panel hidden flex flex-col gap-space-lg" id="panel-tokens">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-8 flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary">token</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Mécanique de Conversion en Jetons FCFA Déductibles</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Section 11 • Incitation à l'excellence par la monnaie d'apprentissage</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+              100 PTS = 5 000 FCFA
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-2">
+<!-- Points per Level Test Passed -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Test de Niveau de Cours Réussi</span>
+<span class="material-symbols-outlined text-[22px] text-tertiary-fixed-dim">verified</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-stat text-[2.25rem] text-tertiary-fixed-dim font-bold">+2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">points / module</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant">
+                Crédités automatiquement après atteinte du score d'au moins 70% sur le test de positionnement intermédiaire.
+              </p>
+</div>
+<!-- Points per CTF Flag -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Challenge CTF Logistique Résolu</span>
+<span class="material-symbols-outlined text-[22px] text-secondary">flag</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-stat text-[2.25rem] text-secondary font-bold">+5</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">points / flag capturé</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant">
+                Validation d'un problème complexe de conteneurisation, douanes CEMAC ou traçabilité logistique.
+              </p>
+</div>
+</div>
+<!-- Non-Cumulative Rule Switch -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md mt-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[24px] text-error mt-0.5">block</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Règle de Non-Cumul : Jetons &amp; Codes Promo</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Interdit formellement d'appliquer simultanément une déduction par jetons FCFA et un code de réduction d'inscription pour préserver la marge financière de l'Académie.
+                </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Conversion Formula Simulator -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">Simulateur de conversion immédiat</span>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<input class="w-20 px-2 py-1 rounded bg-surface-container-lowest font-body-md text-body-md font-bold text-on-surface text-center focus:outline-none" id="simPoints" oninput="simTokenConvert(this.value)" type="number" value="100"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-bold">points</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">arrow_forward</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold" id="simValue">5 000</span>
+<span class="font-body-sm text-body-sm text-on-surface font-bold">FCFA de remise immédiate au panier</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Token Pool Stats (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<span class="font-label-md text-label-md text-on-surface font-bold">Réserve Globale de Jetons en Circulation</span>
+<div class="flex flex-col">
+<span class="font-metric-stat text-[2.5rem] leading-none text-on-surface font-bold">34 250</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Points actifs détenus par 312 apprenants</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 62%;"></div>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Équivalent valeur en FCFA :</span>
+<span class="font-bold text-on-surface">1 712 500 FCFA</span>
+</div>
+<div class="flex justify-between">
+<span>Jetons déduits ce mois :</span>
+<span class="font-bold text-tertiary-fixed-dim">350 000 FCFA</span>
+</div>
+<div class="flex justify-between">
+<span>Taux de réutilisation :</span>
+<span class="font-bold text-on-surface">74%</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-2 text-on-surface-variant font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+              Plafond max par commande d'inscription : 50% du prix de la formation.
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- PANNEAU 4: Passerelle Serveur O2Switch SMTP & SMS (Section 8.2) -->
+<div class="tab-panel hidden flex flex-col gap-space-lg" id="panel-smtp">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-8 flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[26px] text-tertiary-fixed-dim">dns</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Serveur SMTP &amp; Notifications Transactionnelles O2Switch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Section 8.2 • Infrastructure mutualisée Cloud hébergée en France</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> PORT 465 SSL
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-2">
+<!-- Host -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Hôte SMTP O2Switch</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">dns</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" type="text" value="mail.aclog.com"/>
+</div>
+</div>
+<!-- Port & Crypt -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Port &amp; Chiffrement</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">lock</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" type="text" value="465 (SSL / TLS Forcé)"/>
+</div>
+</div>
+<!-- Sender Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Email Expéditeur Officiel Académie</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">alternate_email</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" type="email" value="secretariat.pedagogique@aclog.com"/>
+</div>
+</div>
+<!-- SMS Gateway Status -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Passerelle SMS (+242 Route Directe)</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary">sms</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" type="text" value="Routeur O2Switch API / Twilio CEMAC"/>
+</div>
+</div>
+</div>
+<!-- Email Test Tool -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md mt-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Tester la passerelle d'expédition immédiatement</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Envoie un email de diagnostic avec signature DKIM/SPF vérifiée.</span>
+</div>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-2 flex-shrink-0" id="testMailBtn" onclick="testMailSender()">
+<span class="material-symbols-outlined text-[18px]" id="testMailIcon">send</span>
+<span id="testMailText">Envoyer un test</span>
+</button>
+</div>
+</div>
+<!-- Infrastructure Health (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<span class="font-label-md text-label-md text-on-surface font-bold">État du Serveur Cloud O2Switch</span>
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface">Espace Disque (SSD NVMe) :</span>
+<span class="font-bold text-on-surface">42 GB / 250 GB</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface">Charge CPU :</span>
+<span class="font-bold text-tertiary-fixed-dim">12% (Stable)</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface">PHP Runtime :</span>
+<span class="font-bold text-on-surface">8.2.14 FastCGI</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface">Base de données MySQL :</span>
+<span class="font-bold text-tertiary-fixed-dim">10.6 MariaDB OK</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-secondary-container/20 text-on-secondary-container font-label-sm text-[11px] flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">sync_saved_locally</span>
+              Dernier backup automatique O2Switch : Aujourd'hui à 03:00 UTC.
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- PANNEAU 5: IA & Chatbot Logistique CEMAC (Section 12.2) -->
+<div class="tab-panel hidden flex flex-col gap-space-lg" id="panel-ai">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-8 flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary">psychology</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Moteur IA &amp; Tuteur Logistique Automatisé</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Section 12.2 • Assistance pédagogique 24/7 adaptée au cadre réglementaire CEMAC</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span> GEMINI 1.5 FLASH
+            </span>
+</div>
+<!-- AI Model Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-2">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Moteur IA Sélectionné</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">memory</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" readonly="" type="text" value="Gemini 1.5 Flash (Gratuit Phase 1)"/>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Coût nul sur la phase 1 • Intégration API directe Google AI Studio.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Statut &amp; Quota Mensuel d'Interactions</label>
+<div class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim">speed</span>
+<input class="bg-transparent w-full font-body-md text-body-md text-on-surface font-bold focus:outline-none" readonly="" type="text" value="1 500 RPM • Illimité Phase 1"/>
+</div>
+<span class="font-label-sm text-[11px] text-tertiary-fixed-dim font-bold">Aucun dépassement de coût possible.</span>
+</div>
+</div>
+<!-- System Prompt Edition -->
+<div class="flex flex-col gap-1.5 mt-2">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Prompt Système Logistique CEMAC &amp; Référentiel Maritime de Pointe-Noire</span>
+<button class="text-secondary font-label-sm text-[11px] hover:underline" onclick="restorePrompt()">Réinitialiser par défaut</button>
+</label>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<textarea class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none resize-none font-mono" id="aiPrompt" rows="6">Tu es le tuteur d'élite et l'assistant logistique officiel de l'Académie des Logisticiens à Brazzaville. Tu réponds avec rigueur, professionnalisme et concision aux questions des apprenants. Tu maîtrises parfaitement : les Incoterms 2020 de la CCI, la convention de Rotterdam, le transit multimodal au Port Autonome de Pointe-Noire (PAPN), les règlements douaniers de la zone CEMAC, la chaîne du froid aéroportuaire et la gestion moderne des stocks WMS. Encourage la validation des tests à 70%.</textarea>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">
+              Ce cadrage oriente toutes les réponses fournies par le chatbot intégré dans l'espace de révision des apprenants.
+            </span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface">Activer l'assistance IA pendant les examens certifiants :</span>
+<span class="px-2 py-0.5 rounded bg-error/10 text-error font-label-sm text-[11px] font-bold">Strictement Désactivé (Anti-Fraude)</span>
+</div>
+</div>
+<!-- AI Capabilities Panel (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<span class="font-label-md text-label-md text-on-surface font-bold">Domaines d'Expertise Chatbot</span>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary">directions_boat</span>
+<span class="font-label-sm text-label-sm text-on-surface">Logistique Portuaire PAPN</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary">flight</span>
+<span class="font-label-sm text-label-sm text-on-surface">Fret Aérien Maya-Maya BZV</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
+<span class="font-label-sm text-label-sm text-on-surface">Réglementation Douanes CEMAC</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory_2</span>
+<span class="font-label-sm text-label-sm text-on-surface">Entreposage &amp; Incoterms 2020</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Questions traitées ce mois :</span>
+<span class="font-bold text-on-surface">1 842</span>
+</div>
+<div class="flex justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Taux de satisfaction tuteur :</span>
+<span class="font-bold text-secondary">96.7%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Audit Trail & Historical Changes Log -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px] text-on-surface-variant">history</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Journal des Dernières Modifications Administrateur</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Horodatage Fuseau Brazzaville (WAT / UTC+1)</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">
+<tr>
+<th class="py-2.5 px-4 rounded-l-lg">Date &amp; Heure</th>
+<th class="py-2.5 px-4">Super Admin</th>
+<th class="py-2.5 px-4">Composant Modifié</th>
+<th class="py-2.5 px-4">Ancienne Valeur</th>
+<th class="py-2.5 px-4">Nouvelle Valeur</th>
+<th class="py-2.5 px-4 rounded-r-lg">Statut O2Switch</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-4 font-mono text-[12px]">24 Mai 2024 • 14:32</td>
+<td class="py-3 px-4 font-bold">Didi Chance AMBIA</td>
+<td class="py-3 px-4">Numéro MoMo Récepteur</td>
+<td class="py-3 px-4 text-on-surface-variant">+242 066 ... ...</td>
+<td class="py-3 px-4 font-bold text-secondary">+242 068 287 915</td>
+<td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-[11px]">Enregistré</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-4 font-mono text-[12px]">20 Mai 2024 • 11:15</td>
+<td class="py-3 px-4 font-bold">Didi Chance AMBIA</td>
+<td class="py-3 px-4">Seuil Admissibilité Examen</td>
+<td class="py-3 px-4 text-on-surface-variant">65%</td>
+<td class="py-3 px-4 font-bold text-on-surface">70% (Standard)</td>
+<td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-[11px]">Enregistré</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3 px-4 font-mono text-[12px]">18 Mai 2024 • 09:04</td>
+<td class="py-3 px-4 font-bold">Didi Chance AMBIA</td>
+<td class="py-3 px-4">Modèle Chatbot IA</td>
+<td class="py-3 px-4 text-on-surface-variant">Inactif</td>
+<td class="py-3 px-4 font-bold text-secondary">Gemini 1.5 Flash</td>
+<td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-[11px]">Enregistré</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script>
+  // Tab Switching Logic
+  function switchTab(tabId) {
+    const tabs = ['finance', 'academic', 'tokens', 'smtp', 'ai'];
+    tabs.forEach(id => {
+      const panel = document.getElementById('panel-' + id);
+      const btn = document.getElementById('tab-' + id);
+      if (id === tabId) {
+        panel.classList.remove('hidden');
+        btn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        panel.classList.add('hidden');
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  // Interactive Passing Score Slider
+  function updateScore(val) {
+    document.getElementById('scoreDisplay').innerText = val;
+  }
+
+  // Token Simulator Dynamic Converter
+  function simTokenConvert(points) {
+    const p = parseInt(points) || 0;
+    const valueInFcfa = (p / 100) * 5000;
+    document.getElementById('simValue').innerText = new Intl.NumberFormat('fr-FR').format(Math.floor(valueInFcfa));
+  }
+
+  // Simulated 1-Click Database Backup Action
+  function runBackup() {
+    const btn = document.getElementById('backupBtn');
+    const icon = document.getElementById('backupIcon');
+    const text = document.getElementById('backupText');
+    
+    icon.innerText = 'sync';
+    icon.classList.add('animate-spin');
+    text.innerText = 'Dump MySQL en cours...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      icon.innerText = 'check_circle';
+      icon.classList.replace('text-tertiary-fixed-dim', 'text-secondary');
+      text.innerText = 'BDD Sauvegardée (SQL)';
+      
+      setTimeout(() => {
+        icon.innerText = 'database';
+        icon.classList.replace('text-secondary', 'text-tertiary-fixed-dim');
+        text.innerText = 'Sauvegarde BDD Manuelle';
+        btn.disabled = false;
+      }, 3500);
+    }, 1800);
+  }
+
+  // Interactive Save All Settings
+  function saveAllSettings() {
+    const notification = document.createElement('div');
+    notification.className = 'fixed bottom-6 right-6 z-50 flex items-center gap-3 px-space-md py-3 rounded-xl bg-primary text-on-primary shadow-2xl transition-all';
+    notification.innerHTML = `
+      <span class="material-symbols-outlined text-[20px] text-secondary-fixed">cloud_done</span>
+      <span class="font-label-md text-label-md">Modifications enregistrées avec succès sur O2Switch Cloud.</span>
+    `;
+    document.body.appendChild(notification);
+    setTimeout(() => {
+      notification.remove();
+    }, 3500);
+  }
+
+  // Interactive Email Sender Diagnostic
+  function testMailSender() {
+    const btn = document.getElementById('testMailBtn');
+    const icon = document.getElementById('testMailIcon');
+    const text = document.getElementById('testMailText');
+    
+    icon.innerText = 'sync';
+    icon.classList.add('animate-spin');
+    text.innerText = 'Connexion SMTP 465...';
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      icon.innerText = 'mark_email_read';
+      text.innerText = 'Email envoyé avec succès !';
+      setTimeout(() => {
+        icon.innerText = 'send';
+        text.innerText = 'Envoyer un test';
+      }, 3000);
+    }, 1500);
+  }
+
+  // Prompt reset helper
+  function restorePrompt() {
+    document.getElementById('aiPrompt').value = "Tu es le tuteur d'élite et l'assistant logistique officiel de l'Académie des Logisticiens à Brazzaville. Tu réponds avec rigueur, professionnalisme et concision aux questions des apprenants. Tu maîtrises parfaitement : les Incoterms 2020 de la CCI, la convention de Rotterdam, le transit multimodal au Port Autonome de Pointe-Noire (PAPN), les règlements douaniers de la zone CEMAC, la chaîne du froid aéroportuaire et la gestion moderne des stocks WMS. Encourage la validation des tests à 70%.";
+  }
+</script></main></div></body></html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#44474d","inverse-primary":"#b6c7e7","tertiary-fixed-dim":"#6bd8cb","on-error-container":"#93000a","error-container":"#ffdad6","outline-variant":"#c4c6ce","outline":"#74777e","background":"#f9f9ff","inverse-surface":"#263143","on-primary-fixed-variant":"#364762","surface-container-highest":"#d8e3fb","on-primary":"#ffffff","inverse-on-surface":"#ecf1ff","primary":"#00040e","surface-container-lowest":"#ffffff","on-primary-fixed":"#091c34","secondary-fixed-dim":"#eac249","on-secondary-container":"#735a00","surface-dim":"#cfdaf2","surface-container-low":"#f0f3ff","on-tertiary-fixed-variant":"#005049","on-primary-container":"#7586a3","surface-tint":"#4e5f7a","surface-container":"#e7eeff","on-error":"#ffffff","primary-fixed-dim":"#b6c7e7","on-tertiary-container":"#119589","surface-container-high":"#dee8ff","tertiary-fixed":"#89f5e7","tertiary-container":"#00221e","on-surface":"#111c2d","surface":"#f9f9ff","tertiary":"#000403","surface-bright":"#f9f9ff","on-secondary-fixed-variant":"#584400","on-tertiary":"#ffffff","on-tertiary-fixed":"#00201d","on-secondary":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#745b00","secondary-container":"#fcd358","on-secondary-fixed":"#241a00","secondary-fixed":"#ffe08b","primary-container":"#0b1e36","error":"#ba1a1a","on-background":"#111c2d","surface-variant":"#d8e3fb"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-lg":"1.5rem"},"fontFamily":{"metric-stat":["Outfit"],"label-md":["Plus Jakarta Sans"],"display-lg":["Outfit"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Outfit"],"label-sm":["Plus Jakarta Sans"],"headline-md":["Outfit"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Outfit"],"headline-xl-mobile":["Outfit"],"headline-xl":["Outfit"],"body-sm":["Plus Jakarta Sans"]},"fontSize":{"metric-stat":["1.75rem",{"lineHeight":"1.1","fontWeight":"700"}],"label-md":["0.875rem",{"lineHeight":"1.25","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["1.125rem",{"lineHeight":"1.45","fontWeight":"600"}],"display-lg-mobile":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.04em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"1.35","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.55","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.4","fontWeight":"600"}],"headline-xl-mobile":["1.625rem",{"lineHeight":"1.3","fontWeight":"600"}],"headline-xl":["2.25rem",{"lineHeight":"1.25","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.5","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container text-on-primary z-50 flex flex-col justify-between shadow-[0_4px_24px_rgba(11,30,54,0.18)]"><div class="flex flex-col"><div class="h-20 px-6 flex items-center gap-3 bg-primary/40"><div class="w-10 h-10 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center"><span class="material-symbols-outlined text-secondary-fixed">anchor</span></div><div><span class="block font-headline-sm text-headline-sm text-surface-container-lowest leading-none tracking-tight">ALB</span><span class="block font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider mt-0.5">Brazzaville Executive</span></div></div><div class="px-6 py-4"><div class="bg-surface-container-lowest/5 rounded-xl p-3 flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-lg">military_tech</span><span class="font-label-sm text-label-sm text-surface-container-lowest">Cadre Portuaire</span></div><span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-tertiary-container/80 px-2 py-0.5 rounded-full">Niv. III</span></div></div><nav class="px-4 space-y-1.5 mt-2" data-active-classes="bg-secondary text-on-secondary font-bold rounded-xl shadow-[0_4px_16px_rgba(11,30,54,0.12)]"><a aria-current="page" class="flex items-center gap-3 px-4 py-3 transition-all bg-secondary text-on-secondary font-bold rounded-xl shadow-[0_4px_16px_rgba(11,30,54,0.12)]" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span>Tableau de bord</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="mes-formations" href="#"><span class="material-symbols-outlined text-xl">school</span><span>Mes Formations</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="salle-de-cours" href="#"><span class="material-symbols-outlined text-xl">play_lesson</span><span>Salle de Cours</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="arene-challenges" href="#"><span class="material-symbols-outlined text-xl">flag</span><span>Arène Challenges</span><span class="ml-auto bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded">CTF</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="certifications-et-titres" href="#"><span class="material-symbols-outlined text-xl">verified</span><span>Certifications &amp; Titres</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="solde-et-jetons-fcfa" href="#"><span class="material-symbols-outlined text-xl">account_balance_wallet</span><span>Solde &amp; Jetons FCFA</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-md text-label-md text-primary-fixed hover:bg-surface-container-highest/20 hover:text-surface-container-lowest transition-all" data-path="support-et-mentorat" href="#"><span class="material-symbols-outlined text-xl">contact_support</span><span>Support &amp; Mentorat</span></a></nav></div><div class="p-4 mx-4 mb-6 rounded-xl bg-surface-container-lowest/5 backdrop-blur-sm"><div class="flex items-center gap-2 mb-2"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider">O2Switch Cloud</span></div><p class="font-body-sm text-body-sm text-surface-container-high/80 leading-snug">Brazzaville, Rép. du Congo<br/><span class="text-secondary-fixed-dim font-label-sm text-label-sm font-semibold">Accrédité CEMAC</span></p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,30,54,0.06)] z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-6"><div class="flex flex-col"><h1 class="font-title-md text-title-md text-primary font-bold">Académie des Logisticiens</h1><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Campus Numérique Exécutif</span></div><div class="relative ml-4 w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span><input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Rechercher module, unité, document..." type="text"/></div></div><div class="flex items-center gap-5"><div class="flex items-center gap-3 bg-surface-container-low px-4 py-2 rounded-xl"><div class="flex items-center gap-1.5 text-secondary"><span class="material-symbols-outlined text-lg">workspace_premium</span><span class="font-label-md text-label-md font-bold">280 Pts</span></div><span class="text-outline-variant font-label-sm text-label-sm">•</span><div class="flex items-center gap-1.5 text-primary"><span class="material-symbols-outlined text-lg">payments</span><span class="font-label-md text-label-md font-bold">10 000 FCFA</span></div></div><div class="relative flex items-center"><button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-xl">notifications</span></button><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface"></span></div><div class="flex items-center gap-1 bg-surface-container-low px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-base">language</span><span class="font-label-sm text-label-sm font-semibold uppercase">FR</span></div><div class="h-8 w-px bg-surface-container-highest"></div><div class="flex items-center gap-3"><div class="text-right"><span class="block font-label-md text-label-md text-on-surface leading-tight font-bold">Arsène Makosso</span><span class="block font-label-sm text-label-sm text-on-surface-variant">N° ALB-2024-89</span></div><img alt="Profile" class="w-10 h-10 rounded-full object-cover shadow-[0_2px_8px_rgba(11,30,54,0.12)] ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1XxqjwAYVjvs_zP9bRX1N6xBl6P6OWn35DSbiLXFFktaTA6KXGBs5vi2SNvGbDdT26jnTHmVDyAUL7clABIPU5j7fRZl1Q9iMDqgceEBDTvKE1k1TgdETtc-7b2MMWTTb7wOHV6WYtXUusMwaCIKNufpQvvmAlxDLs5-JL4qYDq9vf-0K3qU4fRmXH3S533i7gRWcJ9fkrouCOeaJ86KNp8rWUUahEpHoaZ4DxGYFrcu8s6AOml3-2hF6sNW3ATM1jOGtNmnLGfPw"/></div></div></header><main class="relative pt-20 w-full min-h-[calc(100vh-3.5rem)] px-8 py-6 bg-surface"><div class="flex flex-col w-full">
+<!-- Dynamic Greeting & Executive Status Hero -->
+<section class="relative w-full rounded-2xl bg-gradient-to-br from-primary-container via-[#0e2746] to-primary p-8 text-on-primary shadow-xl overflow-hidden mb-8">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-32 w-80 h-80 rounded-full bg-tertiary-fixed-dim/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="max-w-2xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+            Session 2026 Active
+          </span>
+<span class="text-surface-container-high/40 text-label-sm font-label-sm">•</span>
+<span class="text-surface-container-high/80 text-label-sm font-label-sm tracking-wide">Bureau Port Fluvial • Brazzaville</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-surface-container-lowest font-bold tracking-tight mb-2">
+          Bienvenue sur votre campus, Arsène
+        </h2>
+<p class="font-body-md text-body-md text-surface-container-highest/85 leading-relaxed italic">
+          “La fluidité d’un corridor multimodal ne réside pas dans la vitesse des navires, mais dans l’exactitude de chaque déclaration douanière.”
+        </p>
+</div>
+<div class="flex flex-wrap lg:flex-nowrap items-center gap-3">
+<!-- Consecutive streak pill -->
+<div class="flex items-center gap-3 bg-surface-container-lowest/10 backdrop-blur-md px-4 py-3 rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div>
+<span class="block font-metric-stat text-metric-stat text-surface-container-lowest leading-none">14</span>
+<span class="font-label-sm text-label-sm text-surface-container-high/70 uppercase">Jours Assiduité</span>
+</div>
+</div>
+<!-- Next Exam pill -->
+<div class="flex items-center gap-3 bg-surface-container-lowest/10 backdrop-blur-md px-4 py-3 rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed-dim/20 flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-2xl">event_upcoming</span>
+</div>
+<div>
+<span class="block font-title-md text-title-md text-surface-container-lowest font-bold leading-none">24 Mars 2026</span>
+<span class="font-label-sm text-label-sm text-surface-container-high/70 uppercase">Échéance Sydonia III</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- KPI Metric Row -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mb-8">
+<!-- Active Courses -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold block mb-1">Formations en cours</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">actives</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">auto_stories</span>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant mb-1.5">
+<span>Avancement pondéré</span>
+<span class="font-bold text-primary">82%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-700" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+<!-- Tokens & FCFA credits -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold block mb-1">Jetons &amp; Solde FCFA</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">10 000</span>
+<span class="font-label-md text-label-md text-secondary font-bold">FCFA</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">toll</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant bg-surface-container-low px-3 py-2 rounded-lg">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm">stars</span>
+<strong>280</strong> jetons débloqués
+        </span>
+<a class="text-secondary font-label-sm font-bold hover:underline" href="#">Convertir</a>
+</div>
+</div>
+<!-- CTF Solved -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold block mb-1">Arène Challenges CTF</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">8</span>
+<span class="font-label-md text-label-md text-on-tertiary-container font-semibold">Flags capturés</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-tertiary-container/10 flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-xl">flag</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Position classement</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-md text-label-md font-bold">#12 National Congo</span>
+</div>
+</div>
+<!-- Certificates -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold block mb-1">Diplômes Validés</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">1</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">titre officiel</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-base">policy</span>
+<span>Homologation CEMAC N° RCG-88</span>
+</div>
+</div>
+</section>
+<!-- High-Priority Course Resume Banner (Reprise Intelligente à la seconde près) -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm mb-10 overflow-hidden relative">
+<div class="flex flex-col lg:flex-row items-center gap-8">
+<!-- High-res Thumbnail & Video Player Hook -->
+<div class="relative w-full lg:w-[420px] aspect-video rounded-xl overflow-hidden bg-primary shadow-md flex-shrink-0 group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An executive customs broker examining container transit documents and desktop Sydonia screen in a pristine port terminal administration office in Brazzaville, cinematic natural lighting, cool navy slate and golden accents, hyper realistic professional documentary photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxY2bvnwl3yvk8Xf2NFSuatjH74-LCQ4w70J6jkGJXamMAFBnrIvT0ArSQ3CbsaNwjAKqmArzeCKb0P-fa_S6LxHwvYks2uUvTxHUWyXD6Y5P2LUq8ywhHpn_zAQjZVKV6GbmnbEbfLnJLk60GGgq_f_wRrMoAT_-VJ9ZkX1QgoHoNxY_OHGAjd2SJQxHXBlKEAkJSSU6mTjGXQqCNSy22JCADRAASzrJwugSwML7yYpsnXw55Wc0Z8A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+<!-- Live Timestamp Resume Pin -->
+<div class="absolute top-3 left-3 bg-primary-container/90 backdrop-blur-md px-3 py-1 rounded-md flex items-center gap-1.5 text-secondary-fixed">
+<span class="material-symbols-outlined text-sm">history</span>
+<span class="font-label-sm text-label-sm font-semibold">Reprise auto à 24:18</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<span class="font-label-sm text-label-sm font-medium">Module 4 • Vidéo 3/5</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest/20 backdrop-blur-sm px-2 py-0.5 rounded text-surface-container-lowest">38:40 total</span>
+</div>
+<!-- Real-time Playhead Indicator -->
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-lowest/30">
+<div class="bg-secondary h-full" style="width: 63%;"></div>
+</div>
+</div>
+<!-- Module Details and CTA -->
+<div class="flex flex-col justify-between flex-1 w-full">
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-secondary-fixed/30 text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              En cours d'apprentissage
+            </span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+              UE-LOG-402
+            </span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">• Port Autonome de Brazzaville</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold mb-2">
+            Maîtrise Opérationnelle du Dédouanement et Transit en Rép. du Congo (SYDONIA World)
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+            Module 4 : Liquidation des droits de douane, gestion des manifestes fluviaux et inspection au bureau de Brazzaville-Port fluvial.
+          </p>
+</div>
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-2">
+<span>Progression du module complet</span>
+<span class="font-bold text-primary">74% complété</span>
+</div>
+<div class="w-full bg-surface-container-low rounded-full h-2 mb-6 overflow-hidden">
+<div class="bg-gradient-to-r from-on-tertiary-container to-tertiary-fixed-dim h-full rounded-full" style="width: 74%;"></div>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<a class="px-6 py-3 rounded-xl bg-primary-container text-on-primary hover:bg-[#0f2942] font-label-md text-label-md font-bold flex items-center gap-2 shadow-md hover:shadow-lg transition-all" href="#">
+<span class="material-symbols-outlined text-lg">play_lesson</span>
+<span>Reprendre le cours (24:18)</span>
+</a>
+<a class="px-5 py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold flex items-center gap-2 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">description</span>
+<span>Guide d'application PDF (1.8 Mo)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Two-Column Architecture: Left 8-Cols Formations & CTF, Right 4-Cols Mentor & Tools -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<!-- Left Column (8 cols) -->
+<div class="lg:col-span-8 space-y-10">
+<!-- Section: Mes Formations Exécutives Souscrites -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Mes Formations Inscrites</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cursus qualifiants certifiés par les autorités douanières congolaises</p>
+</div>
+<a class="text-primary font-label-md text-label-md font-bold flex items-center gap-1 hover:text-secondary transition-colors" href="#">
+            Voir le catalogue complet
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Course Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern shipping containers lined up neatly at Pointe-Noire ocean terminal at sunset, heavy duty gantry cranes, high contrast industrial architecture in deep navy and gold tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwI_If1-mBnDfFg9xyUqESv_4kaHKL5Wkj_qGs_yVBFlYyIS6PVGhUmeNZa2Q2Jx57vDtn0cx7DB0HfCKcJha7Iyx_BM6xdfDVCnVMuYYyQiVg5t8A4xYflUK0GXVhv6PnNC5S67Q70e0rcT88V5T_F3vbcRtfV5tuaHFH0TIPGE6og34BuRbkvMxQi_VfTJbljel8BXbCLRH79qpDf5AzrPjbvyoqAEkjRqJtphbkWvAUyxH_w5j4vg"/>
+<span class="absolute top-3 left-3 bg-primary-container/80 backdrop-blur-md text-surface-container-lowest px-2.5 py-1 rounded text-label-sm font-label-sm">
+                  Maritime &amp; Portuaire
+                </span>
+<span class="absolute top-3 right-3 bg-secondary text-on-secondary px-2.5 py-1 rounded text-label-sm font-label-sm font-bold">
+                  Niveau II
+                </span>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="text-secondary font-label-sm text-label-sm font-bold">UE-SCM-109</span>
+<span class="text-outline-variant text-label-sm font-label-sm">•</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">24h de formation</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold line-clamp-2 mb-2">
+                  Optimisation du Passage Portuaire &amp; Facturation au Terminal de Pointe-Noire
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">
+                  Surestaries, détention conteneurs, tarification Congo Terminal et conformité guichet unique GUOT.
+                </p>
+</div>
+</div>
+<div class="px-5 pb-5">
+<div class="bg-surface-container-low p-3 rounded-xl mb-4">
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1.5">
+<span class="text-on-surface-variant">Progression générale</span>
+<span class="font-bold text-on-tertiary-container">90%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 90%;"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm mt-3 pt-2 border-t-0 text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm">quiz</span>
+                    Examen final disponible
+                  </span>
+<span class="font-bold text-primary">40 QCM</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-[#1a2e46] font-label-md text-label-md font-bold transition-all text-center">
+                  Passer l'examen
+                </button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary" title="Télécharger le polycopié">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Air cargo terminal handling logistics, Maya-Maya International Airport Brazzaville, Boeing cargo aircraft on tarmac with logistics crew loading high value pallets, deep blue and amber tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfTp9HLM0-UHoiySi5KKxMBnpIziEjYllrJ_rN3D64ibVHHxx-wApQCH3y0ED5_YO-eHR996YvC_Wp1oBpjgALoiFmaA26I_JIKc2wSczECfGpaYyi2w05WmSxZBKOe_mciqxkIDFs3elsCuvwyIp5W6RpExf4Bu8JVWDEX8MNA7EaC7a0dYklQBNn-bidZni4_kMqg0z6-NQtcdwYSdXJSiBo9BiNHu-xM7BJ2aPe5zTqeunuAIX62g"/>
+<span class="absolute top-3 left-3 bg-primary-container/80 backdrop-blur-md text-surface-container-lowest px-2.5 py-1 rounded text-label-sm font-label-sm">
+                  Fret Aérien &amp; Douanes
+                </span>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur text-primary px-2.5 py-1 rounded text-label-sm font-label-sm font-bold">
+                  Incoterms 2020
+                </span>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="text-secondary font-label-sm text-label-sm font-bold">UE-AER-301</span>
+<span class="text-outline-variant text-label-sm font-label-sm">•</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">18h de formation</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold line-clamp-2 mb-2">
+                  Dédouanement Express Fret Aérien à Maya-Maya (Brazzaville)
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">
+                  Régimes suspensifs, LTA aérienne et gestion des marchandises périssables et pharmaceutiques.
+                </p>
+</div>
+</div>
+<div class="px-5 pb-5">
+<div class="bg-surface-container-low p-3 rounded-xl mb-4">
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1.5">
+<span class="text-on-surface-variant">Progression générale</span>
+<span class="font-bold text-secondary">35%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 35%;"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm mt-3 pt-2 text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm">schedule</span>
+                    Prochain quiz : Chapitre 3
+                  </span>
+<span class="font-bold text-primary">15 min</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md font-bold transition-all text-center">
+                  Continuer
+                </button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary" title="Télécharger le polycopié">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Arène Gamifiée Challenge Hebdo & Podium National -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 lg:p-7 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/10 flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-2xl">military_tech</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Challenge Pratique de la Semaine</h3>
+<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed text-label-sm font-label-sm font-bold px-2 py-0.5 rounded-full uppercase">CTF Actif</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Épreuves techniques logistiques chronométrées avec validation automatisée</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm bg-surface-container-low px-3 py-1.5 rounded-lg text-on-surface-variant self-start sm:self-auto">
+<span class="material-symbols-outlined text-base text-secondary">hourglass_top</span>
+<span>Fin dans <strong>3j 14h</strong></span>
+</div>
+</div>
+<!-- Challenge Highlight Card -->
+<div class="p-5 rounded-xl bg-gradient-to-r from-surface-container-low to-surface-container-high/40 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="text-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">Scénario de Crise #104</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Terminal à Conteneurs Pointe-Noire</span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold">
+              Analyse d'avarie sous conteneur Reefer à Pointe-Noire : Déclaration de litige armateur
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+              Un conteneur frigorifique de 40 pieds chargé de produits pharmaceutiques a subi une rupture de chaîne de froid de 11h. Identifiez le vice caché dans le télégramme d'escale et générez la réserve légale conforme à l'article 153 du Code de la Marine Marchande CEMAC.
+            </p>
+<div class="flex items-center gap-4 pt-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-on-tertiary-container">
+<span class="material-symbols-outlined text-base">add_circle</span> +5 Pts Académie
+              </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-secondary">
+<span class="material-symbols-outlined text-base">flag</span> 1 Flag Vérifié
+              </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base">groups</span> 34 cadres ont réussi
+              </span>
+</div>
+</div>
+<button class="px-5 py-3 rounded-xl bg-on-tertiary-container text-on-primary font-label-md text-label-md font-bold hover:bg-[#0c7c72] transition-colors whitespace-nowrap shadow-sm">
+            Lancer le challenge
+          </button>
+</div>
+<!-- Leaderboard Preview: Top 5 Learners Congo -->
+<div>
+<h5 class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider mb-3">
+            Top 5 des Déclarants Congolais • Mars 2026
+          </h5>
+<div class="space-y-2">
+<!-- Row 1 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold text-label-sm font-label-sm flex items-center justify-center">1</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Clarisse N'Kounkou</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Transit Général Congo (TGC) • Pointe-Noire</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container bg-tertiary-container/10 px-2 py-0.5 rounded">18 Flags</span>
+<span class="font-label-md text-label-md font-bold text-primary">640 Pts</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-primary font-bold text-label-sm font-label-sm flex items-center justify-center">2</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Jean-Paul Moungalla</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Bolloré Africa Logistics • Maya-Maya BZV</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container bg-tertiary-container/10 px-2 py-0.5 rounded">15 Flags</span>
+<span class="font-label-md text-label-md font-bold text-primary">590 Pts</span>
+</div>
+</div>
+<!-- Current User Row (Arsène) -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-highest/50 ring-0 hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-bold text-label-sm font-label-sm flex items-center justify-center">12</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold flex items-center gap-1.5">
+                    Arsène Makosso
+                    <span class="bg-primary-container text-surface-container-lowest text-[10px] uppercase font-bold px-1.5 py-0.2 rounded">Vous</span>
+</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Cadre Déclarant Junior • Brazzaville Fluvial</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container bg-tertiary-container/10 px-2 py-0.5 rounded">8 Flags</span>
+<span class="font-label-md text-label-md font-bold text-primary">280 Pts</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Sidebar / Utility Strip (4 cols) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- AI Logistics Executive Copilot -->
+<section class="bg-gradient-to-b from-primary-container to-primary text-on-primary rounded-2xl p-6 shadow-md relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-secondary/10 blur-xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-xl">psychology</span>
+</div>
+<div>
+<span class="font-title-md text-title-md font-bold block leading-snug">Assistant Douanes IA</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Spécialisé Réglementation CEMAC</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-high/80 mb-4 leading-relaxed">
+            Interrogez l'intelligence artificielle sur un code tarifaire du SH 2026, un calcul de valeur en douane CAF ou un blocage Sydonia.
+          </p>
+<div class="space-y-3">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest/10 placeholder:text-surface-container-high/40 text-surface-container-lowest text-body-sm font-body-sm px-4 py-3 rounded-xl focus:outline-none focus:bg-surface-container-lowest/15" placeholder="Ex : Exonération TVA sur matériel agricole..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-base">send</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<button class="text-left text-[11px] font-label-sm px-2 py-1 rounded bg-surface-container-lowest/5 text-surface-container-high/80 hover:bg-surface-container-lowest/10 transition-colors">
+                #Incoterm DDP vs DAP
+              </button>
+<button class="text-left text-[11px] font-label-sm px-2 py-1 rounded bg-surface-container-lowest/5 text-surface-container-high/80 hover:bg-surface-container-lowest/10 transition-colors">
+                #Délai apurement D6
+              </button>
+<button class="text-left text-[11px] font-label-sm px-2 py-1 rounded bg-surface-container-lowest/5 text-surface-container-high/80 hover:bg-surface-container-lowest/10 transition-colors">
+                #Calcul Taxe d'Informatique
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Asynchronous Support & Mentor Connection -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-title-md text-title-md text-primary font-bold">Support &amp; Mentor Dédié</h4>
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container" title="Conseillers en ligne"></span>
+</div>
+<!-- Assigned Academic Mentor -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-surface-container-low mb-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Distinguished senior African male logistics professor wearing bespoke navy tailored blazer, gentle confident expression, library background with maritime logbooks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBibeoN2OOV4cbNQNf05Km3teapVCFRaVVsowXBZp4CFEcHmZ5OO24q3qPdzywhfJzC_i9-SvCwm3mqOjjSBhhDXQOKCjR9O-ZUrVlwYH8GlWrDsPZXLO34iyuVkbcHCAw-matsWsOxM5xiuk1YTstYSWe3gg32ErOZoBAlt6RgP0XDzVa6hHp7uSSs3iLz-G-g_A_eB3bY1OAPQOeVb_3qA1qlMtPOXtJrDItMiOJDnllB5PPGenTYKA"/>
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold block truncate">Col. Honoré Batoukounou</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block truncate">Ex-Inspecteur Principal des Douanes</span>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">Mentor Académique</span>
+</div>
+</div>
+<div class="space-y-3">
+<a class="w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">forum</span>
+<span>Poser une question asynchrone</span>
+</a>
+<div class="p-3 bg-surface-container-low/60 rounded-xl text-body-sm font-body-sm text-on-surface-variant space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Ticket en cours : #TK-902</span>
+<span class="text-secondary font-bold">En révision</span>
+</div>
+<p class="text-xs line-clamp-1 text-primary">"Validation du titre de transport multimodal fleuve-rail"</p>
+</div>
+</div>
+</section>
+<!-- CEMAC Official Certification Status Badge Box -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-lg">workspace_premium</span>
+</div>
+<div>
+<h5 class="font-title-md text-title-md text-primary font-bold">Accréditation Officielle</h5>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sceau Institutionnel</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+          Votre matricule <strong class="text-primary">ALB-2024-89</strong> est enregistré dans le registre central des déclarants assermentés de la République du Congo.
+        </p>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Certificat N°1</span>
+<span class="font-label-md text-label-md text-primary font-bold">Transit &amp; Douanes CEMAC</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-primary hover:text-secondary shadow-sm transition-colors">
+<span class="material-symbols-outlined text-lg">file_download</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+</div></main><footer class="w-full h-14 bg-surface-container-lowest shadow-[0_-1px_6px_rgba(11,30,54,0.03)] px-8 flex items-center justify-between"><div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span><span>Infrastructure O2Switch Cloud Datacenter Sécurisé SSL/TLS 256-bit</span></div><div class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Académie des Logisticiens de Brazzaville • Enregistrement CEMAC N° RCG-BZV-0492</div></footer></div></body></html>
