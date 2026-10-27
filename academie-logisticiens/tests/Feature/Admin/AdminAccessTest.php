@@ -49,6 +49,7 @@ class AdminAccessTest extends TestCase
         return [
             'formation' => $f['formation']->slug,
             'certificat' => $certificat->id,
+            'temoignage' => \App\Models\Temoignage::create(['citation' => 'Citation', 'nom' => 'Nom Test'])->id,
             'module' => $f['modules'][0]->id,
             'lecon' => $f['lecons'][0]->id,
             'quiz' => $f['quizzes'][0]->id,

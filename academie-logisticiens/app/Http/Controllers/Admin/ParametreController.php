@@ -11,7 +11,9 @@ class ParametreController extends Controller
     public function index()
     {
         $parametres = Parametre::orderBy('cle')->get();
-        return view('admin.parametres', compact('parametres'));
+        $temoignages = \App\Models\Temoignage::orderBy('ordre')->orderBy('id')->get();
+
+        return view('admin.parametres', compact('parametres', 'temoignages'));
     }
 
     public function update(Request $request)

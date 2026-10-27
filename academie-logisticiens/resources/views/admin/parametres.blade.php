@@ -66,4 +66,73 @@
 
     <button type="submit" class="px-6 py-3 rounded-lg bg-accent-500 text-primary-700 font-bold hover:bg-accent-400 transition">Enregistrer les paramètres</button>
 </form>
+
+{{-- Temoignages de l'accueil (formulaires separes du formulaire des parametres) --}}
+<div id="temoignages" class="max-w-2xl mt-8 bg-white dark:bg-surface-dark rounded-xl p-6 shadow-sm space-y-5 scroll-mt-20">
+    <div class="border-b dark:border-gray-800 pb-3">
+        <h2 class="font-heading font-bold text-primary-700 dark:text-white">Témoignages (page d'accueil)</h2>
+        <p class="text-xs text-gray-400 mt-1">Les témoignages affichés s'enchaînent dans la section « Ils témoignent de Brazzaville à Pointe-Noire ». Si aucun n'est affiché, la section disparaît.</p>
+    </div>
+
+    @if($temoignages->isEmpty())
+    <p class="text-sm text-gray-400 text-center py-4">Aucun témoignage pour le moment.</p>
+    @else
+    <ul class="space-y-3">
+        @foreach($temoignages as $t)
+        <li class="flex flex-col sm:flex-row sm:items-start gap-3 p-4 rounded-lg {{ $t->actif ? 'bg-surface-light dark:bg-surface-darker' : 'bg-gray-100 dark:bg-gray-800 opacity-60' }}">
+            <div class="flex items-start gap-3 flex-1 min-w-0">
+                @if($t->photo_url)
+                <img src="{{ $t->photo_url }}" alt="" class="w-11 h-11 rounded-full object-cover shrink-0">
+                @else
+                <span class="w-11 h-11 rounded-full bg-primary-700 text-accent-400 flex items-center justify-center text-sm font-bold shrink-0">{{ $t->initiales }}</span>
+                @endif
+                <div class="min-w-0">
+                    <p class="text-sm italic text-gray-600 dark:text-gray-300">« {{ $t->citation }} »</p>
+                    <p class="text-sm font-semibold text-primary-700 dark:text-white mt-1">{{ $t->nom }}@if($t->fonction)<span class="font-normal text-gray-500"> — {{ $t->fonction }}</span>@endif</p>
+                    @unless($t->actif)<p class="text-xs text-gray-500 mt-0.5">Masqué de l'accueil</p>@endunless
+                </div>
+            </div>
+            <div class="flex items-center justify-end gap-2 shrink-0">
+                <form method="POST" action="{{ route('admin.temoignages.toggle', $t) }}">
+                    @csrf @method('PATCH')
+                    <button type="submit" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-100 dark:bg-gray-800 hover:bg-gray-200">{{ $t->actif ? 'Masquer' : 'Afficher' }}</button>
+                </form>
+                <form method="POST" action="{{ route('admin.temoignages.destroy', $t) }}" onsubmit="return confirm('Supprimer ce témoignage ?')">
+                    @csrf @method('DELETE')
+                    <button type="submit" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20">Supprimer</button>
+                </form>
+            </div>
+        </li>
+        @endforeach
+    </ul>
+    @endif
+
+    <form method="POST" action="{{ route('admin.temoignages.store') }}" enctype="multipart/form-data" class="space-y-4 border-t dark:border-gray-800 pt-5">
+        @csrf
+        <h3 class="text-sm font-bold text-accent-600 uppercase tracking-wider">Ajouter un témoignage</h3>
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Témoignage <span class="text-red-500">*</span></label>
+            <textarea name="citation" rows="3" maxlength="600" required placeholder="Ce que dit l'apprenant (sans guillemets)" class="{{ $inp }}">{{ old('citation') }}</textarea>
+            @error('citation') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Nom <span class="text-red-500">*</span></label>
+                <input type="text" name="nom" maxlength="120" required value="{{ old('nom') }}" placeholder="Ex : Clarisse Moukala" class="{{ $inp }}">
+                @error('nom') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Fonction / ville</label>
+                <input type="text" name="fonction" maxlength="160" value="{{ old('fonction') }}" placeholder="Ex : Superviseur Logistique • Brazzaville" class="{{ $inp }}">
+                @error('fonction') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+            </div>
+        </div>
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Photo (facultative — sinon les initiales sont affichées)</label>
+            <input type="file" name="photo" accept="image/jpeg,image/png,image/webp" class="{{ $inp }} file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-accent-500 file:text-primary-700 file:font-semibold file:text-sm hover:file:bg-accent-400 file:cursor-pointer">
+            @error('photo') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+        </div>
+        <button type="submit" class="px-6 py-2.5 rounded-lg bg-accent-500 text-primary-700 font-bold hover:bg-accent-400 transition">Ajouter le témoignage</button>
+    </form>
+</div>
 @endsection

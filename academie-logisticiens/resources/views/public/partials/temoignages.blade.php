@@ -1,5 +1,9 @@
+@php($temoignages = \App\Models\Temoignage::actifs()->get())
+@if($temoignages->isNotEmpty())
 <section><div class="c"><div class="sh"><small>Succès réels</small><h2>Ils témoignent de Brazzaville à Pointe-Noire</h2><p>Nos diplômés occupent des postes clés au sein des terminaux portuaires, agences en douane et multinationales.</p></div>
 <div class="g3">
-<div class="card"><p class="q">« Grâce au module sur les régimes douaniers suspensifs CEMAC et aux simulations SYDONIA, j'ai réussi mon entretien chez Bolloré Transport &amp; Logistics à Pointe-Noire dès le mois suivant ma certification. »</p><div class="who"><span class="av">CN</span><span><b>Cedric Nguesso</b><small>Déclarant en Douane Senior • Pointe-Noire</small></span></div></div>
-<div class="card"><p class="q">« La flexibilité de la plateforme m'a permis d'étudier le soir tout en conservant mon poste de gestionnaire de stocks à Maya-Maya. Le paiement par Airtel Money était fluide et immédiat. »</p><div class="who"><span class="av">CM</span><span><b>Clarisse Moukala</b><small>Superviseur Logistique • Brazzaville</small></span></div></div>
-<div class="card"><p class="q">« Les jetons FCFA gagnés via les challenges m'ont fait économiser 15 000 FCFA sur mon certificat international Incoterms. C'est l'école la plus innovante d'Afrique Centrale. »</p><div class="who"><span class="av">JS</span><span><b>Jean-Paul Samba</b><small>Directeur d'Agence Transit • Kinshasa / BZV</small></span></div></div></div></div></section>
+@foreach($temoignages as $t)
+<div class="card"><p class="q">« {{ $t->citation }} »</p><div class="who">@if($t->photo_url)<img class="av" src="{{ $t->photo_url }}" alt="Photo de {{ $t->nom }}" loading="lazy" style="object-fit:cover">@else<span class="av">{{ $t->initiales }}</span>@endif<span><b>{{ $t->nom }}</b>@if($t->fonction)<small>{{ $t->fonction }}</small>@endif</span></div></div>
+@endforeach
+</div></div></section>
+@endif

@@ -184,6 +184,9 @@ Route::middleware(['auth', 'role:admin,gestionnaire'])
         Route::middleware('role:admin')->group(function () {
             Route::get('/parametres', [\App\Http\Controllers\Admin\ParametreController::class, 'index'])->name('parametres');
             Route::post('/parametres', [\App\Http\Controllers\Admin\ParametreController::class, 'update'])->name('parametres.update');
+            Route::post('/parametres/temoignages', [\App\Http\Controllers\Admin\TemoignageController::class, 'store'])->name('temoignages.store');
+            Route::patch('/parametres/temoignages/{temoignage}', [\App\Http\Controllers\Admin\TemoignageController::class, 'toggle'])->name('temoignages.toggle');
+            Route::delete('/parametres/temoignages/{temoignage}', [\App\Http\Controllers\Admin\TemoignageController::class, 'destroy'])->name('temoignages.destroy');
         });
     });
 
