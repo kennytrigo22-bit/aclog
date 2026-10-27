@@ -42,7 +42,6 @@ class CertificatAdminController extends Controller
 
         $certificats = $query->paginate(25)->withQueryString();
         $formations = Formation::orderBy('titre')->get(['id', 'titre', 'duree_heures']);
-        $titresCatalogue = collect(config('catalogue'))->flatMap(fn ($g) => array_column($g['formations'], 'titre'))->sort()->values();
         $pays = array_keys(ProfilOptions::PAYS);
         $stats = [
             'total' => Certificat::count(),
@@ -50,7 +49,7 @@ class CertificatAdminController extends Controller
             'en_ligne' => Certificat::where('mode', Certificat::MODE_EN_LIGNE)->count(),
         ];
 
-        return view('admin.certificats.index', compact('certificats', 'formations', 'titresCatalogue', 'pays', 'stats'));
+        return view('admin.certificats.index', compact('certificats', 'formations', 'pays', 'stats'));
     }
 
     public function store(Request $request)
@@ -121,7 +120,6 @@ class CertificatAdminController extends Controller
         return view('admin.certificats.edit', [
             'certificat' => $certificat,
             'formations' => Formation::orderBy('titre')->get(['id', 'titre', 'duree_heures']),
-            'titresCatalogue' => collect(config('catalogue'))->flatMap(fn ($g) => array_column($g['formations'], 'titre'))->sort()->values(),
             'pays' => array_keys(ProfilOptions::PAYS),
         ]);
     }

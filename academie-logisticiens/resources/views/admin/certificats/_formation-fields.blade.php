@@ -16,10 +16,7 @@
     </div>
     <div>
         <label class="{{ $lbl }}">… ou intitulé de la formation suivie</label>
-        <input type="text" name="formation_titre" list="titres-catalogue{{ $suffixe ?? '' }}" value="{{ old('formation_titre', $c?->formation_titre) }}" placeholder="Ex : Gestion des stocks" class="{{ $inp }}">
-        <datalist id="titres-catalogue{{ $suffixe ?? '' }}">
-            @foreach($titresCatalogue as $t)<option value="{{ $t }}">@endforeach
-        </datalist>
+        <input type="text" name="formation_titre" value="{{ old('formation_titre', $c?->formation_titre) }}" placeholder="Si la formation n'est pas sur la plateforme" class="{{ $inp }}">
         @error('formation_titre') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
     </div>
     <div>

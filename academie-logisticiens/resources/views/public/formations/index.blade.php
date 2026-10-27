@@ -19,16 +19,17 @@
 <a class="btn blue" href="{{ route('formations.show', $vedette) }}">Voir programme</a> <a class="btn gold" href="{{ auth()->check() ? route('apprenant.paiement.initier', $vedette) : route('register') }}">Acheter</a></div></div></div></section>
 @endif
 
-<section id="catalogue"><div class="c"><div class="sh"><small>Catalogue complet</small><h2>Toutes nos formations certifiantes</h2><p>Quatre filières, {{ $total }} formations avec certificat d'aptitude professionnelle. Choisissez votre filière ou recherchez un thème.</p></div>
-<div class="tabs" id="ctabs"><button type="button" data-g="all">Toutes ({{ $total }})</button>@foreach($filieres as $gi => $g)<button type="button" data-g="{{ $gi }}">{{ $g['nom'] }} ({{ count($g['items']) }})</button>@endforeach</div>
+<section id="catalogue"><div class="c"><div class="sh"><small>Catalogue complet</small><h2>Toutes nos formations certifiantes</h2><p>{{ $total }} formation{{ $total > 1 ? 's' : '' }} avec certificat d'aptitude professionnelle. Choisissez votre filière ou recherchez un thème.</p></div>
+@php $premiere = collect($filieres)->search(fn ($g) => count($g['items']) > 0); @endphp
+<div class="tabs" id="ctabs" data-cur="{{ $premiere === false ? 'all' : $premiere }}"><button type="button" data-g="all">Toutes ({{ $total }})</button>@foreach($filieres as $gi => $g)@continue(count($g['items']) === 0)<button type="button" data-g="{{ $gi }}">{{ $g['nom'] }} ({{ count($g['items']) }})</button>@endforeach</div>
 <div class="srch"><span>🔎</span><input id="cq" type="search" placeholder="Rechercher une formation (ex. stocks, douane, Incoterms…)" aria-label="Rechercher une formation"></div>
 <div class="cat" id="cgrid">
 @foreach($filieres as $gi => $g)
 @foreach($g['items'] as $ti => $f)
-<article class="fc" style="--k:{{ $g['couleur'] }}" data-g="{{ $gi }}" data-s="{{ mb_strtolower($f['titre'] . ' ' . $f['description'] . ' ' . $g['nom']) }}"><figure class="fim"><img loading="lazy" decoding="async" alt="{{ $f['titre'] }}" src="{{ $f['image'] }}" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fdur">{{ $f['badge'] }}</span></figure><div class="tp"><span class="tg">{{ $g['nom'] }}</span><span class="ix">{{ str_pad($ti + 1, 2, '0', STR_PAD_LEFT) }}</span></div><h4>{{ $f['titre'] }}</h4><p>{{ $f['description'] }}</p><div class="mt">{{ $f['meta'] }}</div><div class="bt"><span class="pr">{{ number_format($f['prix'], 0, ',', ' ') }} <small>FCFA</small></span><a class="btn blue" href="{{ $f['url'] }}" @if($f['externe']) target="_blank" rel="noopener" @endif>{{ $f['bouton'] }}</a></div></article>
+<article class="fc" style="--k:{{ $g['couleur'] }}" data-g="{{ $gi }}" data-s="{{ mb_strtolower($f['titre'] . ' ' . $f['description'] . ' ' . $g['nom']) }}"><figure class="fim"><img loading="lazy" decoding="async" alt="{{ $f['titre'] }}" src="{{ $f['image'] }}" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="fdur">{{ $f['badge'] }}</span></figure><div class="tp"><span class="tg">{{ $g['nom'] }}</span><span class="ix">{{ str_pad($ti + 1, 2, '0', STR_PAD_LEFT) }}</span></div><h4>{{ $f['titre'] }}</h4><p>{{ $f['description'] }}</p><div class="mt">{{ $f['meta'] }}</div><div class="bt"><span class="pr">{{ number_format($f['prix'], 0, ',', ' ') }} <small>FCFA</small></span><a class="btn blue" href="{{ $f['url'] }}">{{ $f['bouton'] }}</a></div></article>
 @endforeach
 @endforeach
-<div class="nores" style="display:none">Aucune formation ne correspond à votre recherche.</div>
+<div class="nores" style="display:none">{{ $total ? 'Aucune formation ne correspond à votre recherche.' : 'Les formations seront bientôt publiées.' }}</div>
 </div></div></section>
 
 @include('public.partials.cta')

@@ -5,7 +5,7 @@
 @section('content')
 @php
     $nbApprenants = max(23, \App\Models\User::where('role', 'apprenant')->count());
-    $nbFormationsEnLigne = max(4, \App\Models\Formation::where('is_published', true)->count());
+    $nbFormationsEnLigne = \App\Models\Formation::where('is_published', true)->count();
 @endphp
 <div class="pg show" id="pg-apropos">
 <div class="phead"><div class="c"><div class="bc"><a href="{{ route('home') }}">Accueil</a> › À propos</div><h1>À propos du <em>{{ $siteTitre }}</em></h1><p>Académie des Logisticiens — « {{ $siteSlogan }} » Le hub digital qui forme les professionnels de la logistique, de la douane et du commerce international en Afrique Centrale.</p></div></div>
@@ -21,7 +21,7 @@
 <div class="card"><div class="ico">🤝</div><h3>Notre engagement</h3><p>Des formations pratiques, des certificats vérifiables par QR Code et un paiement simple par Mobile Money MTN &amp; Airtel.</p></div></div></div></section>
 <section class="pc"><div class="c"><h2 class="pc-t">Votre parcours chez ACLOG</h2>
 <ol class="pc-l">
-<li><span class="pc-n">1</span><span class="pc-i">📚</span><h3>Choisissez votre formation</h3><p>Parmi {{ collect(config('catalogue'))->sum(fn ($g) => count($g['formations'])) }} formations certifiantes en logistique, transport, commerce international, douane et transit.</p></li>
+<li><span class="pc-n">1</span><span class="pc-i">📚</span><h3>Choisissez votre formation</h3><p>Parmi nos {{ $nbFormationsEnLigne }} formations certifiantes en logistique, transport, commerce international, douane et transit.</p></li>
 <li><span class="pc-n">2</span><span class="pc-i">📲</span><h3>Inscrivez-vous et payez</h3><p>Réglez par MTN Mobile Money ou Airtel Money, puis confirmez votre paiement sur WhatsApp.</p></li>
 <li><span class="pc-n">3</span><span class="pc-i">🎯</span><h3>Formez-vous pendant 2 mois</h3><p>Cours en ligne ou en présentiel, ateliers pratiques et accompagnement individualisé.</p></li>
 <li><span class="pc-n">4</span><span class="pc-i">🏅</span><h3>Recevez votre certificat</h3><p>Chaque formation se conclut par un certificat d'aptitude professionnelle.</p></li>

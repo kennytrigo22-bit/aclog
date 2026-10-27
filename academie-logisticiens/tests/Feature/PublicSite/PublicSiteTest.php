@@ -290,14 +290,17 @@ Ligne <2>"]);
         $this->get("/formations/{$f->slug}")->assertOk()->assertSee('Ligne 1<br />', false)->assertSee('Ligne &lt;2&gt;', false);
     }
 
-    public function test_catalogue_lists_database_formations_and_the_full_catalogue(): void
+    public function test_catalogue_lists_only_real_published_formations(): void
     {
         $f = $this->formation(['titre' => 'Formation En Base', 'categorie' => 'douane']);
+        $this->unpublishedFormation(['titre' => 'Brouillon Catalogue', 'categorie' => 'douane']);
 
         $this->get('/formations')->assertOk()
             ->assertSee('Formation En Base')->assertSee(route('formations.show', $f), false)
-            ->assertSee('Gestion des stocks')->assertSee('Contentieux douanier')
-            ->assertSee('Toutes (41)');
+            ->assertSee('Toutes (1)')->assertSee('Douane et transit (1)')
+            ->assertDontSee('Brouillon Catalogue')
+            ->assertDontSee('Gestion des stocks')->assertDontSee('Contentieux douanier')
+            ->assertDontSee('Transport (0)')->assertDontSee('wa.me/242068287915?text=', false);
     }
 
     public function test_annuaire_on_a_propos_lists_online_certified_with_avatar(): void

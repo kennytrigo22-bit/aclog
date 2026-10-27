@@ -6,7 +6,7 @@
  /* ===== Catalogue : onglets par filière + recherche ===== */
  var ct=document.getElementById('ctabs'),cg=document.getElementById('cgrid'),cq=document.getElementById('cq');
  if(ct&&cg&&cq){
-  var cur='0',cards=[].slice.call(cg.querySelectorAll('.fc')),nores=cg.querySelector('.nores');
+  var cur=ct.getAttribute('data-cur')||'all',cards=[].slice.call(cg.querySelectorAll('.fc')),nores=cg.querySelector('.nores');
   function draw(){
    var q=(cq.value||'').toLowerCase().trim(),n=0;
    cards.forEach(function(c){
@@ -96,7 +96,7 @@
 
  /* 4. message défilant de la barre du haut */
  var msg=document.querySelector('.top .msg');
- if(msg&&!RM){var MS=[msg.textContent,'Paiement simple par MTN Mobile Money et Airtel Money (+242)','Certificats vérifiables par QR Code',(msg.getAttribute('data-nb')||'40')+' formations certifiantes en 4 filières','En ligne ou en salle à Brazzaville'],mi=0;
+ if(msg&&!RM){var MS=[msg.textContent,'Paiement simple par MTN Mobile Money et Airtel Money (+242)','Certificats vérifiables par QR Code',(msg.getAttribute('data-nb')||'')+' formations certifiantes avec certificat','En ligne ou en salle à Brazzaville'],mi=0;
   setInterval(function(){msg.classList.add('out');setTimeout(function(){mi=(mi+1)%MS.length;msg.textContent=MS[mi];msg.classList.remove('out')},450)},4500)}
 
  /* 5. mot qui s'écrit dans le bandeau d'accroche */
