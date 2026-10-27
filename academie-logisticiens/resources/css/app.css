@@ -34,3 +34,5 @@
 .contenu-cours .encadre p + p { margin-top: .4rem; }
 .contenu-cours .encadre, .contenu-cours td, .contenu-cours [style*="background"] { color: #1f2937; }
 .dark .contenu-cours td { background: #f8fafc; }
+
+[x-cloak] { display: none !important; }

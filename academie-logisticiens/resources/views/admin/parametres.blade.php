@@ -19,6 +19,9 @@
             ['cle' => 'telephone_contact_2', 'description' => 'Téléphone secondaire', 'defaut' => '+242 05 599 73 34'],
             ['cle' => 'email_contact', 'description' => 'Email de contact (reçoit les messages du formulaire)', 'defaut' => 'contact@cabinet-aclog.com'],
             ['cle' => 'adresse', 'description' => 'Adresse du siège', 'defaut' => '4 Rue Abila, Talangai, Brazzaville'],
+            ['cle' => 'whatsapp_numero', 'description' => 'Numéro WhatsApp (chiffres uniquement, avec indicatif)', 'defaut' => '242068287915', 'aide' => 'Utilisé par les boutons WhatsApp du site.'],
+            ['cle' => 'lien_youtube', 'description' => 'Lien de la chaîne YouTube', 'defaut' => 'https://www.youtube.com/@academiedeslogisticiensdid2613'],
+            ['cle' => 'lien_facebook', 'description' => 'Lien de la page Facebook', 'defaut' => 'https://www.facebook.com/profile.php?id=100088676956387'],
         ],
         'Paiement Mobile Money' => [
             ['cle' => 'numero_paiement', 'description' => 'Numéro Mobile Money', 'defaut' => '+242 068 287 915'],

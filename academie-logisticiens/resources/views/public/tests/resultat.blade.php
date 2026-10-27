@@ -3,7 +3,6 @@
 @section('title', 'Résultat du Test - ' . $siteTitre)
 
 @section('content')
-<div class="pt-28"></div>
 
 <section class="w-full py-10 lg:py-20 bg-surface-light dark:bg-surface-darker">
     <div class="max-w-2xl mx-auto px-4 lg:px-6">

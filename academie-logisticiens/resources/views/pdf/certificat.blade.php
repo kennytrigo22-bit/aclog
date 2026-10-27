@@ -4,15 +4,15 @@
     $box = fn ($x, $y, $w, $h) => "left:{$mm($x)};top:{$mm($y)};width:{$mm($w)};height:{$mm($h)};";
     $d = fn ($date) => $date->format('d/m/Y');
 
-    $user = $certificat->user;
-    $nomComplet = trim(($user->prenom ? $user->prenom . ' ' : '') . mb_strtoupper($user->name));
-    $naissance = $user->date_naissance?->format('d/m/Y');
-    $lieu = $user->lieu_naissance;
-    $titre = $certificat->formation->titre;
+    $nomComplet = $certificat->nom_complet;
+    $naissance = $certificat->date_naissance?->format('d/m/Y');
+    $lieu = $certificat->lieu_naissance;
+    $titre = $certificat->intitule_formation;
     $tailleTitre = mb_strlen($titre) > 70 ? '12.5pt' : (mb_strlen($titre) > 55 ? '14pt' : (mb_strlen($titre) > 42 ? '15.5pt' : '17pt'));
-    $fin = $certificat->issued_at;
-    $debut = ($inscription?->created_at) ?? $fin;
-    $heures = $certificat->formation->duree_heures;
+    $fin = $certificat->date_fin ?? $certificat->issued_at;
+    $debut = $certificat->date_debut ?? ($inscription?->created_at) ?? $fin;
+    $heures = $certificat->duree_formation;
+    $modalite = $certificat->estPresentiel() ? 'en présentiel' : 'en ligne';
     $identifiants = \App\Models\Parametre::identifiantsLegauxLigne();
     $numero = $certificat->numero_affiche;
 @endphp
@@ -51,7 +51,7 @@
     <div class="abs lbl" style="{{ $box(5456722, 3213876, 411480, 292608) }} font-size:15pt;">à :</div>
     <div class="abs ctr val" style="{{ $box(5913922, 3201000, 3017520, 278368) }} font-size:16pt;">{{ $lieu }}</div>
 
-    <div class="abs ctr" style="{{ $box(914400, 3822192, 8860536, 292608) }} font-size:16pt; color:#1F2A37;">a suivi en ligne, avec succès le programme de formation certifiante intitulé :</div>
+    <div class="abs ctr" style="{{ $box(914400, 3822192, 8860536, 292608) }} font-size:16pt; color:#1F2A37;">a suivi {{ $modalite }}, avec succès le programme de formation certifiante intitulé :</div>
     <div class="abs ctr val" style="{{ $box(1828800, 4232000, 7031736, 267233) }} font-size:{{ $tailleTitre }};">{{ $titre }}</div>
 
     <div class="abs lbl" style="{{ $box(1783080, 4617720, 1325880, 292608) }} font-size:15pt;">d’une durée de</div>
@@ -61,7 +61,7 @@
     <div class="abs lbl" style="{{ $box(6528816, 4617720, 320040, 292608) }} font-size:15pt;">au</div>
     <div class="abs ctr val" style="{{ $box(6903720, 4600000, 1600200, 292608) }} font-size:15pt;">{{ $d($fin) }}</div>
 
-    <div class="abs" style="{{ $box(6680835, 5344490, 2895028, 200425) }} font-size:12.6pt;">Fait à Brazzaville, le <span class="val">{{ $d($fin) }}</span></div>
+    <div class="abs" style="{{ $box(6680835, 5344490, 2895028, 200425) }} font-size:12.6pt;">Fait à Brazzaville, le <span class="val">{{ $d($certificat->issued_at ?? $fin) }}</span></div>
     <div class="abs ctr navy" style="{{ $box(7518448, 5735822, 2316023, 222695) }} font-size:14pt; font-weight:bold;">Directeur Général</div>
     <div class="abs ctr navy" style="{{ $box(7571613, 6617974, 2316023, 222695) }} font-size:14pt; font-weight:bold;">Didi-Chance AMBIA</div>
     <div class="abs ctr gold" style="{{ $box(7482535, 6901571, 2494178, 139184) }} font-size:8.8pt; font-style:italic;">Expert en Gestion Logistique et Transport</div>

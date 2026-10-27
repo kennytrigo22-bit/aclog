@@ -4,14 +4,16 @@ namespace App\Http\Controllers\PublicSite;
 
 use App\Http\Controllers\Controller;
 use App\Models\Formation;
+use App\Support\Catalogue;
 use Illuminate\Http\Request;
 
 class FormationController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Formation::where('is_published', true);
+        $query = Formation::where('is_published', true)->withCount('modules');
 
+        // Anciens liens filtres (?categorie=douane, ?niveau=debutant) toujours acceptes
         if ($request->filled('categorie')) {
             $query->where('categorie', $request->categorie);
         }
@@ -19,9 +21,11 @@ class FormationController extends Controller
             $query->where('niveau', $request->niveau);
         }
 
-        $formations = $query->orderBy('ordre')->paginate(12);
+        $publiees = $query->orderBy('ordre')->get();
+        $filieres = Catalogue::filieres($publiees);
+        $vedette = $publiees->firstWhere('is_featured', true) ?? $publiees->first();
 
-        return view('public.formations.index', compact('formations'));
+        return view('public.formations.index', compact('filieres', 'vedette'));
     }
 
     public function show(Formation $formation)

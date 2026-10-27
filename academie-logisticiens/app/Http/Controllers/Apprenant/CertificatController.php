@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Apprenant;
 
 use App\Http\Controllers\Controller;
 use App\Models\Certificat;
-use Barryvdh\DomPDF\Facade\Pdf;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class CertificatController extends Controller
 {
@@ -33,26 +31,9 @@ class CertificatController extends Controller
             abort(403);
         }
 
-        // DomPDF decode l'image du cadre en memoire : 128 Mo (limite courante) ne suffit pas toujours.
-        @ini_set('memory_limit', '384M');
+        $service = app(\App\Services\CertificatService::class);
 
-        $certificat->load(['user', 'formation']);
-
-        $verificationUrl = route('certificat.verifier', $certificat->code_verification);
-
-        $qrCode = 'data:image/svg+xml;base64,' . base64_encode(
-            QrCode::format('svg')->size(80)->generate($verificationUrl)
-        );
-
-        $inscription = \App\Models\Inscription::where('user_id', $certificat->user_id)
-            ->where('formation_id', $certificat->formation_id)->first();
-
-        $pdf = Pdf::loadView('pdf.certificat', compact('certificat', 'qrCode', 'inscription'))
-            ->setPaper('a4', 'landscape');
-
-        $filename = 'certificat-' . $certificat->code_verification . '.pdf';
-
-        return $pdf->download($filename);
+        return $service->pdf($certificat)->download($service->nomFichier($certificat));
     }
 
     public function verifier(string $code)

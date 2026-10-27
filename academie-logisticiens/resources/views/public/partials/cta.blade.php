@@ -1,0 +1,2 @@
+@php($nbApprenants = max(23, \App\Models\User::where('role', 'apprenant')->count()))
+<div class="cta"><h2>Prêt à transformer votre carrière ?</h2><p>Rejoignez plus de {{ $nbApprenants }} professionnels qui ont choisi l'excellence avec {{ $siteTitre }} de Brazzaville.</p>@guest<a class="btn gold" href="{{ route('register') }}">S'inscrire Gratuitement</a>@else<a class="btn gold" href="{{ route('formations.index') }}">Voir les formations</a>@endguest <a class="btn ghost" href="{{ route('contact') }}">Nous Contacter</a></div>

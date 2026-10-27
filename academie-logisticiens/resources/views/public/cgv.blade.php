@@ -2,17 +2,7 @@
 @section('title', 'Conditions Générales de Vente - ' . $siteTitre)
 
 @section('content')
-<div class="pt-28"></div>
-
-<section class="bg-primary-700 text-white py-10 lg:py-14 relative overflow-hidden">
-    <div class="absolute inset-0">
-        <img src="{{ asset('assets/images/thumbs/e3bfe6a7-b76b-46c4-a823-9acf07f79199.jpg') }}" alt="" class="w-full h-full object-cover opacity-15">
-    </div>
-    <div class="max-w-4xl mx-auto px-4 lg:px-6 relative z-10">
-        <h1 class="font-heading text-3xl md:text-4xl font-bold">Conditions Générales de Vente</h1>
-        <p class="text-gray-300 mt-2">Dernière mise à jour : 1er octobre 2026</p>
-    </div>
-</section>
+<div class="phead"><div class="c"><div class="bc"><a href="{{ route('home') }}">Accueil</a> › Conditions générales</div><h1>Conditions Générales de Vente</h1><p>Dernière mise à jour : 1er octobre 2026</p></div></div>
 
 <section class="py-10 lg:py-16 bg-surface-light dark:bg-surface-darker">
     <div class="max-w-4xl mx-auto px-4 lg:px-6">

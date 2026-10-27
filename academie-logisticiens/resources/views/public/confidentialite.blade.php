@@ -2,17 +2,7 @@
 @section('title', 'Politique de Confidentialité - ' . $siteTitre)
 
 @section('content')
-<div class="pt-28"></div>
-
-<section class="bg-primary-700 text-white py-10 lg:py-14 relative overflow-hidden">
-    <div class="absolute inset-0">
-        <img src="{{ asset('assets/images/thumbs/technological-futuristic-holograms-logistics-means-transport (1).jpg') }}" alt="" class="w-full h-full object-cover opacity-15">
-    </div>
-    <div class="max-w-4xl mx-auto px-4 lg:px-6 relative z-10">
-        <h1 class="font-heading text-3xl md:text-4xl font-bold">Politique de Confidentialité</h1>
-        <p class="text-gray-300 mt-2">Dernière mise à jour : 1er octobre 2026</p>
-    </div>
-</section>
+<div class="phead"><div class="c"><div class="bc"><a href="{{ route('home') }}">Accueil</a> › Confidentialité</div><h1>Politique de Confidentialité</h1><p>Dernière mise à jour : 1er octobre 2026</p></div></div>
 
 <section class="py-10 lg:py-16 bg-surface-light dark:bg-surface-darker">
     <div class="max-w-4xl mx-auto px-4 lg:px-6">

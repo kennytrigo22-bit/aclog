@@ -4,27 +4,19 @@ namespace App\Http\Controllers\PublicSite;
 
 use App\Http\Controllers\Controller;
 use App\Models\Formation;
-use App\Models\Parametre;
-use App\Models\Partenaire;
+use App\Support\Catalogue;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $formationsPopulaires = Formation::where('is_published', true)
-            ->where('is_featured', true)
-            ->orderBy('ordre')
-            ->take(4)
-            ->get();
+        $publiees = Formation::where('is_published', true)->withCount('modules')->orderBy('ordre')->get();
 
-        $stats = [
-            'apprenants' => \App\Models\User::where('role', 'apprenant')->count(),
-            'formations' => Formation::where('is_published', true)->count(),
-            'certificats' => \App\Models\Certificat::count(),
-        ];
+        // Formation a la une : la premiere mise en avant, sinon la premiere publiee
+        $aLaUne = $publiees->firstWhere('is_featured', true) ?? $publiees->first();
 
-        $partenaires = Partenaire::actifs()->get();
+        $nbFormations = Catalogue::total($publiees);
 
-        return view('public.home', compact('formationsPopulaires', 'stats', 'partenaires'));
+        return view('public.home', compact('aLaUne', 'nbFormations'));
     }
 }

@@ -51,8 +51,8 @@ class SecurityHeaders
             // Alpine.js evalue ses expressions et les vues utilisent des scripts en ligne.
             "script-src 'self' 'unsafe-inline' 'unsafe-eval'{$vite}",
             "style-src 'self' 'unsafe-inline'{$vite}",
-            "font-src 'self' data:",
-            "img-src 'self' data: blob: https://i.ytimg.com https://img.youtube.com",
+            "font-src 'self' data:{$vite}",
+            "img-src 'self' data: blob: https://i.ytimg.com https://img.youtube.com https://images.unsplash.com",
             "media-src 'self' https:",
             "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
             "connect-src 'self'{$vite}{$viteWs}",

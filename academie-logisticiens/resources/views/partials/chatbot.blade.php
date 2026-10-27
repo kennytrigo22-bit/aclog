@@ -1,13 +1,12 @@
 {{-- Chatbot Widget --}}
-<div x-data="chatbot()" class="fixed bottom-6 right-6 z-[100]">
-    {{-- Toggle --}}
-    <button @click="open = !open" class="w-14 h-14 rounded-full bg-accent-500 text-primary-700 shadow-lg hover:bg-accent-400 transition flex items-center justify-center">
-        <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-        <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+<div x-data="chatbot()">
+    {{-- Bouton "Assistant ACLOG" (modele du site) --}}
+    <button type="button" class="ia" @click="open = !open" :aria-expanded="open.toString()" aria-controls="chat-window">
+        <i>IA</i><span><b>Assistant ACLOG</b><small x-text="open ? 'Fermer la discussion' : 'Posez vos questions'">Posez vos questions</small></span>
     </button>
 
     {{-- Chat Window --}}
-    <div x-show="open" x-transition.origin.bottom.right class="absolute bottom-16 right-0 w-80 sm:w-96 bg-white dark:bg-surface-dark rounded-2xl shadow-2xl border dark:border-gray-800 overflow-hidden flex flex-col" style="height: 28rem;">
+    <div id="chat-window" x-show="open" x-cloak x-transition.origin.bottom.right class="chatw bg-white dark:bg-surface-dark rounded-2xl shadow-2xl border dark:border-gray-800 overflow-hidden flex flex-col">
         <div class="bg-primary-700 text-white p-4 flex items-center gap-3">
             <div class="w-9 h-9 rounded-full bg-accent-500 text-primary-700 flex items-center justify-center font-bold text-sm">IA</div>
             <div>

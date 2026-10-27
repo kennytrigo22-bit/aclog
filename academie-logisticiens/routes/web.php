@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicSite\HomeController::class, 'index'])->name('home');
 Route::get('/formations', [PublicSite\FormationController::class, 'index'])->name('formations.index');
 Route::get('/formations/{formation:slug}', [PublicSite\FormationController::class, 'show'])->name('formations.show');
+Route::view('/nos-services', 'public.services')->name('services');
 Route::get('/tests-de-niveau', [PublicSite\TestNiveauController::class, 'index'])->name('tests.index');
 Route::post('/tests-de-niveau/questions', [PublicSite\TestNiveauController::class, 'questions'])->middleware('throttle:40,1,tests-questions')->name('tests.questions');
 Route::post('/tests-de-niveau/soumettre', [PublicSite\TestNiveauController::class, 'soumettre'])->middleware('throttle:20,1,tests-soumettre')->name('tests.soumettre');
@@ -124,6 +125,16 @@ Route::middleware(['auth', 'role:admin,gestionnaire'])
             Route::post('/utilisateurs/{user}/unsuspend', [\App\Http\Controllers\Admin\UtilisateurController::class, 'unsuspend'])->name('utilisateurs.unsuspend');
             Route::delete('/utilisateurs/{user}', [\App\Http\Controllers\Admin\UtilisateurController::class, 'softDelete'])->name('utilisateurs.destroy');
         });
+
+        // Certificats : liste + generation pour les apprenants formes en presentiel
+        Route::get('/certificats', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'index'])->name('certificats.index');
+        Route::post('/certificats/presentiel', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'store'])->name('certificats.store');
+        Route::post('/certificats/presentiel/lot', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'storeLot'])->name('certificats.lot');
+        Route::get('/certificats/{certificat}/editer', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'edit'])->name('certificats.edit');
+        Route::put('/certificats/{certificat}', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'update'])->name('certificats.update');
+        Route::get('/certificats/{certificat}/pdf', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'pdf'])->name('certificats.pdf');
+        Route::patch('/certificats/{certificat}/visibilite', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'visibilite'])->name('certificats.visibilite');
+        Route::delete('/certificats/{certificat}', [\App\Http\Controllers\Admin\CertificatAdminController::class, 'destroy'])->middleware('role:admin')->name('certificats.destroy');
 
         Route::get('/tickets', [\App\Http\Controllers\Admin\TicketController::class, 'index'])->name('tickets.index');
         Route::get('/tickets/{ticket}', [\App\Http\Controllers\Admin\TicketController::class, 'show'])->name('tickets.show');

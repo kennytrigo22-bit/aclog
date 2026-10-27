@@ -42,8 +42,13 @@ class AdminAccessTest extends TestCase
             'is_passed' => false, 'numero_tentative' => 1, 'is_active' => true, 'created_at' => now(),
         ]);
 
+        $certificat = app(\App\Services\CertificatService::class)->genererPresentiel([
+            'formation_id' => $f['formation']->id, 'titulaire_nom' => 'PRESENTIEL', 'titulaire_prenom' => 'Test', 'titulaire_pays' => 'Congo',
+        ]);
+
         return [
             'formation' => $f['formation']->slug,
+            'certificat' => $certificat->id,
             'module' => $f['modules'][0]->id,
             'lecon' => $f['lecons'][0]->id,
             'quiz' => $f['quizzes'][0]->id,

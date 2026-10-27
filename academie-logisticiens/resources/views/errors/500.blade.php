@@ -2,7 +2,6 @@
 @section('title', 'Erreur serveur')
 
 @section('content')
-<div class="pt-28"></div>
 <section class="min-h-[60vh] flex items-center justify-center py-16 px-4">
     <div class="text-center max-w-lg">
         <p class="text-8xl font-bold text-red-500 font-heading">500</p>

@@ -259,4 +259,59 @@ class PublicSiteTest extends TestCase
         }
         $this->assertSame(2, $u->fresh()->points);
     }
+
+    // ───────── Refonte du site (maquette cabinet-aclog) ─────────
+
+    public function test_menu_shows_nos_services_instead_of_test_de_niveau(): void
+    {
+        $this->get('/')->assertOk()->assertSee('Nos Services')->assertSee(route('services'), false)
+            ->assertDontSee(route('tests.index'), false);
+        $this->get('/nos-services')->assertOk()->assertSee("Des services d'excellence pour votre", false)
+            ->assertSee('Formations sur mesure pour entreprises');
+    }
+
+    public function test_formation_plan_html_is_rendered_not_escaped(): void
+    {
+        $f = $this->formation(['programme' => '<h4>Présentation générale</h4><table><tr><td><p><strong>Intitulé</strong></p></td></tr></table><script>alert(1)</script>']);
+
+        $this->get("/formations/{$f->slug}")->assertOk()
+            ->assertSee('<h4>Présentation générale</h4>', false)
+            ->assertSee('<strong>Intitulé</strong>', false)
+            ->assertDontSee('&lt;h4&gt;', false)
+            ->assertDontSee('&lt;table&gt;', false)
+            ->assertDontSee('<script>alert(1)</script>', false);
+    }
+
+    public function test_formation_plain_text_plan_keeps_line_breaks(): void
+    {
+        $f = $this->formation(['programme' => "Ligne 1
+Ligne <2>"]);
+
+        $this->get("/formations/{$f->slug}")->assertOk()->assertSee('Ligne 1<br />', false)->assertSee('Ligne &lt;2&gt;', false);
+    }
+
+    public function test_catalogue_lists_database_formations_and_the_full_catalogue(): void
+    {
+        $f = $this->formation(['titre' => 'Formation En Base', 'categorie' => 'douane']);
+
+        $this->get('/formations')->assertOk()
+            ->assertSee('Formation En Base')->assertSee(route('formations.show', $f), false)
+            ->assertSee('Gestion des stocks')->assertSee('Contentieux douanier')
+            ->assertSee('Toutes (41)');
+    }
+
+    public function test_annuaire_on_a_propos_lists_online_certified_with_avatar(): void
+    {
+        $f = $this->formation(['titre' => 'Formation Annuaire']);
+        $u = $this->apprenant(['name' => 'Avatarperson', 'avatar' => 'avatars/a.jpg', 'pays' => 'Gabon']);
+        app(\App\Services\CertificatService::class)->generer($u, $f, 88);
+
+        $this->get('/a-propos')->assertOk()->assertSee('Avatarperson')->assertSee('storage/avatars/a.jpg', false)
+            ->assertSee('Gabon')->assertSee('Formation Annuaire');
+    }
+
+    public function test_annuaire_empty_state_matches_the_model(): void
+    {
+        $this->get('/a-propos')->assertOk()->assertSee('La liste des étudiants certifiés sera publiée ici');
+    }
 }

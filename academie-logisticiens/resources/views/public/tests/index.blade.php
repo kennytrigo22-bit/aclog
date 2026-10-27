@@ -3,7 +3,6 @@
 @section('title', 'Tests de Niveau - ' . $siteTitre)
 
 @section('content')
-<div class="pt-28"></div>
 
 <section class="bg-primary-700 text-white py-12 lg:py-16 relative overflow-hidden">
     <div class="absolute inset-0">

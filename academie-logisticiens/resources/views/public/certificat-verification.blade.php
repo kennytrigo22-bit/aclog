@@ -1,36 +1,34 @@
 @extends('layouts.public')
 
-@section('title', 'Vérification du Certificat')
+@section('title', 'Vérification du Certificat - ' . $siteTitre)
 
 @section('content')
-<div class="pt-28"></div>
-
-<section class="w-full py-16 bg-surface-light dark:bg-surface-darker">
-    <div class="max-w-lg mx-auto px-4 text-center">
-        @if($certificat)
-        <div class="bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm">
-            <div class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </div>
-            <h1 class="font-heading text-2xl font-bold text-primary-700 dark:text-white mt-4">Certificat Authentique</h1>
-            <p class="text-gray-500 mt-2">Ce certificat est valide et vérifié.</p>
-            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mt-6 text-sm text-left space-y-2">
-                <div class="flex justify-between"><span class="text-gray-500">Titulaire</span><span class="font-semibold">{{ $certificat->user->nom_complet ?? $certificat->user->name }}</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Formation</span><span class="font-semibold">{{ $certificat->formation->titre }}</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Score</span><span class="font-semibold">{{ $certificat->score_obtenu }}%</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Délivré le</span><span class="font-semibold">{{ $certificat->issued_at->format('d/m/Y') }}</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Code</span><span class="font-mono font-semibold">{{ $certificat->code_verification }}</span></div>
-            </div>
-        </div>
-        @else
-        <div class="bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-sm">
-            <div class="w-16 h-16 rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 mx-auto flex items-center justify-center">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </div>
-            <h1 class="font-heading text-2xl font-bold text-primary-700 dark:text-white mt-4">Certificat non trouvé</h1>
-            <p class="text-gray-500 mt-2">Le code <span class="font-mono font-semibold">{{ $code }}</span> ne correspond à aucun certificat dans notre base de données.</p>
-        </div>
-        @endif
+<div class="pg show">
+<div class="phead"><div class="c"><div class="bc"><a href="{{ route('home') }}">Accueil</a> › Vérification de certificat</div><h1>Vérification du <em>certificat</em></h1><p>Authenticité des certificats d'aptitude professionnelle délivrés par le {{ $siteTitre }}.</p></div></div>
+<section class="alt"><div class="c">
+@if($certificat)
+<div class="dg" style="grid-template-columns:auto 1fr">
+    <figure class="ph" style="width:150px;height:186px">@if($certificat->photo_url)<img src="{{ $certificat->photo_url }}" alt="Photo de {{ $certificat->nom_complet }}">@else<span class="ini">{{ $certificat->initiales }}</span>@endif</figure>
+    <div>
+        <span class="ann-ok" style="font-size:.95rem">✅ Certificat Authentique</span>
+        <h3 style="margin-top:6px">{{ $certificat->nom_complet }}</h3>
+        <small>Ce certificat est valide et vérifié.</small>
+        <div class="info"><dl>
+            <div><dt>Formation</dt><dd style="text-transform:none">{{ $certificat->intitule_formation }}</dd></div>
+            <div><dt>Modalité</dt><dd>{{ $certificat->estPresentiel() ? 'En présentiel' : 'En ligne' }}</dd></div>
+            @if($certificat->pays)<div><dt>Pays</dt><dd>{{ $certificat->pays }}</dd></div>@endif
+            @unless($certificat->estPresentiel())<div><dt>Score</dt><dd>{{ $certificat->score_obtenu }}%</dd></div>@endunless
+            <div><dt>Délivré le</dt><dd>{{ $certificat->issued_at?->format('d/m/Y') }}</dd></div>
+            <div><dt>N° d'enregistrement</dt><dd style="text-transform:none">{{ $certificat->numero_affiche }}</dd></div>
+            <div><dt>Code</dt><dd style="text-transform:none;font-family:monospace">{{ $certificat->code_verification }}</dd></div>
+        </dl></div>
     </div>
-</section>
+</div>
+@else
+<div class="dg" style="grid-template-columns:1fr;text-align:center;border-left-color:#C0392B">
+    <div><span style="font-size:3rem">❌</span><h3>Certificat non trouvé</h3><p>Le code <span style="font-family:monospace;font-weight:700">{{ $code }}</span> ne correspond à aucun certificat dans notre base de données.</p><p style="margin-top:14px"><a class="btn blue" href="{{ route('annuaire-certifies') }}">Voir l'annuaire des certifiés</a></p></div>
+</div>
+@endif
+</div></section>
+</div>
 @endsection
