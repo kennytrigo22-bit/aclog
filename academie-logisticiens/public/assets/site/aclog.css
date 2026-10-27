@@ -411,3 +411,21 @@ button.ia{border:0;font:inherit;cursor:pointer;text-align:left}
 .rt .btn{white-space:nowrap}
 [x-cloak]{display:none!important}
 #catalogue,#annuaire{scroll-margin-top:90px}
+/* ===== Responsive : corrections ===== */
+/* barre du haut : sur petit téléphone, coordonnées et réseaux passent sur deux lignes au lieu d'être coupés */
+@media(max-width:600px){.top .c{flex-wrap:wrap;justify-content:center;row-gap:4px;white-space:normal;padding:5px 16px}.top .l{flex-wrap:wrap;justify-content:center;row-gap:2px}.top .r{overflow:visible}}
+/* une colonne de grille ne doit jamais s'élargir à cause d'un tableau large (plan de formation) */
+.fx>*,.split>*,.ph2>*,.biz>*,.hm-feat>*,.hm-tok>*,.feat>*,.hg>*{min-width:0}
+.plan table{min-width:520px}
+.plan img{max-width:100%;height:auto}
+/* conteneur : marges de 16 px sur mobile */
+@media(max-width:600px){.c{padding-left:16px;padding-right:16px}.phead{padding:48px 0 54px}.hero{padding:48px 0 56px}.plan{padding:20px 16px}.buy{padding:20px}.fm,.dg,.pane{padding:24px 18px}.hm-pil{padding:36px 16px}.feat .bd{padding:26px 20px}.ann-c{padding:28px 14px}.card{padding:24px 20px}}
+/* titres longs : coupure propre */
+h1,h2,h3,h4{overflow-wrap:anywhere}
+/* boutons pleine largeur lisibles sur petit écran */
+@media(max-width:420px){.acts .btn{flex:1 1 100%;text-align:center}.cta .btn{display:block;text-align:center;margin:0 auto 10px;max-width:320px}.head .btn{margin-top:16px}}
+/* message défilant masqué sous 900 px (la règle du modèle était écrasée par celle de l'animation) */
+@media(max-width:900px){.top .msg{display:none}}
+/* en-tête compact sur téléphone : logo + bouton sur une ligne, onglets serrés et défilables */
+@media(max-width:600px){header .c{column-gap:10px;row-gap:4px}.brand{gap:8px;min-width:0}.brand img{height:40px}.brand b{font-size:.98rem;letter-spacing:.04em}.rt .btn{padding:8px 14px!important;font-size:.76rem}nav a.tab{padding:8px 10px;font-size:.82rem}}
+@media(max-width:360px){.brand b{font-size:.88rem}.rt .btn{padding:7px 11px!important}}

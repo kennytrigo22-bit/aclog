@@ -16,13 +16,13 @@
 
 <div class="min-h-screen flex">
     {{-- Sidebar --}}
-    <aside class="fixed inset-y-0 left-0 z-50 w-64 bg-primary-700 text-white transform transition-transform lg:translate-x-0"
+    <aside class="fixed inset-y-0 left-0 z-50 w-64 max-w-[85vw] h-[100dvh] flex flex-col bg-primary-700 text-white transform transition-transform lg:translate-x-0"
            :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'">
-        <div class="p-5 flex items-center gap-3 border-b border-primary-500/30">
+        <div class="p-5 flex items-center gap-3 border-b border-primary-500/30 shrink-0">
             <img src="{{ asset('assets/logo/logo-192.jpg') }}" alt="Logo" class="w-9 h-9 rounded-lg object-contain">
             <span class="font-heading font-bold text-sm">Mon Espace</span>
         </div>
-        <nav class="p-4 space-y-1">
+        <nav class="flex-1 min-h-0 overflow-y-auto overscroll-contain p-4 space-y-1">
             @php
                 $links = [
                     ['route' => 'apprenant.dashboard', 'label' => 'Tableau de bord', 'icon' => 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'],
@@ -39,7 +39,7 @@
             </a>
             @endforeach
         </nav>
-        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-primary-500/30">
+        <div class="shrink-0 p-4 border-t border-primary-500/30">
             <div class="flex items-center gap-3 mb-3">
                 <div class="w-9 h-9 rounded-full bg-accent-500 text-primary-700 flex items-center justify-center font-bold text-sm overflow-hidden shrink-0">
                     @if(auth()->user()->avatar)
@@ -70,14 +70,14 @@
     <div x-show="sidebarOpen" @click="sidebarOpen = false" class="fixed inset-0 bg-black/50 z-40 lg:hidden" x-transition.opacity></div>
 
     {{-- Contenu --}}
-    <div class="flex-1 lg:ml-64">
+    <div class="flex-1 min-w-0 lg:ml-64">
         {{-- Top bar --}}
-        <header class="sticky top-0 z-30 bg-white dark:bg-surface-dark border-b dark:border-gray-800 px-4 lg:px-6 h-16 flex items-center justify-between">
+        <header class="sticky top-0 z-30 bg-white dark:bg-surface-dark border-b dark:border-gray-800 px-4 lg:px-6 h-16 flex items-center justify-between gap-2">
             <button @click="sidebarOpen = !sidebarOpen" class="lg:hidden p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
-            <h1 class="font-heading font-bold text-lg text-primary-700 dark:text-white">@yield('page-title', 'Tableau de bord')</h1>
-            <div class="flex items-center gap-1">
+            <h1 class="font-heading font-bold text-base sm:text-lg text-primary-700 dark:text-white truncate min-w-0 flex-1 lg:flex-none">@yield('page-title', 'Tableau de bord')</h1>
+            <div class="flex items-center gap-1 shrink-0">
                 @include('components.notification-bell')
                 <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light'); document.documentElement.classList.toggle('dark', darkMode)"
                         class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition">

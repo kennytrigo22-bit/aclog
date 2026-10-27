@@ -24,7 +24,7 @@
     <div class="grid gap-4">
         @foreach($parcours as $p)
         <div class="bg-white dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden">
-            <div class="p-5 flex items-center gap-4">
+            <div class="p-4 sm:p-5 flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-4">
                 @if($p->image)
                 <img src="{{ asset('storage/' . $p->image) }}" alt="" class="w-16 h-16 rounded-lg object-cover shrink-0">
                 @else
@@ -39,7 +39,7 @@
                         <span class="px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-500 text-xs font-bold">Inactif</span>
                         @endif
                     </div>
-                    <div class="flex items-center gap-3 mt-1 text-xs text-gray-500">
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-xs text-gray-500">
                         <span class="px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold">{{ $p->domaine }}</span>
                         <span class="capitalize">{{ $p->niveau }}</span>
                         <span>{{ $p->challenges_count }} challenge(s)</span>
@@ -48,7 +48,7 @@
                     <p class="text-xs text-gray-400 mt-1 truncate">{{ $p->description }}</p>
                     @endif
                 </div>
-                <div class="flex items-center gap-2 shrink-0">
+                <div class="flex items-center justify-end gap-2 shrink-0 w-full sm:w-auto">
                     <a href="{{ route('admin.challenges.parcours.show', $p) }}" class="p-2 rounded-lg text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition" title="Gerer les challenges">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>

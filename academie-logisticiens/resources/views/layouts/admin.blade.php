@@ -17,16 +17,16 @@
 <body class="font-body bg-surface-light dark:bg-surface-darker text-gray-900 dark:text-gray-100 antialiased">
 
 <div class="min-h-screen flex">
-    <aside class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 text-white transform transition-transform lg:translate-x-0"
+    <aside class="fixed inset-y-0 left-0 z-50 w-64 max-w-[85vw] h-[100dvh] flex flex-col bg-gray-900 text-white transform transition-transform lg:translate-x-0"
            :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'">
-        <div class="p-5 flex items-center gap-3 border-b border-gray-700/50">
+        <div class="p-5 flex items-center gap-3 border-b border-gray-700/50 shrink-0">
             <img src="{{ asset('assets/logo/logo-192.jpg') }}" alt="Logo" class="w-9 h-9 rounded-lg object-contain">
             <div>
                 <span class="font-heading font-bold text-sm block">ACLOG</span>
                 <span class="text-[10px] text-gray-400 uppercase tracking-wider">Administration</span>
             </div>
         </div>
-        <nav class="p-4 space-y-1">
+        <nav class="flex-1 min-h-0 overflow-y-auto overscroll-contain p-4 space-y-1">
             @php
                 $adminLinks = [
                     ['route' => 'admin.dashboard', 'label' => 'Dashboard', 'icon' => 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z'],
@@ -45,13 +45,13 @@
             @endphp
             @foreach($adminLinks as $link)
             @continue(in_array($link['route'], ['admin.utilisateurs.index', 'admin.parametres']) && auth()->user()->role !== 'admin')
-            <a href="{{ Route::has($link['route']) ? route($link['route']) : '#' }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition {{ request()->routeIs($link['route'] . '*') ? 'bg-white/10 text-accent-400' : 'text-gray-400 hover:bg-white/5 hover:text-white' }}">
+            <a href="{{ Route::has($link['route']) ? route($link['route']) : '#' }}" @click="sidebarOpen = false" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition {{ request()->routeIs($link['route'] . '*') ? 'bg-white/10 text-accent-400' : 'text-gray-400 hover:bg-white/5 hover:text-white' }}">
                 <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $link['icon'] }}"/></svg>
                 {{ $link['label'] }}
             </a>
             @endforeach
         </nav>
-        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-700/50">
+        <div class="shrink-0 p-4 border-t border-gray-700/50">
             <div class="flex items-center gap-3 mb-3">
                 <div class="w-9 h-9 rounded-full bg-accent-500 text-primary-700 flex items-center justify-center font-bold text-sm overflow-hidden shrink-0">
                     @if(auth()->user()->avatar)
@@ -80,13 +80,13 @@
 
     <div x-show="sidebarOpen" @click="sidebarOpen = false" class="fixed inset-0 bg-black/50 z-40 lg:hidden" x-transition.opacity></div>
 
-    <div class="flex-1 lg:ml-64">
-        <header class="sticky top-0 z-30 bg-white dark:bg-surface-dark border-b dark:border-gray-800 px-4 lg:px-6 h-16 flex items-center justify-between">
+    <div class="flex-1 min-w-0 lg:ml-64">
+        <header class="sticky top-0 z-30 bg-white dark:bg-surface-dark border-b dark:border-gray-800 px-4 lg:px-6 h-16 flex items-center justify-between gap-2">
             <button @click="sidebarOpen = !sidebarOpen" class="lg:hidden p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
-            <h1 class="font-heading font-bold text-lg text-primary-700 dark:text-white">@yield('page-title', 'Dashboard')</h1>
-            <div class="flex items-center gap-1">
+            <h1 class="font-heading font-bold text-base sm:text-lg text-primary-700 dark:text-white truncate min-w-0 flex-1 lg:flex-none">@yield('page-title', 'Dashboard')</h1>
+            <div class="flex items-center gap-1 shrink-0">
                 @include('components.notification-bell')
                 <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light'); document.documentElement.classList.toggle('dark', darkMode)"
                     class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition">

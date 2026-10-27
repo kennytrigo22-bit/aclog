@@ -2,7 +2,7 @@
 @section('page-title', 'Tickets de support')
 
 @section('content')
-<div class="flex items-center gap-3 mb-6">
+<div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-6">
     <a href="{{ route('admin.tickets.index') }}" class="px-3 py-1.5 rounded-lg text-sm font-semibold {{ !request('statut') ? 'bg-primary-700 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300' }}">Tous</a>
     @foreach(['ouvert' => 'Ouverts', 'en_cours' => 'En cours', 'resolu' => 'Résolus', 'ferme' => 'Fermés'] as $val => $label)
     <a href="{{ route('admin.tickets.index', ['statut' => $val]) }}" class="px-3 py-1.5 rounded-lg text-sm font-semibold {{ request('statut') == $val ? 'bg-primary-700 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300' }}">{{ $label }}</a>
