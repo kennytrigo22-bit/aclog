@@ -3,8 +3,12 @@
 namespace Tests\Feature;
 
 use App\Models\User;
+use App\Notifications\ConfirmerNouvelEmail;
+use App\Notifications\EmailModifie;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 use Tests\TestCase;
 
 class ProfileTest extends TestCase
@@ -27,21 +31,86 @@ class ProfileTest extends TestCase
         $this->assertSame('Dolisie', $user->ville);
     }
 
-    public function test_email_verification_status_unchanged_when_email_same_and_reset_when_changed(): void
+    public function test_email_change_waits_for_confirmation_link_sent_to_new_address(): void
     {
+        Notification::fake();
         $user = $this->apprenant();
-        $this->actingAs($user)->patch('/profil', $this->profilPayload($user))->assertSessionHasNoErrors();
-        $this->assertNotNull($user->fresh()->email_verified_at);
+        $ancien = $user->email;
 
-        $this->patch('/profil', $this->profilPayload($user, ['email' => 'autre@example.test']))->assertSessionHasNoErrors();
-        $this->assertNull($user->fresh()->email_verified_at);
+        $this->actingAs($user)->patch('/profil', $this->profilPayload($user))->assertSessionHasNoErrors();
+        Notification::assertNothingSent();
+
+        $this->patch('/profil', $this->profilPayload($user, ['email' => 'Nouvelle@Example.test']))
+            ->assertSessionHasNoErrors()->assertSessionHas('status', 'email-change-sent');
+
+        $user->refresh();
+        $this->assertSame($ancien, $user->email, "l'ancienne adresse reste active");
+        $this->assertNotNull($user->email_verified_at);
+        $this->assertSame('nouvelle@example.test', $user->pending_email);
+        $this->get('/profil')->assertSee('En attente de confirmation')->assertSee('nouvelle@example.test');
+
+        $lien = null;
+        Notification::assertSentOnDemand(ConfirmerNouvelEmail::class, function ($n, $channels, $notifiable) use (&$lien, $user) {
+            $lien = $n->toMail($user)->actionUrl;
+
+            return $notifiable->routes['mail'] === 'nouvelle@example.test';
+        });
+
+        // le lien fonctionne meme depuis un autre appareil, sans etre connecte
+        auth()->logout();
+        $this->get($lien)->assertRedirect(route('login'))->assertSessionHas('status');
+        $user->refresh();
+        $this->assertSame('nouvelle@example.test', $user->email);
+        $this->assertNull($user->pending_email);
+        $this->assertNotNull($user->email_verified_at);
+        Notification::assertSentOnDemand(EmailModifie::class, fn ($n, $c, $notifiable) => $notifiable->routes['mail'] === $ancien);
+
+        // lien deja utilise : plus valable
+        $this->get($lien)->assertSessionHasErrors('email');
     }
 
-    public function test_email_must_be_unique_on_update(): void
+    public function test_confirmation_link_must_be_signed_and_match_latest_request(): void
     {
+        Notification::fake();
+        $user = $this->apprenant();
+        $this->actingAs($user)->patch('/profil', $this->profilPayload($user, ['email' => 'premiere@example.test']));
+        $ancienLien = URL::temporarySignedRoute('profile.email.confirm', now()->addHour(), ['user' => $user->id, 'email' => 'premiere@example.test']);
+        $this->patch('/profil', $this->profilPayload($user, ['email' => 'seconde@example.test']));
+
+        $this->get(route('profile.email.confirm', ['user' => $user->id, 'email' => 'seconde@example.test']))->assertForbidden();
+        $this->get(str_replace('premiere', 'pirate', $ancienLien))->assertForbidden();
+        $this->get($ancienLien)->assertSessionHasErrors('email');
+        $this->assertNotSame('premiere@example.test', $user->fresh()->email);
+
+        $expire = URL::temporarySignedRoute('profile.email.confirm', now()->subMinute(), ['user' => $user->id, 'email' => 'seconde@example.test']);
+        $this->get($expire)->assertForbidden();
+    }
+
+    public function test_taken_email_gets_a_neutral_message_and_nothing_is_sent(): void
+    {
+        Notification::fake();
         $other = $this->apprenant();
         $user = $this->apprenant();
-        $this->actingAs($user)->patch('/profil', $this->profilPayload($user, ['email' => $other->email]))->assertSessionHasErrors('email');
+
+        $this->actingAs($user)->patch('/profil', $this->profilPayload($user, ['email' => $other->email]))
+            ->assertSessionHasErrors(['email' => User::MESSAGE_EMAIL_INDISPONIBLE]);
+        $this->assertNull($user->fresh()->pending_email);
+        Notification::assertNothingSent();
+    }
+
+    public function test_email_change_can_be_cancelled_and_is_rate_limited(): void
+    {
+        Notification::fake();
+        $user = $this->apprenant();
+        $this->actingAs($user);
+        foreach (['a1', 'a2', 'a3'] as $n) {
+            $this->patch('/profil', $this->profilPayload($user, ['email' => "{$n}@example.test"]))->assertSessionHasNoErrors();
+        }
+        $this->patch('/profil', $this->profilPayload($user, ['email' => 'a4@example.test']))->assertSessionHasErrors('email');
+        $this->assertSame('a3@example.test', $user->fresh()->pending_email);
+
+        $this->delete(route('profile.email.cancel'))->assertSessionHas('status', 'email-change-cancelled');
+        $this->assertNull($user->fresh()->pending_email);
     }
 
     public function test_mass_assignment_of_protected_fields_is_ignored(): void

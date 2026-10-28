@@ -47,6 +47,7 @@
         @include('partials.chatbot')
     </div>
 
+    @include('partials.presence')
     <script src="{{ asset('assets/site/aclog.js') }}?v={{ filemtime(public_path('assets/site/aclog.js')) }}" defer></script>
     @stack('scripts')
 </body>

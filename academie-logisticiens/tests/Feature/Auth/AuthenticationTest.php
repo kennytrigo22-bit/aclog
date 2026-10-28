@@ -33,8 +33,10 @@ class AuthenticationTest extends TestCase
     public function test_wrong_password_and_unknown_email_fail(): void
     {
         $user = $this->apprenant();
-        $this->post('/login', ['email' => $user->email, 'password' => 'wrong'])->assertSessionHasErrors('email');
-        $this->post('/login', ['email' => 'nobody@example.test', 'password' => 'password'])->assertSessionHasErrors('email');
+        // meme message dans les deux cas : on ne revele pas si l'adresse existe
+        $message = ['email' => 'Identifiants ou mot de passe incorrects.'];
+        $this->post('/login', ['email' => $user->email, 'password' => 'wrong'])->assertSessionHasErrors($message);
+        $this->post('/login', ['email' => 'nobody@example.test', 'password' => 'password'])->assertSessionHasErrors($message);
         $this->assertGuest();
     }
 

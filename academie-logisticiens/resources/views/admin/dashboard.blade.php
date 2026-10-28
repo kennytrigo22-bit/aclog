@@ -1,32 +1,137 @@
 @extends('layouts.admin')
 @section('page-title', 'Dashboard')
 
+@php
+    $carte = 'bg-white dark:bg-surface-dark rounded-xl shadow-sm';
+    $titre = 'font-heading font-bold text-primary-700 dark:text-white';
+    $kpis = [
+        ['cle' => 'visiteurs', 'libelle' => 'Visiteurs uniques', 'format' => 'nombre', 'delta' => true],
+        ['cle' => 'pages_vues', 'libelle' => 'Pages vues', 'format' => 'nombre', 'delta' => true],
+        ['cle' => 'nouveaux_comptes', 'libelle' => 'Nouveaux comptes', 'format' => 'nombre', 'delta' => true],
+        ['cle' => 'ventes', 'libelle' => 'Ventes validées', 'format' => 'nombre', 'delta' => true],
+        ['cle' => 'chiffre_affaires', 'libelle' => "Chiffre d'affaires", 'format' => 'fcfa', 'delta' => true],
+        ['cle' => 'conversion', 'libelle' => 'Taux de conversion', 'format' => 'pourcent', 'aide' => 'ventes ÷ visiteurs uniques'],
+        ['cle' => 'panier_moyen', 'libelle' => 'Panier moyen', 'format' => 'fcfa'],
+        ['cle' => 'certificats', 'libelle' => 'Certificats délivrés', 'format' => 'nombre'],
+    ];
+    $etat = [
+        ['cle' => 'comptes_total', 'libelle' => 'Comptes apprenants', 'lien' => 'admin.utilisateurs.index'],
+        ['cle' => 'inscriptions_actives', 'libelle' => 'Inscriptions actives', 'lien' => null],
+        ['cle' => 'paiements_attente', 'libelle' => 'Paiements en attente', 'lien' => 'admin.paiements.index'],
+        ['cle' => 'tickets_ouverts', 'libelle' => 'Tickets ouverts', 'lien' => 'admin.tickets.index'],
+    ];
+    $graphiques = [
+        ['id' => 'g-audience', 'titre' => 'Audience', 'sous' => 'Visiteurs uniques et pages vues', 'large' => true],
+        ['id' => 'g-ca', 'titre' => "Chiffre d'affaires", 'sous' => 'Paiements validés, en FCFA'],
+        ['id' => 'g-comptes', 'titre' => 'Nouveaux comptes', 'sous' => 'Inscriptions sur la plateforme'],
+        ['id' => 'g-vendues', 'titre' => 'Formations les plus vendues', 'sous' => 'Nombre de ventes validées'],
+        ['id' => 'g-consultees', 'titre' => 'Formations les plus consultées', 'sous' => 'Pages vues de la fiche formation'],
+        ['id' => 'g-pays', 'titre' => 'Pays des visiteurs', 'sous' => 'Visiteurs uniques'],
+        ['id' => 'g-appareils', 'titre' => 'Appareils', 'sous' => 'Visiteurs uniques'],
+        ['id' => 'g-sources', 'titre' => "Provenance", 'sous' => 'Site d\'où arrivent les visiteurs'],
+        ['id' => 'g-pages', 'titre' => 'Pages les plus vues', 'sous' => 'Pages vues'],
+    ];
+@endphp
+
 @section('content')
-{{-- Stats --}}
-<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
-    @php
-        $cards = [
-            ['label' => 'Apprenants', 'value' => $stats['apprenants'], 'color' => 'text-blue-600 bg-blue-50 dark:bg-blue-900/20', 'icon' => 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z'],
-            ['label' => 'Formations', 'value' => $stats['formations'], 'color' => 'text-purple-600 bg-purple-50 dark:bg-purple-900/20', 'icon' => 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'],
-            ['label' => 'Inscrits actifs', 'value' => $stats['inscriptions'], 'color' => 'text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20', 'icon' => 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'],
-            ['label' => 'Revenus', 'value' => number_format($stats['revenus'], 0, ',', ' ') . ' F', 'color' => 'text-accent-500 bg-accent-500/10', 'icon' => 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'],
-            ['label' => 'Paiements en attente', 'value' => $stats['paiements_en_attente'], 'color' => 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20', 'icon' => 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'],
-            ['label' => 'Tickets ouverts', 'value' => $stats['tickets_ouverts'], 'color' => 'text-red-600 bg-red-50 dark:bg-red-900/20', 'icon' => 'M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4'],
-        ];
-    @endphp
-    @foreach($cards as $card)
-    <div class="bg-white dark:bg-surface-dark rounded-xl p-4 shadow-sm">
-        <div class="w-10 h-10 rounded-lg {{ $card['color'] }} flex items-center justify-center mb-3">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $card['icon'] }}"/></svg>
+<div id="tableau-stats" class="space-y-6"
+     data-url-stats="{{ route('admin.dashboard.statistiques') }}"
+     data-url-en-ligne="{{ route('admin.dashboard.en-ligne') }}">
+
+    {{-- Filtres : une seule ligne au-dessus des graphiques --}}
+    <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap rounded-lg bg-white dark:bg-surface-dark shadow-sm p-1 text-sm font-semibold" role="group" aria-label="Période">
+            @foreach($periodes as $cle => $libelle)
+            <button type="button" data-periode="{{ $cle }}" aria-pressed="{{ $stats['periode'] === $cle ? 'true' : 'false' }}"
+                    class="px-3 py-1.5 rounded-md transition text-gray-500 hover:text-primary-700 dark:hover:text-white aria-pressed:bg-primary-700 aria-pressed:text-white">
+                {{ ['jour' => 'Jour', 'semaine' => 'Semaine', 'mois' => 'Mois', 'annee' => 'Année'][$cle] }}
+            </button>
+            @endforeach
         </div>
-        <p class="text-2xl font-bold text-primary-700 dark:text-white">{{ $card['value'] }}</p>
-        <p class="text-xs text-gray-500 mt-1">{{ $card['label'] }}</p>
+        <label class="flex items-center gap-2 text-sm">
+            <span class="text-gray-500">Pays</span>
+            <select id="filtre-pays" class="rounded-lg border-gray-300 dark:border-gray-700 dark:bg-surface-dark text-sm focus:ring-accent-500 focus:border-accent-500">
+                <option value="">Tous les pays</option>
+                @foreach($stats['pays_disponibles'] as $p)
+                <option value="{{ $p['code'] }}" @selected($stats['pays'] === $p['code'])>{{ $p['nom'] }}</option>
+                @endforeach
+            </select>
+        </label>
+        <p class="text-xs text-gray-400 sm:ml-auto" aria-live="polite">
+            <span id="periode-libelle">{{ $stats['periode_libelle'] }}</span> · mis à jour à <span id="maj">{{ $stats['mis_a_jour'] }}</span>
+            <span id="chargement" class="hidden">· actualisation…</span>
+        </p>
     </div>
-    @endforeach
+
+    {{-- En ligne maintenant + etat de la plateforme --}}
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="{{ $carte }} p-5">
+            <div class="flex items-center gap-2 text-sm font-semibold text-gray-500">
+                <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span></span>
+                En ligne maintenant <span class="text-xs font-normal text-gray-400">(actualisé toutes les 15 s)</span>
+            </div>
+            <p class="mt-2 flex items-baseline gap-3">
+                <span id="en-ligne-total" class="font-heading text-5xl font-bold text-primary-700 dark:text-white tabular-nums">{{ $stats['en_ligne']['total'] }}</span>
+                <span class="text-sm text-gray-500">dont <strong id="en-ligne-connectes" class="text-primary-700 dark:text-white tabular-nums">{{ $stats['en_ligne']['connectes'] }}</strong> connecté(s)</span>
+            </p>
+            <ul id="en-ligne-pages" class="mt-3 space-y-1 text-xs text-gray-500">
+                @foreach($stats['en_ligne']['pages'] as $p)
+                <li class="flex justify-between gap-2"><span class="truncate">{{ $p['chemin'] }}</span><span class="tabular-nums">{{ $p['n'] }}</span></li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="lg:col-span-2 grid grid-cols-2 gap-4">
+            @foreach($etat as $e)
+            @php $lienOk = $e['lien'] && Route::has($e['lien']) && ($e['lien'] !== 'admin.utilisateurs.index' || auth()->user()->role === 'admin'); @endphp
+            <a @if($lienOk) href="{{ route($e['lien']) }}" @endif class="{{ $carte }} p-5 block {{ $lienOk ? 'hover:ring-2 hover:ring-accent-500/40 transition' : '' }}">
+                <p class="text-xs font-semibold text-gray-500">{{ $e['libelle'] }}</p>
+                <p class="font-heading text-3xl font-bold text-primary-700 dark:text-white mt-1 tabular-nums" data-kpi="{{ $e['cle'] }}" data-format="nombre">{{ number_format($stats['kpis'][$e['cle']]['valeur'], 0, ',', ' ') }}</p>
+            </a>
+            @endforeach
+        </div>
+    </div>
+
+    {{-- Indicateurs de la periode, compares a la periode precedente --}}
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        @foreach($kpis as $k)
+        <div class="{{ $carte }} p-4">
+            <p class="text-xs font-semibold text-gray-500">{{ $k['libelle'] }}</p>
+            <p class="font-heading text-2xl font-bold text-primary-700 dark:text-white mt-1 tabular-nums" data-kpi="{{ $k['cle'] }}" data-format="{{ $k['format'] }}">—</p>
+            @if(!empty($k['delta']))
+            <p class="text-xs mt-1" data-delta="{{ $k['cle'] }}">&nbsp;</p>
+            @elseif(!empty($k['aide']))
+            <p class="text-xs text-gray-400 mt-1">{{ $k['aide'] }}</p>
+            @endif
+        </div>
+        @endforeach
+    </div>
+
+    {{-- Graphiques --}}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        @foreach($graphiques as $g)
+        <figure class="{{ $carte }} p-5 m-0 {{ !empty($g['large']) ? 'lg:col-span-2' : '' }}">
+            <figcaption>
+                <h2 class="{{ $titre }}">{{ $g['titre'] }}</h2>
+                <p class="text-xs text-gray-400">{{ $g['sous'] }}</p>
+            </figcaption>
+            <div class="relative mt-4 {{ !empty($g['large']) ? 'h-72' : 'h-64' }}">
+                <canvas id="{{ $g['id'] }}" role="img" aria-label="{{ $g['titre'] }}"></canvas>
+                <p class="vide hidden absolute inset-0 flex items-center justify-center text-sm text-gray-400">Aucune donnée sur cette période.</p>
+            </div>
+            <details class="mt-3 text-xs text-gray-500">
+                <summary class="cursor-pointer select-none font-semibold">Voir les données en tableau</summary>
+                <div class="overflow-x-auto mt-2"><table class="w-full" data-table="{{ $g['id'] }}"></table></div>
+            </details>
+        </figure>
+        @endforeach
+    </div>
+
+    <p class="text-xs text-gray-400">Mesure d'audience interne : un visiteur = un navigateur. Les pays proviennent de Cloudflare quand le site passe par Cloudflare, sinon du profil des apprenants connectés. Les pages de l'administration et les visites de l'équipe ne sont pas comptées.</p>
+
+    <script type="application/json" id="stats-initiales">@json($stats)</script>
 </div>
 
-<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
-    {{-- Paiements en attente --}}
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-8">
     <div class="bg-white dark:bg-surface-dark rounded-xl shadow-sm">
         <div class="p-5 border-b dark:border-gray-800 flex items-center justify-between">
             <h2 class="font-heading font-bold text-primary-700 dark:text-white">Paiements en attente</h2>
@@ -84,3 +189,7 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+    @vite('resources/js/admin-stats.js')
+@endpush

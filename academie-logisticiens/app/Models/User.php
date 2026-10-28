@@ -20,6 +20,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'suspended_at', 'suspended_until', 'suspension_reason',
     ];
 
+    /** Reponse neutre quand la nouvelle adresse est deja prise : on ne revele pas l'existence d'un autre compte. */
+    public const MESSAGE_EMAIL_INDISPONIBLE = 'Désolé, nous ne pouvons pas utiliser cette adresse e-mail. Veuillez en saisir une autre.';
+
     protected $hidden = ['password', 'remember_token'];
 
     protected function casts(): array

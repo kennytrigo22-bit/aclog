@@ -49,6 +49,8 @@
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-5">Mettez à jour votre nom et adresse email.</p>
 
         <form id="send-verification" method="post" action="{{ route('verification.send') }}">@csrf</form>
+        <form id="email-resend" method="post" action="{{ route('profile.email.resend') }}">@csrf</form>
+        <form id="email-cancel" method="post" action="{{ route('profile.email.cancel') }}">@csrf @method('DELETE')</form>
 
         <form method="post" action="{{ route('profile.update') }}" class="space-y-4">
             @csrf
@@ -71,6 +73,24 @@
                 <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Adresse email</label>
                 <input id="email" name="email" type="email" value="{{ old('email', $user->email) }}" required class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-surface-darker text-sm focus:ring-accent-500 focus:border-accent-500">
                 @error('email')<p class="text-red-500 text-xs mt-1">{{ $message }}</p>@enderror
+                <p class="text-xs text-gray-400 mt-1">Pour changer d'adresse, saisissez la nouvelle : un lien de confirmation lui sera envoyé. Votre adresse actuelle reste active jusqu'à la confirmation.</p>
+
+                @if (session('status') === 'email-changed')
+                <p class="mt-2 text-sm text-emerald-600 font-medium">Votre nouvelle adresse e-mail est confirmée.</p>
+                @elseif (session('status') === 'email-change-cancelled')
+                <p class="mt-2 text-sm text-gray-500 font-medium">Le changement d'adresse a été annulé.</p>
+                @endif
+
+                @if ($user->pending_email)
+                <div class="mt-3 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-300">
+                    @if (session('status') === 'email-change-sent')<p class="font-semibold mb-1">Lien de confirmation envoyé.</p>@endif
+                    <p>En attente de confirmation : <strong class="break-all">{{ $user->pending_email }}</strong>. Cliquez sur le lien reçu à cette adresse (valable 60 minutes).</p>
+                    <div class="flex flex-wrap gap-3 mt-2">
+                        <button form="email-resend" class="underline font-semibold">Renvoyer le lien</button>
+                        <button form="email-cancel" class="underline font-semibold">Annuler le changement</button>
+                    </div>
+                </div>
+                @endif
 
                 @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div class="mt-2">

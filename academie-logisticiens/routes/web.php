@@ -14,7 +14,8 @@ Route::post('/tests-de-niveau/questions', [PublicSite\TestNiveauController::clas
 Route::post('/tests-de-niveau/soumettre', [PublicSite\TestNiveauController::class, 'soumettre'])->middleware('throttle:20,1,tests-soumettre')->name('tests.soumettre');
 Route::get('/contact', [PublicSite\ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [PublicSite\ContactController::class, 'envoyer'])->middleware('throttle:5,1,contact')->name('contact.envoyer');
-Route::get('/certificat/verifier/{code}', [Apprenant\CertificatController::class, 'verifier'])->name('certificat.verifier');
+Route::post('/presence', \App\Http\Controllers\PresenceController::class)->middleware('throttle:6,1,presence')->name('presence');
+Route::get('/certificat/verifier/{code}',[Apprenant\CertificatController::class, 'verifier'])->name('certificat.verifier');
 Route::get('/a-propos', [PublicSite\AnnuaireController::class, 'aPropos'])->name('a-propos');
 Route::get('/annuaire-certifies', [PublicSite\AnnuaireController::class, 'annuaire'])->name('annuaire-certifies');
 Route::view('/conditions-generales', 'public.cgv')->name('cgv');
@@ -24,11 +25,16 @@ Route::view('/mentions-legales', 'public.mentions-legales')->name('mentions-lega
 // ─── PROFIL ───
 Route::get('/dashboard', [Apprenant\DashboardController::class, 'redirection'])->middleware('auth')->name('dashboard');
 
+// Lien recu par e-mail : signe et a duree limitee, utilisable meme sans etre connecte (autre appareil).
+Route::get('/profil/email/confirmer/{user}', [\App\Http\Controllers\ProfileController::class, 'confirmerEmail'])->middleware(['signed', 'throttle:10,1,email-confirm'])->name('profile.email.confirm');
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/profil', [\App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profil', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profil', [\App\Http\Controllers\ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::delete('/profil/avatar', [\App\Http\Controllers\ProfileController::class, 'removeAvatar'])->name('profile.avatar.remove');
+    Route::post('/profil/email/renvoyer', [\App\Http\Controllers\ProfileController::class, 'renvoyerConfirmationEmail'])->middleware('throttle:3,10,email-change')->name('profile.email.resend');
+    Route::delete('/profil/email', [\App\Http\Controllers\ProfileController::class, 'annulerChangementEmail'])->name('profile.email.cancel');
 
     Route::get('/notifications', [\App\Http\Controllers\NotificationController::class, 'index'])->name('notifications.index');
     Route::post('/notifications/{notification_interne}/lire', [\App\Http\Controllers\NotificationController::class, 'markAsRead'])->name('notifications.read');
@@ -81,6 +87,8 @@ Route::middleware(['auth', 'role:admin,gestionnaire'])
     ->name('admin.')
     ->group(function () {
         Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/dashboard/statistiques', [\App\Http\Controllers\Admin\DashboardController::class, 'statistiques'])->name('dashboard.statistiques');
+        Route::get('/dashboard/en-ligne', [\App\Http\Controllers\Admin\DashboardController::class, 'enLigne'])->name('dashboard.en-ligne');
 
         Route::get('/formations', [\App\Http\Controllers\Admin\FormationController::class, 'index'])->name('formations.index');
         Route::get('/formations/creer', [\App\Http\Controllers\Admin\FormationController::class, 'create'])->name('formations.create');

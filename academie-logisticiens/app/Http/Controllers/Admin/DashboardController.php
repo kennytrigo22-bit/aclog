@@ -3,24 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Formation;
-use App\Models\Inscription;
 use App\Models\Paiement;
 use App\Models\Ticket;
-use App\Models\User;
+use App\Services\StatistiquesAdmin;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Request $request, StatistiquesAdmin $statistiques)
     {
-        $stats = [
-            'apprenants' => User::where('role', 'apprenant')->count(),
-            'formations' => Formation::where('is_published', true)->count(),
-            'inscriptions' => Inscription::where('statut', 'active')->count(),
-            'revenus' => Paiement::where('statut', 'valide')->sum('montant'),
-            'paiements_en_attente' => Paiement::where('statut', 'en_attente')->count(),
-            'tickets_ouverts' => Ticket::where('statut', 'ouvert')->count(),
-        ];
+        $stats = $statistiques->calculer((string) $request->query('periode', 'mois'), $request->query('pays'));
+        $periodes = StatistiquesAdmin::PERIODES;
 
         $paiementsRecents = Paiement::with(['user', 'formation'])
             ->where('statut', 'en_attente')
@@ -34,6 +28,18 @@ class DashboardController extends Controller
             ->take(5)
             ->get();
 
-        return view('admin.dashboard', compact('stats', 'paiementsRecents', 'ticketsRecents'));
+        return view('admin.dashboard', compact('stats', 'periodes', 'paiementsRecents', 'ticketsRecents'));
+    }
+
+    /** Rafraichissement des graphiques et indicateurs (filtres periode / pays). */
+    public function statistiques(Request $request, StatistiquesAdmin $statistiques): JsonResponse
+    {
+        return response()->json($statistiques->calculer((string) $request->query('periode', 'mois'), $request->query('pays')));
+    }
+
+    /** Compteur "en ligne maintenant", interroge toutes les 15 secondes. */
+    public function enLigne(StatistiquesAdmin $statistiques): JsonResponse
+    {
+        return response()->json($statistiques->enLigne());
     }
 }

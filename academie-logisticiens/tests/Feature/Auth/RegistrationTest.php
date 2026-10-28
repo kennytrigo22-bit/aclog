@@ -101,6 +101,17 @@ class RegistrationTest extends TestCase
         $this->post('/register', $this->registrationPayload(['email' => 'DUP@example.test']))->assertSessionHasErrors('email');
     }
 
+    public function test_duplicate_email_gets_a_neutral_message_that_does_not_reveal_the_account(): void
+    {
+        Notification::fake();
+        $this->apprenant(['email' => 'pris@example.test']);
+
+        $this->post('/register', $this->registrationPayload(['email' => 'pris@example.test']))
+            ->assertSessionHasErrors(['email' => 'Désolé, nous ne pouvons pas créer votre compte avec cette adresse e-mail. Veuillez en utiliser une autre.']);
+        $this->assertSame(1, User::where('email', 'pris@example.test')->count());
+        $this->assertGuest();
+    }
+
     public function test_etudiant_with_niveau_and_professionnel_with_profession_are_accepted(): void
     {
         Notification::fake();

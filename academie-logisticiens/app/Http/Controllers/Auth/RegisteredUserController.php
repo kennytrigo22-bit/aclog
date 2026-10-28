@@ -38,7 +38,10 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'telephone' => ['nullable', 'string', 'max:20'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ] + ProfilOptions::regles(), ProfilOptions::messages());
+        ] + ProfilOptions::regles(), [
+            // Message neutre : ne jamais indiquer qu'un compte existe deja avec cette adresse.
+            'email.unique' => 'Désolé, nous ne pouvons pas créer votre compte avec cette adresse e-mail. Veuillez en utiliser une autre.',
+        ] + ProfilOptions::messages());
 
         $user = User::create(array_merge(
             collect($data)->except(['password', 'password_confirmation'])->all(),

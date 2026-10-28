@@ -102,5 +102,6 @@
     </div>
 </div>
 
+@include('partials.presence')
 </body>
 </html>
