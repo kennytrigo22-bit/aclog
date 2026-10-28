@@ -429,3 +429,16 @@ h1,h2,h3,h4{overflow-wrap:anywhere}
 /* en-tête compact sur téléphone : logo + bouton sur une ligne, onglets serrés et défilables */
 @media(max-width:600px){header .c{column-gap:10px;row-gap:4px}.brand{gap:8px;min-width:0}.brand img{height:40px}.brand b{font-size:.98rem;letter-spacing:.04em}.rt .btn{padding:8px 14px!important;font-size:.76rem}nav a.tab{padding:8px 10px;font-size:.82rem}}
 @media(max-width:360px){.brand b{font-size:.88rem}.rt .btn{padding:7px 11px!important}}
+
+/* Page de verification d'un certificat (ouverte depuis le QR code, souvent sur telephone) */
+.verif>div{min-width:0}
+.verif-ok{font-size:.95rem;white-space:normal}
+.verif-info{margin-top:14px}
+.verif-info dd{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+@media(max-width:600px){
+.dg.verif{padding:22px 16px;gap:16px}
+.verif .ph{width:120px;height:150px}
+.verif h3{font-size:1.2rem;overflow-wrap:anywhere}
+.verif-info dl div{flex-direction:column;align-items:flex-start;gap:2px;text-align:left}
+.verif-info dd{text-align:left}
+}

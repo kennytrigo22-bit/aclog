@@ -7,13 +7,13 @@
 <div class="phead"><div class="c"><div class="bc"><a href="{{ route('home') }}">Accueil</a> › Vérification de certificat</div><h1>Vérification du <em>certificat</em></h1><p>Authenticité des certificats d'aptitude professionnelle délivrés par le {{ $siteTitre }}.</p></div></div>
 <section class="alt"><div class="c">
 @if($certificat)
-<div class="dg" style="grid-template-columns:auto 1fr">
+<div class="dg verif">
     <figure class="ph" style="width:150px;height:186px">@if($certificat->photo_url)<img src="{{ $certificat->photo_url }}" alt="Photo de {{ $certificat->nom_complet }}">@else<span class="ini">{{ $certificat->initiales }}</span>@endif</figure>
     <div>
-        <span class="ann-ok" style="font-size:.95rem">✅ Certificat Authentique</span>
+        <span class="ann-ok verif-ok">✅ Certificat Authentique</span>
         <h3 style="margin-top:6px">{{ $certificat->nom_complet }}</h3>
         <small>Ce certificat est valide et vérifié.</small>
-        <div class="info"><dl>
+        <div class="info verif-info"><dl>
             <div><dt>Formation</dt><dd style="text-transform:none">{{ $certificat->intitule_formation }}</dd></div>
             <div><dt>Modalité</dt><dd>{{ $certificat->estPresentiel() ? 'En présentiel' : 'En ligne' }}</dd></div>
             @if($certificat->pays)<div><dt>Pays</dt><dd>{{ $certificat->pays }}</dd></div>@endif
